@@ -183,19 +183,19 @@ The server starts at **http://\<your-local-ip\>:5000/** by default (it auto-dete
 
 ```bash
 # Run with OpenAI directly
-python app.py --openai-key sk-... --model gpt-4o --debug
+python app.py --openai-key sk-... --model gpt-5.2 --debug
 
 # Run with OpenRouter (recommended — supports many models)
-python app.py --openrouter-key sk-or-v1-... --model google/gemini-3-flash-preview
+python app.py --openrouter-key sk-or-v1-... --model openai/gpt-5.2
 
 # Run with OpenRouter using a separate study model
-python app.py --openrouter-key sk-or-v1-... --model google/gemini-3-flash-preview --study-model google/gemini-3-flash-preview
+python app.py --openrouter-key sk-or-v1-... --model openai/gpt-5.2 --study-model openai/gpt-5.2
 
 # Using uv run (no venv activation needed)
-uv run python app.py --openrouter-key sk-or-v1-... --model google/gemini-3-flash-preview
+uv run python app.py --openrouter-key sk-or-v1-... --model openai/gpt-5.2
 
 # Custom port
-python app.py --openrouter-key sk-or-v1-... --model google/gemini-3-flash-preview --port 8080
+python app.py --openrouter-key sk-or-v1-... --model openai/gpt-5.2 --port 8080
 ```
 
 ### Accessing the app in your browser
