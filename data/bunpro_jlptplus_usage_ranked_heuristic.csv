@@ -1,0 +1,928 @@
+﻿rank,usage_tier,score,register,jlpt,id,grammar,meaning,url,norm
+1,S (ubiquitous),110.0,general,N5,1.0,だ,"To be, Is",https://bunpro.jp/grammar_points/%E3%81%A0,だ
+2,S (ubiquitous),110.0,general,N5,3.0,は,As for... (Highlights sentence topic),https://bunpro.jp/grammar_points/%E3%81%AF,は
+3,S (ubiquitous),110.0,general,N5,4.0,も,"Also, Too, As well, Even, Either, Neither",https://bunpro.jp/grammar_points/%E3%82%82,も
+4,S (ubiquitous),110.0,general,N5,12.0,か,Question marking particle,https://bunpro.jp/grammar_points/%E3%81%8B,か
+5,S (ubiquitous),110.0,general,N5,13.0,が,"Subject marking particle, Identification particle",https://bunpro.jp/grammar_points/%E3%81%8C,が
+6,S (ubiquitous),110.0,general,N5,14.0,よ,Emphasis (Sentence ending particle),https://bunpro.jp/grammar_points/%E3%82%88,よ
+7,S (ubiquitous),110.0,general,N5,15.0,ね,"Isn't it?, Right? (Sentence ending particle) ",https://bunpro.jp/grammar_points/%E3%81%AD,ね
+8,S (ubiquitous),110.0,general,N5,18.0,を,Object marking particle,https://bunpro.jp/grammar_points/%E3%82%92,を
+9,S (ubiquitous),110.0,general,N5,21.0,と,And,https://bunpro.jp/grammar_points/%E3%81%A8-and,と
+10,S (ubiquitous),110.0,general,N5,25.0,で,"At, In",https://bunpro.jp/grammar_points/%E3%81%A7,で
+11,S (ubiquitous),110.0,general,N5,26.0,に,"In, At, To, For, On",https://bunpro.jp/grammar_points/%E3%81%AB,に
+12,S (ubiquitous),110.0,general,N5,27.0,か,Or,https://bunpro.jp/grammar_points/%E3%81%8B-or,か
+13,S (ubiquitous),110.0,general,N5,28.0,と,With,https://bunpro.jp/grammar_points/%E3%81%A8-with,と
+14,S (ubiquitous),110.0,general,N5,51.0,で,"With, By (using)",https://bunpro.jp/grammar_points/%E3%81%A7-by,で
+15,S (ubiquitous),110.0,general,N5,56.0,が,"But, However",https://bunpro.jp/grammar_points/%E3%81%8C-but,が
+16,S (ubiquitous),110.0,general,N5,61.0,へ,"To, Toward",https://bunpro.jp/grammar_points/%E3%81%B8,へ
+17,S (ubiquitous),110.0,general,N5,70.0,と,Quotation,https://bunpro.jp/grammar_points/%E3%81%A8,と
+18,S (ubiquitous),110.0,general,N5,114.0,や,"Things like, And the like",https://bunpro.jp/grammar_points/%E3%82%84,や
+19,S (ubiquitous),110.0,general,N5,2.0,です,"To be, Is",https://bunpro.jp/grammar_points/%E3%81%A7%E3%81%99,です
+20,S (ubiquitous),110.0,general,N5,5.0,これ,This,https://bunpro.jp/grammar_points/%E3%81%93%E3%82%8C,これ
+21,S (ubiquitous),110.0,general,N5,6.0,それ,That,https://bunpro.jp/grammar_points/%E3%81%9D%E3%82%8C,それ
+22,S (ubiquitous),110.0,general,N5,7.0,あれ,That (over there),https://bunpro.jp/grammar_points/%E3%81%82%E3%82%8C,あれ
+23,S (ubiquitous),110.0,general,N5,22.0,ここ,"Here, This place",https://bunpro.jp/grammar_points/%E3%81%93%E3%81%93,ここ
+24,S (ubiquitous),110.0,general,N5,23.0,そこ,"There, That place",https://bunpro.jp/grammar_points/%E3%81%9D%E3%81%93,そこ
+25,S (ubiquitous),110.0,general,N5,33.0,この,This,https://bunpro.jp/grammar_points/%E3%81%93%E3%81%AE,この
+26,S (ubiquitous),110.0,general,N5,34.0,その,That,https://bunpro.jp/grammar_points/%E3%81%9D%E3%81%AE,その
+27,S (ubiquitous),110.0,general,N5,35.0,あの,That (over there),https://bunpro.jp/grammar_points/%E3%81%82%E3%81%AE,あの
+28,S (ubiquitous),110.0,general,N5,42.0,する,"To do, To make into",https://bunpro.jp/grammar_points/%E3%81%99%E3%82%8B,する
+29,S (ubiquitous),110.0,general,N5,52.0,ので,"Because, So, Since, The reason being",https://bunpro.jp/grammar_points/%E3%81%AE%E3%81%A7,ので
+30,S (ubiquitous),110.0,general,N5,53.0,から,"Because, Since",https://bunpro.jp/grammar_points/%E3%81%8B%E3%82%89-because,から
+31,S (ubiquitous),110.0,general,N5,54.0,から,From,https://bunpro.jp/grammar_points/%E3%81%8B%E3%82%89,から
+32,S (ubiquitous),110.0,general,N5,78.0,どこ,Where,https://bunpro.jp/grammar_points/%E3%81%A9%E3%81%93,どこ
+33,S (ubiquitous),110.0,general,N5,83.0,もう,"Already, Anymore",https://bunpro.jp/grammar_points/%E3%82%82%E3%81%86,もう
+34,S (ubiquitous),110.0,general,N5,84.0,まだ,"Still, Not yet",https://bunpro.jp/grammar_points/%E3%81%BE%E3%81%A0,まだ
+35,S (ubiquitous),110.0,general,N5,87.0,たい,Want to do,https://bunpro.jp/grammar_points/%E3%81%9F%E3%81%84,たい
+36,S (ubiquitous),109.65,general,N5,24.0,あそこ,Over there,https://bunpro.jp/grammar_points/%E3%81%82%E3%81%9D%E3%81%93,あそこ
+37,S (ubiquitous),109.65,general,N5,30.0,だろう,"Right?, Probably, Isn't it?",https://bunpro.jp/grammar_points/%E3%81%A0%E3%82%8D%E3%81%86,だろう
+38,S (ubiquitous),109.65,general,N5,60.0,ている①,"Is, Am, Are (~ing)",https://bunpro.jp/grammar_points/%E3%81%A6%E3%81%84%E3%82%8B1,ている
+39,S (ubiquitous),109.65,general,N5,80.0,ている②,"State of being, Has (have) done",https://bunpro.jp/grammar_points/%E3%81%A6%E3%81%84%E3%82%8B2,ている
+40,S (ubiquitous),109.65,general,N5,116.0,ている③,"Has/have done, Is ~ing (Repetition)",https://bunpro.jp/grammar_points/%E3%81%A6%E3%81%84%E3%82%8B3,ている
+41,S (ubiquitous),109.3,general,N5,29.0,でしょう,"Right?, Probably, Isn't it?",https://bunpro.jp/grammar_points/%E3%81%A7%E3%81%97%E3%82%87%E3%81%86,でしょう
+42,S (ubiquitous),109.3,archaic/literary,N5,67.0,じゃない,"Is not, Isn't",https://bunpro.jp/grammar_points/%E3%81%98%E3%82%83%E3%81%AA%E3%81%84,じゃない
+43,S (ubiquitous),109.3,general,N5,125.0,けれども,"But, Although",https://bunpro.jp/grammar_points/%E3%81%91%E3%82%8C%E3%81%A9%E3%82%82,けれども
+44,S (ubiquitous),106.0,general,N4,136.0,と,"If, When, Whenever, And, [Conditional]",https://bunpro.jp/grammar_points/%E3%81%A8-conditional,と
+45,S (ubiquitous),106.0,general,N4,1.0,でも,"Or something,  Any... (with question words), No matter (who)",https://bunpro.jp/grammar_points/%E3%81%A7%E3%82%82,でも
+46,S (ubiquitous),106.0,general,N4,21.0,まで,"Even, To even, To the extent of",https://bunpro.jp/grammar_points/%E3%81%BE%E3%81%A7,まで
+47,S (ubiquitous),106.0,general,N4,31.0,より,"More than, Over",https://bunpro.jp/grammar_points/%E3%82%88%E3%82%8A,より
+48,S (ubiquitous),106.0,general,N4,35.0,のに,"Despite, Although, Even though",https://bunpro.jp/grammar_points/%E3%81%AE%E3%81%AB-despite,のに
+49,S (ubiquitous),106.0,general,N4,37.0,など,"Such as, Things like, Etc., And so on",https://bunpro.jp/grammar_points/%E3%81%AA%E3%81%A9,など
+50,S (ubiquitous),106.0,general,N4,47.0,かな,I wonder,https://bunpro.jp/grammar_points/%E3%81%8B%E3%81%AA,かな
+51,S (ubiquitous),106.0,general,N4,41.0,さ,Converting adjectives to nouns,https://bunpro.jp/grammar_points/%E3%81%95,さ
+52,S (ubiquitous),106.0,general,N4,142.0,かい,Question marker,https://bunpro.jp/grammar_points/%E3%81%8B%E3%81%84,かい
+53,S (ubiquitous),105.65,general,N4,7.0,ていく,"To ~ and go, To go on, To start",https://bunpro.jp/grammar_points/%E3%81%A6%E3%81%84%E3%81%8F,ていく
+54,S (ubiquitous),105.65,general,N4,8.0,てくる,"To come to, To become, To continue, To be starting to, Has been ~ing",https://bunpro.jp/grammar_points/%E3%81%A6%E3%81%8F%E3%82%8B,てくる
+55,S (ubiquitous),105.65,general,N4,65.0,ておく,To do something in advance,https://bunpro.jp/grammar_points/%E3%81%A6%E3%81%8A%E3%81%8F,ておく
+56,S (ubiquitous),105.65,general,N4,106.0,てみる,To try to,https://bunpro.jp/grammar_points/%E3%81%A6%E3%81%BF%E3%82%8B,てみる
+57,S (ubiquitous),105.65,general,N4,161.0,かしら,I wonder,https://bunpro.jp/grammar_points/%E3%81%8B%E3%81%97%E3%82%89,かしら
+58,S (ubiquitous),102.0,general,N3,31.0,のに,In order to,https://bunpro.jp/grammar_points/%E3%81%AE%E3%81%AB,のに
+59,S (ubiquitous),101.65,general,N3,11.0,あまり,So much...that,https://bunpro.jp/grammar_points/%E3%81%82%E3%81%BE%E3%82%8A,あまり
+60,S (ubiquitous),100.0,general,N0,5.0,ん (Slang),Slang abbreviation,https://bunpro.jp/grammar_points/%E3%82%93-slang,ん(Slang)
+61,S (ubiquitous),100.0,general,N0,6.0,つ (Slang),"Called, Said that (slang abbreviation)",https://bunpro.jp/grammar_points/%E3%81%A4-slang,つ(Slang)
+62,S (ubiquitous),100.0,general,N0,1.0,ぞ,"Strong emphasis (toward anyone), !",https://bunpro.jp/grammar_points/%E3%81%9E,ぞ
+63,S (ubiquitous),100.0,general,N0,2.0,ぜ,"Strong emphasis (friendly or familiar), !",https://bunpro.jp/grammar_points/%E3%81%9C,ぜ
+64,S (ubiquitous),100.0,general,N0,3.0,わ,"You know?, Oh?, Ever so, Oh how I ever (emphasis)",https://bunpro.jp/grammar_points/%E3%82%8F,わ
+65,S (ubiquitous),100.0,general,N0,10.0,やや,"A little bit, Marginally, Slightly",https://bunpro.jp/grammar_points/%E3%82%84%E3%82%84,やや
+66,S (ubiquitous),99.65,general,N0,8.0,がいい,"You should, It would be good to",https://bunpro.jp/grammar_points/%E3%81%8C%E3%81%84%E3%81%84,がいい
+67,S (ubiquitous),99.3,archaic/literary,N0,11.0,いずれも,"All (positive), None (negative), Both, Whatever, Whatsoever",https://bunpro.jp/grammar_points/%E3%81%84%E3%81%9A%E3%82%8C%E3%82%82,いずれも
+68,S (ubiquitous),98.0,general,N2,144.0,とか,"I heard that… something like, They said ... or something ",https://bunpro.jp/grammar_points/%E3%81%A8%E3%81%8B,とか
+69,A (very common),90.0,general,N5,76.0,だけ,"Only, Just",https://bunpro.jp/grammar_points/%E3%81%A0%E3%81%91,だけ
+70,A (very common),89.65,general,N5,81.0,てから,"Once...is done, Once...happens, After doing",https://bunpro.jp/grammar_points/%E3%81%A6%E3%81%8B%E3%82%89,てから
+71,A (very common),89.65,general,N5,92.0,くらい ①,"About, Approximately",https://bunpro.jp/grammar_points/%E3%81%8F%E3%82%89%E3%81%841,くらい
+72,A (very common),89.3,general,N5,86.0,てもいい,"It is alright/fine/okay even if, Can/may, ~ is also okay",https://bunpro.jp/grammar_points/%E3%81%A6%E3%82%82%E3%81%84%E3%81%84,てもいい
+73,A (very common),89.3,general,N5,105.0,Verb + てもいい,"It's okay to, It's alright to, Can/may",https://bunpro.jp/grammar_points/verb-%E3%81%A6%E3%82%82%E3%81%84%E3%81%84,Verb+てもいい
+74,A (very common),88.95,general,N5,55.0,けど・だけど,"But, However",https://bunpro.jp/grammar_points/%E3%81%91%E3%81%A9-%E3%81%A0%E3%81%91%E3%81%A9,けど・だけど
+75,A (very common),88.6,general,N5,108.0,てはいけない,"Must not, May not",https://bunpro.jp/grammar_points/%E3%81%A6%E3%81%AF%E3%81%84%E3%81%91%E3%81%AA%E3%81%84,てはいけない
+76,A (very common),88.6,general,N5,115.0,たことがある,Have done before,https://bunpro.jp/grammar_points/%E3%81%9F%E3%81%93%E3%81%A8%E3%81%8C%E3%81%82%E3%82%8B,たことがある
+77,A (very common),88.6,archaic/literary,N5,68.0,じゃなかった,"Was not, Wasn't",https://bunpro.jp/grammar_points/%E3%81%98%E3%82%83%E3%81%AA%E3%81%8B%E3%81%A3%E3%81%9F,じゃなかった
+78,A (very common),88.25,general,N5,36.0,～んです・のです,"Explanatory, Emphasis, The fact is",https://bunpro.jp/grammar_points/-%E3%82%93%E3%81%A7%E3%81%99-%E3%81%AE%E3%81%A7%E3%81%99,~んです・のです
+79,A (very common),88.25,archaic/literary,N5,113.0,なくちゃ・なきゃ,"Must do, Have to do",https://bunpro.jp/grammar_points/%E3%81%AA%E3%81%8F%E3%81%A1%E3%82%83-%E3%81%AA%E3%81%8D%E3%82%83,なくちゃ・なきゃ
+80,A (very common),87.9,general,N5,109.0,なくてはいけない,"Must do, Have to do",https://bunpro.jp/grammar_points/%E3%81%AA%E3%81%8F%E3%81%A6%E3%81%AF%E3%81%84%E3%81%91%E3%81%AA%E3%81%84,なくてはいけない
+81,A (very common),87.9,general,N5,110.0,なくてはならない,"Must do, Have to do",https://bunpro.jp/grammar_points/%E3%81%AA%E3%81%8F%E3%81%A6%E3%81%AF%E3%81%AA%E3%82%89%E3%81%AA%E3%81%84,なくてはならない
+82,A (very common),86.85,general,N5,98.0,のなかで～がいちばん～,"Out of ~, ~ is the best/most ~",https://bunpro.jp/grammar_points/%E3%81%AE%E3%81%AA%E3%81%8B%E3%81%A7-%E3%81%8C%E3%81%84%E3%81%A1%E3%81%B0%E3%82%93,のなかで~がいちばん~
+83,A (very common),86.0,general,N4,49.0,ば,"If… then, (Conditional)",https://bunpro.jp/grammar_points/%E3%81%B0,ば
+84,A (very common),86.0,general,N4,39.0,こと,Converting a verb into a noun,https://bunpro.jp/grammar_points/%E3%81%93%E3%81%A8,こと
+85,A (very common),86.0,general,N4,40.0,そう,"Look like, Appear, Seem, Have a feeling that",https://bunpro.jp/grammar_points/%E3%81%9D%E3%81%86,そう
+86,A (very common),86.0,general,N4,44.0,Verb[よう],"Let's, I shall (Casual volitional)",https://bunpro.jp/grammar_points/%E3%82%88%E3%81%86-%E3%81%8A%E3%81%86,Verb[よう]
+87,A (very common),86.0,general,N4,50.0,なら,"Were it, If, If it's the case, As for (Conditional)",https://bunpro.jp/grammar_points/%E3%81%AA%E3%82%89,なら
+88,A (very common),86.0,general,N4,97.0,ても,"Even if, Even though",https://bunpro.jp/grammar_points/%E3%81%A6%E3%82%82,ても
+89,A (very common),86.0,general,N4,126.0,たら,"When, From when, Just when, If",https://bunpro.jp/grammar_points/%E3%81%9F%E3%82%89,たら
+90,A (very common),86.0,archaic/literary,N4,19.0,とき,"When, At the time of",https://bunpro.jp/grammar_points/%E3%81%A8%E3%81%8D,とき
+91,A (very common),85.65,general,N4,10.0,だけで,"Just by, Just with",https://bunpro.jp/grammar_points/%E3%81%A0%E3%81%91%E3%81%A7,だけで
+92,A (very common),85.65,general,N4,27.0,あとで,"After, Later",https://bunpro.jp/grammar_points/%E3%81%82%E3%81%A8%E3%81%A7,あとで
+93,A (very common),85.65,general,N4,32.0,ごとに,"Each, Every",https://bunpro.jp/grammar_points/%E3%81%94%E3%81%A8%E3%81%AB,ごとに
+94,A (very common),85.65,general,N4,38.0,みたい,"Like, Similar to, Resembling",https://bunpro.jp/grammar_points/%E3%81%BF%E3%81%9F%E3%81%84,みたい
+95,A (very common),85.65,general,N4,45.0,ようだ,"It seems that, It appears that, It looks like",https://bunpro.jp/grammar_points/%E3%82%88%E3%81%86%E3%81%A0,ようだ
+96,A (very common),85.65,general,N4,60.0,といい,"I hope, I wish, You should, It would be good",https://bunpro.jp/grammar_points/%E3%81%A8%E3%81%84%E3%81%84,といい
+97,A (very common),85.65,general,N4,64.0,らしい ①,"Seems like, Apparently, I heard",https://bunpro.jp/grammar_points/%E3%82%89%E3%81%97%E3%81%841,らしい
+98,A (very common),85.65,general,N4,137.0,ないと,"Must, Have to",https://bunpro.jp/grammar_points/%E3%81%AA%E3%81%84%E3%81%A8,ないと
+99,A (very common),85.65,general,N4,146.0,ながら,"While ~ing, During, As",https://bunpro.jp/grammar_points/%E3%81%AA%E3%81%8C%E3%82%89,ながら
+100,A (very common),85.65,general,N4,160.0,ように,"So that, In order to, In such a way that",https://bunpro.jp/grammar_points/%E3%82%88%E3%81%86%E3%81%AB,ように
+101,A (very common),85.65,general,N4,162.0,らしい ②,"typical of, -ish・like, appropriate for, becoming of, befitting",https://bunpro.jp/grammar_points/%E3%82%89%E3%81%97%E3%81%842,らしい
+102,A (very common),85.65,archaic/literary,N4,80.0,ずっと ①,"Continuously, All throughout, Entire time, Ever (since), The whole time, All the way",https://bunpro.jp/grammar_points/%E3%81%9A%E3%81%A3%E3%81%A81,ずっと
+103,A (very common),85.65,archaic/literary,N4,134.0,はずだ,"Bound to (be), Expected to (be), Should be (able)",https://bunpro.jp/grammar_points/%E3%81%AF%E3%81%9A%E3%81%A0,はずだ
+104,A (very common),85.3,general,N4,30.0,とうとう,"Finally, After all",https://bunpro.jp/grammar_points/%E3%81%A8%E3%81%86%E3%81%A8%E3%81%86,とうとう
+105,A (very common),85.3,general,N4,36.0,とおもう,I think,https://bunpro.jp/grammar_points/%E3%81%A8%E3%81%8A%E3%82%82%E3%81%86,とおもう
+106,A (very common),85.3,general,N4,43.0,そういう,"Like that, Kind of",https://bunpro.jp/grammar_points/%E3%81%9D%E3%81%86%E3%81%84%E3%81%86,そういう
+107,A (very common),85.3,general,N4,74.0,ほとんど,"Almost all, Most, Hardly any, Few (Adverbial noun)",https://bunpro.jp/grammar_points/%E3%81%BB%E3%81%A8%E3%82%93%E3%81%A9,ほとんど
+108,A (very common),85.3,general,N4,87.0,Number + しか〜ない,"No more than, Not exceeding, As few as・as little as, Only",https://bunpro.jp/grammar_points/number-%E3%81%97%E3%81%8B-%E3%81%AA%E3%81%84,Number+しかない
+109,A (very common),85.3,general,N4,92.0,ばあいは,"In the event of, In the case of",https://bunpro.jp/grammar_points/%E3%81%B0%E3%81%82%E3%81%84%E3%81%AF,ばあいは
+110,A (very common),85.3,general,N4,110.0,てもらう,"To get someone to do, To have someone do",https://bunpro.jp/grammar_points/%E3%81%A6%E3%82%82%E3%82%89%E3%81%86,てもらう
+111,A (very common),85.3,general,N4,131.0,たとえば,For example,https://bunpro.jp/grammar_points/%E3%81%9F%E3%81%A8%E3%81%88%E3%81%B0,たとえば
+112,A (very common),85.3,general,N4,157.0,たばかり,"Just did, Something just happened",https://bunpro.jp/grammar_points/%E3%81%9F%E3%81%B0%E3%81%8B%E3%82%8A,たばかり
+113,A (very common),85.3,general,N4,164.0,とみえる,"It seems that, It can be deduced, One can conclude that",https://bunpro.jp/grammar_points/%E3%81%A8%E3%81%BF%E3%81%88%E3%82%8B,とみえる
+114,A (very common),85.3,general,N4,168.0,〜でも 〜でも,"Whether ~ or, Neither ~ or",https://bunpro.jp/grammar_points/%E3%81%A7%E3%82%82-%E3%81%A7%E3%82%82,でもでも
+115,A (very common),85.3,general,N4,172.0,それでも,"But still, And yet, Even so, Nevertheless",https://bunpro.jp/grammar_points/%E3%81%9D%E3%82%8C%E3%81%A7%E3%82%82,それでも
+116,A (very common),85.3,general,N4,173.0,たらどう,"Why don't you...?, What if you did...?",https://bunpro.jp/grammar_points/%E3%81%9F%E3%82%89%E3%81%A9%E3%81%86,たらどう
+117,A (very common),85.3,archaic/literary,N4,68.0,ときいた,I heard that,https://bunpro.jp/grammar_points/%E3%81%A8%E3%81%8D%E3%81%84%E3%81%9F,ときいた
+118,B (common),84.95,general,N4,18.0,ということ,"~ing, The ~ that ~ (Nominalization)",https://bunpro.jp/grammar_points/%E3%81%A8%E3%81%84%E3%81%86%E3%81%93%E3%81%A8,ということ
+119,B (common),84.95,general,N4,34.0,るところだ,"About to, On the verge of",https://bunpro.jp/grammar_points/%E3%82%8B%E3%81%A8%E3%81%93%E3%82%8D%E3%81%A0,るところだ
+120,B (common),84.95,general,N4,42.0,とか～とか,"Among other things, For example, Such as",https://bunpro.jp/grammar_points/%E3%81%A8%E3%81%8B-%E3%81%A8%E3%81%8B,とか~とか
+121,B (common),84.95,general,N4,61.0,ようになる,"To reach the point that, To come to be that, To turn into",https://bunpro.jp/grammar_points/%E3%82%88%E3%81%86%E3%81%AB%E3%81%AA%E3%82%8B,ようになる
+122,B (common),84.95,general,N4,128.0,がひつよう,"Need, Necessary",https://bunpro.jp/grammar_points/%E3%81%8C%E3%81%B2%E3%81%A4%E3%82%88%E3%81%86,がひつよう
+123,B (common),84.95,general,N4,139.0,しか～ない,"There's only, Nothing but",https://bunpro.jp/grammar_points/%E3%81%97%E3%81%8B-%E3%81%AA%E3%81%84,しか~ない
+124,B (common),84.95,general,N4,140.0,だけでなく,Not only… but also,https://bunpro.jp/grammar_points/%E3%81%A0%E3%81%91%E3%81%A7%E3%81%AA%E3%81%8F,だけでなく
+125,B (common),84.95,general,N4,147.0,たところだ,"Just finished doing, Was just doing",https://bunpro.jp/grammar_points/%E3%81%9F%E3%81%A8%E3%81%93%E3%82%8D%E3%81%A0,たところだ
+126,B (common),84.95,general,N4,150.0,ようにする,"To try to, To make sure to, To endeavor to",https://bunpro.jp/grammar_points/%E3%82%88%E3%81%86%E3%81%AB%E3%81%99%E3%82%8B,ようにする
+127,B (common),84.95,general,N4,154.0,ようにいう,"To tell, request, or order to do (in such a way)",https://bunpro.jp/grammar_points/%E3%82%88%E3%81%86%E3%81%AB%E3%81%84%E3%81%86,ようにいう
+128,B (common),84.95,general,N4,177.0,ばよかった,"Should have, I wish, It would have been better to",https://bunpro.jp/grammar_points/%E3%81%B0%E3%82%88%E3%81%8B%E3%81%A3%E3%81%9F,ばよかった
+129,B (common),84.95,archaic/literary,N4,63.0,じゃないか,"Isn't it?, Is it not?",https://bunpro.jp/grammar_points/%E3%81%98%E3%82%83%E3%81%AA%E3%81%84%E3%81%8B,じゃないか
+130,B (common),84.95,archaic/literary,N4,138.0,はずがない,"Hardly possible, Cannot be, Highly unlikely, Improbable",https://bunpro.jp/grammar_points/%E3%81%AF%E3%81%9A%E3%81%8C%E3%81%AA%E3%81%84,はずがない
+131,B (common),84.6,general,N4,54.0,かもしれない,"Might, Maybe, Probably",https://bunpro.jp/grammar_points/%E3%81%8B%E3%82%82%E3%81%97%E3%82%8C%E3%81%AA%E3%81%84,かもしれない
+132,B (common),84.6,general,N4,56.0,そうに・そうな,"Seem, Look like, Sound",https://bunpro.jp/grammar_points/%E3%81%9D%E3%81%86%E3%81%AB-%E3%81%9D%E3%81%86%E3%81%AA,そうに・そうな
+133,B (common),84.6,general,N4,83.0,ように・ような,"As・like, Just like",https://bunpro.jp/grammar_points/%E3%82%88%E3%81%86%E3%81%AB-%E3%82%88%E3%81%86%E3%81%AA,ように・ような
+134,B (common),84.6,general,N4,105.0,なくてもいい,Don't have to,https://bunpro.jp/grammar_points/%E3%81%AA%E3%81%8F%E3%81%A6%E3%82%82%E3%81%84%E3%81%84,なくてもいい
+135,B (common),84.6,general,N4,156.0,ようにいのる,"Pray that/for, Hope that/for, Keep fingers crossed that",https://bunpro.jp/grammar_points/%E3%82%88%E3%81%86%E3%81%AB%E3%81%84%E3%81%AE%E3%82%8B,ようにいのる
+136,B (common),84.6,general,N4,175.0,とされている,"To be considered, To be deemed, Be regarded as, Be accepted as, To be said, To be accredited with",https://bunpro.jp/grammar_points/%E3%81%A8%E3%81%95%E3%82%8C%E3%81%A6%E3%81%84%E3%82%8B,とされている
+137,B (common),84.6,archaic/literary,N4,141.0,ことができる,"Can, Be able to",https://bunpro.jp/grammar_points/%E3%81%93%E3%81%A8%E3%81%8C%E3%81%A7%E3%81%8D%E3%82%8B,ことができる
+138,B (common),84.25,general,N4,96.0,といってもいい,"You could say, You might say",https://bunpro.jp/grammar_points/%E3%81%A8%E3%81%84%E3%81%A3%E3%81%A6%E3%82%82%E3%81%84%E3%81%84,といってもいい
+139,B (common),84.25,general,N4,98.0,てしまう・ちゃう,"To do something by accident, To finish completely・totally, Unfortunately",https://bunpro.jp/grammar_points/%E3%81%A6%E3%81%97%E3%81%BE%E3%81%86-%E3%81%A1%E3%82%83%E3%81%86,てしまう・ちゃう
+140,B (common),84.25,general,N4,104.0,ているあいだに,"While, During the time that ~",https://bunpro.jp/grammar_points/%E3%81%A6%E3%81%84%E3%82%8B%E3%81%82%E3%81%84%E3%81%A0%E3%81%AB,ているあいだに
+141,B (common),84.25,general,N4,130.0,ひつようがある,It is necessary to,https://bunpro.jp/grammar_points/%E3%81%B2%E3%81%A4%E3%82%88%E3%81%86%E3%81%8C%E3%81%82%E3%82%8B,ひつようがある
+142,B (common),84.25,general,N4,148.0,ているところだ,In the process of doing ~ right now/at this moment,https://bunpro.jp/grammar_points/%E3%81%A6%E3%81%84%E3%82%8B%E3%81%A8%E3%81%93%E3%82%8D%E3%81%A0,ているところだ
+143,B (common),84.25,general,N4,176.0,といわれている,"It is said that, Is known as",https://bunpro.jp/grammar_points/%E3%81%A8%E3%81%84%E3%82%8F%E3%82%8C%E3%81%A6%E3%81%84%E3%82%8B,といわれている
+144,B (common),83.9,general,N4,55.0,みたいに・みたいな,"Like, Similar to, Resembling",https://bunpro.jp/grammar_points/%E3%81%BF%E3%81%9F%E3%81%84%E3%81%AB-%E3%81%BF%E3%81%9F%E3%81%84%E3%81%AA,みたいに・みたいな
+145,B (common),83.9,general,N4,57.0,のように・のような,"Like (Noun), Similar to (Noun)",https://bunpro.jp/grammar_points/%E3%81%AE%E3%82%88%E3%81%86%E3%81%AB-%E3%81%AE%E3%82%88%E3%81%86%E3%81%AA,のように・のような
+146,B (common),83.9,general,N4,103.0,ように～てほしい,"Want ~ to ~ like ~, Want ~ to be able to ~, Want ~ to ~ in the way of ~",https://bunpro.jp/grammar_points/%E3%82%88%E3%81%86%E3%81%AB-%E3%81%A6%E3%81%BB%E3%81%97%E3%81%84,ように~てほしい
+147,B (common),83.9,general,N4,133.0,んだけど・んですが,"But..., And...",https://bunpro.jp/grammar_points/%E3%82%93%E3%81%A0%E3%81%91%E3%81%A9-%E3%82%93%E3%81%A7%E3%81%99%E3%81%8C,んだけど・んですが
+148,B (common),83.9,general,N4,149.0,と～と、どちらが,Between ~ which one,https://bunpro.jp/grammar_points/%E3%81%A8-%E3%81%A8-%E3%81%A9%E3%81%A1%E3%82%89%E3%81%8C,と~と、どちらが
+149,B (common),83.9,general,N4,151.0,なければいけない,"Must do, Have to do",https://bunpro.jp/grammar_points/%E3%81%AA%E3%81%91%E3%82%8C%E3%81%B0%E3%81%84%E3%81%91%E3%81%AA%E3%81%84,なければいけない
+150,B (common),83.9,general,N4,152.0,なければならない,"Must do, Have to do",https://bunpro.jp/grammar_points/%E3%81%AA%E3%81%91%E3%82%8C%E3%81%B0%E3%81%AA%E3%82%89%E3%81%AA%E3%81%84,なければならない
+151,B (common),83.55,general,N4,114.0,てくれてありがとう,Thank you for ~ ing,https://bunpro.jp/grammar_points/%E3%81%A6%E3%81%8F%E3%82%8C%E3%81%A6%E3%81%82%E3%82%8A%E3%81%8C%E3%81%A8%E3%81%86,てくれてありがとう
+152,B (common),83.55,polite/honorific,N4,125.0,ていただけませんか,"Won't you, Could you please (Humble request)",https://bunpro.jp/grammar_points/%E3%81%A6%E3%81%84%E3%81%9F%E3%81%A0%E3%81%91%E3%81%BE%E3%81%9B%E3%82%93%E3%81%8B,ていただけませんか
+153,B (common),83.55,archaic/literary,N4,145.0,でできる・からできる,"Made of, Made from, Produced from, Come from",https://bunpro.jp/grammar_points/%E3%81%A7%E3%81%A7%E3%81%8D%E3%82%8B-%E3%81%8B%E3%82%89%E3%81%A7%E3%81%8D%E3%82%8B,でできる・からできる
+154,B (common),83.2,general,N4,58.0,〜ようと思う・〜おうと思う,"I think I will, I think I shall, Going to, Gonna (Volitional + と思う)",https://bunpro.jp/grammar_points/%E3%82%88%E3%81%86%E3%81%A8%E6%80%9D%E3%81%86-%E3%81%8A%E3%81%86%E3%81%A8%E6%80%9D%E3%81%86,ようと思う・おうと思う
+155,B (common),83.2,general,N4,174.0,とかんがえられている,"Is considered, Is thought of as",https://bunpro.jp/grammar_points/%E3%81%A8%E3%81%8B%E3%82%93%E3%81%8C%E3%81%88%E3%82%89%E3%82%8C%E3%81%A6%E3%81%84%E3%82%8B,とかんがえられている
+156,B (common),82.85,general,N4,115.0,てくれない・てもらえない,"Won't you?, Will you?, Could you?, Can you?, Would you?",https://bunpro.jp/grammar_points/%E3%81%A6%E3%81%8F%E3%82%8C%E3%81%AA%E3%81%84-%E3%81%A6%E3%82%82%E3%82%89%E3%81%88%E3%81%AA%E3%81%84,てくれない・てもらえない
+157,B (common),82.0,general,N3,27.0,ほど,"The more, About, To the extent that, So much… that",https://bunpro.jp/grammar_points/%E3%81%BB%E3%81%A9,ほど
+158,B (common),82.0,archaic/literary,N3,7.0,べき,"Must, Should , Ought to",https://bunpro.jp/grammar_points/%E3%81%B9%E3%81%8D,べき
+159,B (common),81.65,general,N3,1.0,ばいい,"Can, Should, It'd be good if",https://bunpro.jp/grammar_points/%E3%81%B0%E3%81%84%E3%81%84,ばいい
+160,B (common),81.65,general,N3,4.0,の間に,"While, During, Between, Period",https://bunpro.jp/grammar_points/%E3%81%AE%E9%96%93%E3%81%AB,の間に
+161,B (common),81.65,general,N3,5.0,うちに,"While, During",https://bunpro.jp/grammar_points/%E3%81%86%E3%81%A1%E3%81%AB,うちに
+162,B (common),81.65,general,N3,16.0,ことだ,"Should, Ought",https://bunpro.jp/grammar_points/%E3%81%93%E3%81%A8%E3%81%A0,ことだ
+163,B (common),81.65,general,N3,17.0,そうだ,"I heard that, It is said that",https://bunpro.jp/grammar_points/%E3%81%9D%E3%81%86%E3%81%A0,そうだ
+164,B (common),81.65,general,N3,18.0,すると,"Having done..., If...is done..., (And/just) then, Thereupon, If so",https://bunpro.jp/grammar_points/%E3%81%99%E3%82%8B%E3%81%A8,すると
+165,B (common),81.65,general,N3,28.0,ば〜ほど,The more…the more,https://bunpro.jp/grammar_points/%E3%81%B0-%E3%81%BB%E3%81%A9,ばほど
+166,B (common),81.65,general,N3,32.0,ため(に),"For, For the sake of, In order to",https://bunpro.jp/grammar_points/%E3%81%9F%E3%82%81-%E3%81%AB,ため(に)
+167,B (common),81.65,general,N3,33.0,ために,"Due to, Because of, As a result of",https://bunpro.jp/grammar_points/%E3%81%9F%E3%82%81%E3%81%AB,ために
+168,B (common),81.65,general,N3,34.0,という,"Called, Named, Known as, As much as",https://bunpro.jp/grammar_points/%E3%81%A8%E3%81%84%E3%81%86-called,という
+169,B (common),81.65,general,N3,39.0,ものだ,"Supposed to, Should, That's the way it is",https://bunpro.jp/grammar_points/%E3%82%82%E3%81%AE%E3%81%A0,ものだ
+170,B (common),81.65,general,N3,48.0,ばかり,"Just, Only, Nothing but",https://bunpro.jp/grammar_points/%E3%81%B0%E3%81%8B%E3%82%8A,ばかり
+171,B (common),81.65,general,N3,73.0,わけだ,"For that reason, No wonder, As you'd expect, Naturally, Thus, This is why",https://bunpro.jp/grammar_points/%E3%82%8F%E3%81%91%E3%81%A0,わけだ
+172,B (common),81.65,general,N3,82.0,くらい ②,"To the extent that, So…that, About the only thing that...",https://bunpro.jp/grammar_points/%E3%81%8F%E3%82%89%E3%81%842,くらい
+173,B (common),81.65,general,N3,88.0,まま(に),"As is, While remaining, Left in a state",https://bunpro.jp/grammar_points/%E3%81%BE%E3%81%BE,まま(に)
+174,B (common),81.65,general,N3,96.0,として,"As (i.e. in the role of), For",https://bunpro.jp/grammar_points/%E3%81%A8%E3%81%97%E3%81%A6,として
+175,B (common),81.65,general,N3,108.0,さえ〜ば,"If only…then, As long as..., Provided..., Only thing ... needs for ... is ...",https://bunpro.jp/grammar_points/%E3%81%95%E3%81%88-%E3%81%B0,さえば
+176,B (common),81.65,general,N3,129.0,ことに,"Extremely, Especially, To my ...",https://bunpro.jp/grammar_points/%E3%81%93%E3%81%A8%E3%81%AB,ことに
+177,B (common),81.65,general,N3,130.0,ことか,"How…, What..., God knows...",https://bunpro.jp/grammar_points/%E3%81%93%E3%81%A8%E3%81%8B,ことか
+178,B (common),81.65,general,N3,150.0,Verb[volitional]とする,"Try to, Attempt to, To be about to",https://bunpro.jp/grammar_points/verb-volitional%E3%81%A8%E3%81%99%E3%82%8B,Verb[volitional]とする
+179,B (common),81.65,general,N3,158.0,と共に,"Together with, At the same time,  As well as",https://bunpro.jp/grammar_points/%E3%81%A8%E5%85%B1%E3%81%AB,と共に
+180,B (common),81.65,general,N3,195.0,とおり,"In that way, Exactly, Precisely, Just as",https://bunpro.jp/grammar_points/%E3%81%A8%E3%81%8A%E3%82%8A,とおり
+181,B (common),81.65,general,N3,204.0,せいで,"Because of, Due to, Blame",https://bunpro.jp/grammar_points/%E3%81%9B%E3%81%84%E3%81%A7,せいで
+182,B (common),81.65,archaic/literary,N3,135.0,ずっと ②,"By far, Way, Far...er, Far...more",https://bunpro.jp/grammar_points/%E3%81%9A%E3%81%A3%E3%81%A82,ずっと
+183,B (common),81.3,general,N3,25.0,ところが,"Even so, However, Even though, But",https://bunpro.jp/grammar_points/%E3%81%A8%E3%81%93%E3%82%8D%E3%81%8C,ところが
+184,B (common),81.3,general,N3,26.0,ところで,"By the way, Incidentally",https://bunpro.jp/grammar_points/%E3%81%A8%E3%81%93%E3%82%8D%E3%81%A7,ところで
+185,B (common),81.3,general,N3,38.0,もの・もん,"Because, Cause",https://bunpro.jp/grammar_points/%E3%82%82%E3%81%AE-%E3%82%82%E3%82%93,もの・もん
+186,B (common),81.3,general,N3,42.0,おかげで,"Thanks to, Because of",https://bunpro.jp/grammar_points/%E3%81%8A%E3%81%8B%E3%81%92%E3%81%A7,おかげで
+187,B (common),81.3,general,N3,47.0,からこそ,"Emphasized because, Precisely because",https://bunpro.jp/grammar_points/%E3%81%8B%E3%82%89%E3%81%93%E3%81%9D,からこそ
+188,B (common),81.3,general,N3,49.0,ばかりだ,"(Only) continue to, Keep on -ing, More and more",https://bunpro.jp/grammar_points/%E3%81%B0%E3%81%8B%E3%82%8A%E3%81%A0,ばかりだ
+189,B (common),81.3,general,N3,50.0,ばかりに,"Simply because, Only because, Just because, Simply on account of",https://bunpro.jp/grammar_points/%E3%81%B0%E3%81%8B%E3%82%8A%E3%81%AB,ばかりに
+190,B (common),81.3,general,N3,53.0,ことなの,"(A) is (Description of A), (A) means that (Description of A)",https://bunpro.jp/grammar_points/%E3%81%93%E3%81%A8%E3%81%AA%E3%81%AE,ことなの
+191,B (common),81.3,general,N3,58.0,といえば,"Speaking of, If it were the case that",https://bunpro.jp/grammar_points/%E3%81%A8%E3%81%84%E3%81%88%E3%81%B0,といえば
+192,B (common),81.3,general,N3,61.0,について,"Concerning, About, Regarding",https://bunpro.jp/grammar_points/%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6,について
+193,B (common),81.3,general,N3,63.0,と言える,"Would or could say that..., Can probably say that..., Fair to say that...",https://bunpro.jp/grammar_points/%E3%81%A8%E8%A8%80%E3%81%88%E3%82%8B,と言える
+194,B (common),81.3,general,N3,75.0,と同時に,"At the same time as, The instant, The moment, As well as",https://bunpro.jp/grammar_points/%E3%81%A8%E5%90%8C%E6%99%82%E3%81%AB,と同時に
+195,B (common),81.3,formal/written,N3,81.0,に対して,"In contrast to, While, In regard to, Whereas",https://bunpro.jp/grammar_points/%E3%81%AB%E5%AF%BE%E3%81%97%E3%81%A6,に対して
+196,B (common),81.3,general,N3,90.0,しかない,"Have no choice but, Only, Just",https://bunpro.jp/grammar_points/%E3%81%97%E3%81%8B%E3%81%AA%E3%81%84,しかない
+197,B (common),81.3,general,N3,98.0,にしても,"Even though, Even if, Even when, Also",https://bunpro.jp/grammar_points/%E3%81%AB%E3%81%97%E3%81%A6%E3%82%82,にしても
+198,B (common),81.3,general,N3,102.0,ことから,From the fact that,https://bunpro.jp/grammar_points/%E3%81%93%E3%81%A8%E3%81%8B%E3%82%89,ことから
+199,B (common),81.3,general,N3,109.0,たものだ,Used to,https://bunpro.jp/grammar_points/%E3%81%9F%E3%82%82%E3%81%AE%E3%81%A0,たものだ
+200,B (common),81.3,general,N3,122.0,だけしか," To emphasize '~only', Nothing but",https://bunpro.jp/grammar_points/%E3%81%A0%E3%81%91%E3%81%97%E3%81%8B,だけしか
+201,B (common),81.3,general,N3,133.0,で言うと,"In, Of, According to",https://bunpro.jp/grammar_points/%E3%81%A7%E8%A8%80%E3%81%86%E3%81%A8,で言うと
+202,B (common),81.3,general,N3,137.0,もっとも,"Although, But, However, For all that, Provided that",https://bunpro.jp/grammar_points/%E3%82%82%E3%81%A3%E3%81%A8%E3%82%82,もっとも
+203,B (common),81.3,general,N3,142.0,と並んで,"In line with, Comparable with, Along with, Just like, As … as",https://bunpro.jp/grammar_points/%E3%81%A8%E4%B8%A6%E3%82%93%E3%81%A7,と並んで
+204,B (common),81.3,general,N3,151.0,Verb[volitional] + としたが,"Tried to ~ but ~, Was about to ~ but ~, Was going to ~ but ~",https://bunpro.jp/grammar_points/verb-volitional-%E3%81%A8%E3%81%97%E3%81%9F%E3%81%8C,Verb[volitional]+としたが
+205,B (common),81.3,general,N3,165.0,ながらも,"But, Even while, Even though, Despite, Although",https://bunpro.jp/grammar_points/%E3%81%AA%E3%81%8C%E3%82%89%E3%82%82,ながらも
+206,B (common),81.3,general,N3,196.0,でもある,"Be also, It also is",https://bunpro.jp/grammar_points/%E3%81%A7%E3%82%82%E3%81%82%E3%82%8B,でもある
+207,B (common),80.95,general,N3,6.0,ないうちに,"Before it becomes, Before ~ occurs, Without",https://bunpro.jp/grammar_points/%E3%81%AA%E3%81%84%E3%81%86%E3%81%A1%E3%81%AB,ないうちに
+208,B (common),80.95,general,N3,19.0,そうすると,"Having done that..., If that is done..., (And/just) then, Thereupon, If so",https://bunpro.jp/grammar_points/%E3%81%9D%E3%81%86%E3%81%99%E3%82%8B%E3%81%A8,そうすると
+209,B (common),80.95,general,N3,29.0,ほど～ない,"Is not as…as, Isn't... like..., Not to the extent of...",https://bunpro.jp/grammar_points/%E3%81%BB%E3%81%A9%EF%BD%9E%E3%81%AA%E3%81%84,ほど~ない
+210,B (common),80.95,general,N3,36.0,というのは,"~ Known as ~ is, ~ Called ~ is, ~ Means ~, Because",https://bunpro.jp/grammar_points/%E3%81%A8%E3%81%84%E3%81%86%E3%81%AE%E3%81%AF,というのは
+211,B (common),80.95,general,N3,51.0,ことがある,"Something is possible, Sometimes, Occasionally, There are times when",https://bunpro.jp/grammar_points/%E3%81%93%E3%81%A8%E3%81%8C%E3%81%82%E3%82%8B,ことがある
+212,B (common),80.95,general,N3,52.0,ことにする,"To decide on, Have decided to",https://bunpro.jp/grammar_points/%E3%81%93%E3%81%A8%E3%81%AB%E3%81%99%E3%82%8B,ことにする
+213,B (common),80.95,general,N3,54.0,ことになる,"It will end up being, It is the result of, It has been decided that",https://bunpro.jp/grammar_points/%E3%81%93%E3%81%A8%E3%81%AB%E3%81%AA%E3%82%8B,ことになる
+214,B (common),80.95,general,N3,56.0,ことはない,"There is no need to, Never happens",https://bunpro.jp/grammar_points/%E3%81%93%E3%81%A8%E3%81%AF%E3%81%AA%E3%81%84,ことはない
+215,B (common),80.95,general,N3,65.0,そのため(に),"For that reason, Because of that, To that end",https://bunpro.jp/grammar_points/%E3%81%9D%E3%81%AE%E3%81%9F%E3%82%81-%E3%81%AB,そのため(に)
+216,B (common),80.95,general,N3,69.0,いくら〜でも,No matter how (much),https://bunpro.jp/grammar_points/%E3%81%84%E3%81%8F%E3%82%89-%E3%81%A7%E3%82%82,いくらでも
+217,B (common),80.95,general,N3,94.0,わけがない,"There is no way, There is no reason, It is impossible, Cannot be",https://bunpro.jp/grammar_points/%E3%82%8F%E3%81%91%E3%81%8C%E3%81%AA%E3%81%84,わけがない
+218,B (common),80.95,general,N3,100.0,から言うと,"Speaking in terms of, From the point of view of",https://bunpro.jp/grammar_points/%E3%81%8B%E3%82%89%E8%A8%80%E3%81%86%E3%81%A8,から言うと
+219,B (common),80.95,general,N3,103.0,というより,"...is more of a... than a..., Rather than saying that...",https://bunpro.jp/grammar_points/%E3%81%A8%E3%81%84%E3%81%86%E3%82%88%E3%82%8A,というより
+220,B (common),80.95,general,N3,128.0,たとえ〜ても,"Even if…is the case, Supposing that",https://bunpro.jp/grammar_points/%E3%81%9F%E3%81%A8%E3%81%88-%E3%81%A6%E3%82%82,たとえても
+221,B (common),80.95,general,N3,143.0,に違いない,"There is no doubt that, I'm sure",https://bunpro.jp/grammar_points/%E3%81%AB%E9%81%95%E3%81%84%E3%81%AA%E3%81%84,に違いない
+222,B (common),80.95,general,N3,153.0,そうもない,"Very unlikely to, Does not seem that, Does not appear that",https://bunpro.jp/grammar_points/%E3%81%9D%E3%81%86%E3%82%82%E3%81%AA%E3%81%84,そうもない
+223,B (common),80.95,general,N3,161.0,たとたんに,"The instant or moment, As soon as, Just as",https://bunpro.jp/grammar_points/%E3%81%9F%E3%81%A8%E3%81%9F%E3%82%93%E3%81%AB,たとたんに
+224,B (common),80.95,general,N3,193.0,でよければ,"If it is alright, If you don't mind, If you would like, If possible",https://bunpro.jp/grammar_points/%E3%81%A7%E3%82%88%E3%81%91%E3%82%8C%E3%81%B0,でよければ
+225,B (common),80.95,general,N3,197.0,どうしても,"Regardless of, No matter what",https://bunpro.jp/grammar_points/%E3%81%A9%E3%81%86%E3%81%97%E3%81%A6%E3%82%82,どうしても
+226,B (common),80.95,archaic/literary,N3,93.0,んじゃない,"Don't, Mustn't, Shouldn't have",https://bunpro.jp/grammar_points/%E3%82%93%E3%81%98%E3%82%83%E3%81%AA%E3%81%84,んじゃない
+227,B (common),80.6,general,N3,35.0,ということだ,"I heard that, Rumor has it that, It is said that, It means that",https://bunpro.jp/grammar_points/%E3%81%A8%E3%81%84%E3%81%86%E3%81%93%E3%81%A8%E3%81%A0,ということだ
+228,B (common),80.6,general,N3,43.0,にもとづいて,"Based on, In accordance with",https://bunpro.jp/grammar_points/%E3%81%AB%E3%82%82%E3%81%A8%E3%81%A5%E3%81%84%E3%81%A6,にもとづいて
+229,B (common),80.6,general,N3,45.0,なぜなら〜から,"Because, The reason is, That is because",https://bunpro.jp/grammar_points/%E3%81%AA%E3%81%9C%E3%81%AA%E3%82%89-%E3%81%8B%E3%82%89,なぜならから
+230,B (common),80.6,general,N3,57.0,～と言っても,Although ~ might say that ~,https://bunpro.jp/grammar_points/%E3%81%A8%E8%A8%80%E3%81%A3%E3%81%A6%E3%82%82,~と言っても
+231,B (common),80.6,general,N3,68.0,どんなに〜ても,No matter how,https://bunpro.jp/grammar_points/%E3%81%A9%E3%82%93%E3%81%AA%E3%81%AB-%E3%81%A6%E3%82%82,どんなにても
+232,B (common),80.6,general,N3,74.0,わけではない,"It doesn't mean that, It is not the case, It's not like",https://bunpro.jp/grammar_points/%E3%82%8F%E3%81%91%E3%81%A7%E3%81%AF%E3%81%AA%E3%81%84,わけではない
+233,B (common),80.6,general,N3,76.0,ところだった ①,"Almost, Nearly, About to, On the verge of",https://bunpro.jp/grammar_points/%E3%81%A8%E3%81%93%E3%82%8D%E3%81%A0%E3%81%A3%E3%81%9F1,ところだった
+234,B (common),80.6,general,N3,117.0,とても～ない,"Not ~ at all, Cannot ~ at all",https://bunpro.jp/grammar_points/%E3%81%A8%E3%81%A6%E3%82%82-%E3%81%AA%E3%81%84,とても~ない
+235,B (common),80.6,general,N3,119.0,ばかりでなく,"Not only…but also, As well as",https://bunpro.jp/grammar_points/%E3%81%B0%E3%81%8B%E3%82%8A%E3%81%A7%E3%81%AA%E3%81%8F,ばかりでなく
+236,B (common),80.6,general,N3,126.0,〜ようとしない,"Not willing to, Not make an effort to, To not attempt or try to, Volitional + としない",https://bunpro.jp/grammar_points/-%E3%82%88%E3%81%86%E3%81%A8%E3%81%97%E3%81%AA%E3%81%84,ようとしない
+237,B (common),80.6,general,N3,127.0,もしかしたら,"Perhaps, Maybe, Possibly",https://bunpro.jp/grammar_points/%E3%82%82%E3%81%97%E3%81%8B%E3%81%97%E3%81%9F%E3%82%89,もしかしたら
+238,B (common),80.6,general,N3,131.0,～かというと ①,"Why? Well..., Why? Because..., If you ask me why..., The reason why is..., It is because...",https://bunpro.jp/grammar_points/%E3%81%8B%E3%81%A8%E3%81%84%E3%81%86%E3%81%A81,~かというと
+239,B (common),80.6,general,N3,132.0,～かというと ②,"If you ask me..., If I had to say, If I were to say, If I were to choose one, I'd rather",https://bunpro.jp/grammar_points/%E3%81%8B%E3%81%A8%E3%81%84%E3%81%86%E3%81%A82,~かというと
+240,B (common),80.6,general,N3,147.0,とは限らない,"Not necessarily so, Is not always true, There is no guarantee that",https://bunpro.jp/grammar_points/%E3%81%A8%E3%81%AF%E9%99%90%E3%82%89%E3%81%AA%E3%81%84,とは限らない
+241,B (common),80.6,general,N3,202.0,前者は・後者は,"The former ~ the latter, The first ~ the second",https://bunpro.jp/grammar_points/%E5%89%8D%E8%80%85%E3%81%AF-%E5%BE%8C%E8%80%85%E3%81%AF,前者は・後者は
+242,B (common),80.6,general,N3,217.0,という理由で,"For (that) reason; on the grounds of (that), With the reasoning, Under the pretext of, Due to",https://bunpro.jp/grammar_points/%E3%81%A8%E3%81%84%E3%81%86%E7%90%86%E7%94%B1%E3%81%A7,という理由で
+243,B (common),80.6,archaic/literary,N3,8.0,べきではない,"Should not, Must not , Ought not to",https://bunpro.jp/grammar_points/%E3%81%B9%E3%81%8D%E3%81%A7%E3%81%AF%E3%81%AA%E3%81%84,べきではない
+244,B (common),80.6,archaic/literary,N3,140.0,と同じくらい,"About the same as, About as, No less",https://bunpro.jp/grammar_points/%E3%81%A8%E5%90%8C%E3%81%98%E3%81%8F%E3%82%89%E3%81%84,と同じくらい
+245,B (common),80.25,general,N3,2.0,たらいい・といい,"It would be nice if, It would be good if, Should, I hope",https://bunpro.jp/grammar_points/%E3%81%9F%E3%82%89%E3%81%84%E3%81%84-%E3%81%A8%E3%81%84%E3%81%84,たらいい・といい
+246,B (common),80.25,formal/written,N3,14.0,によって・による,"By means of, According to, Depending on, Because of, Due to",https://bunpro.jp/grammar_points/%E3%81%AB%E3%82%88%E3%81%A3%E3%81%A6-%E3%81%AB%E3%82%88%E3%82%8B,によって・による
+247,B (common),80.25,general,N3,83.0,は～くらいです,"About the only, To the extent that",https://bunpro.jp/grammar_points/%E3%81%AF-%E3%81%8F%E3%82%89%E3%81%84%E3%81%A7%E3%81%99,は~くらいです
+248,B (common),80.25,general,N3,91.0,てもかまわない,"It doesn't matter if, I don't mind",https://bunpro.jp/grammar_points/%E3%81%A6%E3%82%82%E3%81%8B%E3%81%BE%E3%82%8F%E3%81%AA%E3%81%84,てもかまわない
+249,B (common),80.25,general,N3,116.0,ような気がする,Have a feeling that,https://bunpro.jp/grammar_points/%E3%82%88%E3%81%86%E3%81%AA%E6%B0%97%E3%81%8C%E3%81%99%E3%82%8B,ような気がする
+250,B (common),80.25,general,N3,152.0,言うまでもない ②,"It goes without saying, It is needless to say, Of course, Obviously",https://bunpro.jp/grammar_points/%E8%A8%80%E3%81%86%E3%81%BE%E3%81%A7%E3%82%82%E3%81%AA%E3%81%842,言うまでもない
+251,B (common),80.25,general,N3,154.0,ないことはない,"Is not impossible, It doesn't mean that it isn't",https://bunpro.jp/grammar_points/%E3%81%AA%E3%81%84%E3%81%93%E3%81%A8%E3%81%AF%E3%81%AA%E3%81%84,ないことはない
+252,B (common),79.9,formal/written,N3,13.0,によると・によれば,According to,https://bunpro.jp/grammar_points/%E3%81%AB%E3%82%88%E3%82%8B%E3%81%A8-%E3%81%AB%E3%82%88%E3%82%8C%E3%81%B0,によると・によれば
+253,B (common),79.9,general,N3,70.0,〜かは〜によって違う,"Depends on, Changes depending on, Differ depending on",https://bunpro.jp/grammar_points/%E3%81%8B%E3%81%AF-%E3%81%AB%E3%82%88%E3%81%A3%E3%81%A6%E9%81%95%E3%81%86,かはによって違う
+254,B (common),79.9,formal/written,N3,80.0,に関する・に関して,"Related to, About, Regarding",https://bunpro.jp/grammar_points/%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B-%E3%81%AB%E9%96%A2%E3%81%97%E3%81%A6,に関する・に関して
+255,B (common),79.9,general,N3,92.0,～ても～なくても,Whether ~ or not,https://bunpro.jp/grammar_points/%E3%81%A6%E3%82%82-%E3%81%AA%E3%81%8F%E3%81%A6%E3%82%82,~ても~なくても
+256,B (common),79.9,general,N3,121.0,だけでなく(て)～も,"Not only ~ but ~ also, Not just ~ but ~ also",https://bunpro.jp/grammar_points/%E3%81%A0%E3%81%91%E3%81%A7%E3%81%AA%E3%81%8F-%E3%81%A6-%E3%82%82,だけでなく(て)~も
+257,B (common),79.9,general,N3,123.0,は言うまでもない ①,"It goes without saying (that), (It is) needless to say, I don't need to remind you",https://bunpro.jp/grammar_points/%E3%81%AF%E8%A8%80%E3%81%86%E3%81%BE%E3%81%A7%E3%82%82%E3%81%AA%E3%81%841,は言うまでもない
+258,B (common),79.9,general,N3,125.0,わけにはいかない,"Cannot afford to, No way, Impossible to do",https://bunpro.jp/grammar_points/%E3%82%8F%E3%81%91%E3%81%AB%E3%81%AF%E3%81%84%E3%81%8B%E3%81%AA%E3%81%84,わけにはいかない
+259,B (common),79.9,formal/written,N3,166.0,において・における,"In, On, At, Regarding, In terms of",https://bunpro.jp/grammar_points/%E3%81%AB%E3%81%8A%E3%81%84%E3%81%A6-%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B,において・における
+260,B (common),79.9,archaic/literary,N3,64.0,ちゃんと・きちんと,"Properly, Neatly, Orderly, Sufficiently, Decently",https://bunpro.jp/grammar_points/%E3%81%A1%E3%82%83%E3%82%93%E3%81%A8-%E3%81%8D%E3%81%A1%E3%82%93%E3%81%A8,ちゃんと・きちんと
+261,B (common),79.9,archaic/literary,N3,141.0,と同じで・と違って,"Like, Similar to, Unlike, Dissimilar to",https://bunpro.jp/grammar_points/%E3%81%A8%E5%90%8C%E3%81%98%E3%81%A7-%E3%81%A8%E9%81%95%E3%81%A3%E3%81%A6,と同じで・と違って
+262,B (common),79.9,archaic/literary,N3,192.0,できれば・できたら,If possible,https://bunpro.jp/grammar_points/%E3%81%A7%E3%81%8D%E3%82%8C%E3%81%B0-%E3%81%A7%E3%81%8D%E3%81%9F%E3%82%89,できれば・できたら
+263,B (common),79.55,general,N3,99.0,～というのは事実だ,"It is a fact that ~, There is no doubt that",https://bunpro.jp/grammar_points/%E3%81%A8%E3%81%84%E3%81%86%E3%81%AE%E3%81%AF%E4%BA%8B%E5%AE%9F%E3%81%A0,~というのは事実だ
+264,B (common),79.55,general,N3,115.0,まるで…ようだ,"It is entirely as if, It is just as though",https://bunpro.jp/grammar_points/%E3%81%BE%E3%82%8B%E3%81%A7-%E3%82%88%E3%81%86%E3%81%A0,まるで...ようだ
+265,B (common),79.55,general,N3,218.0,～は～となっている,"It is (has been), Have/has become, Happen to be, Has been established",https://bunpro.jp/grammar_points/%E3%81%AF-%E3%81%A8%E3%81%AA%E3%81%A3%E3%81%A6%E3%81%84%E3%82%8B,~は~となっている
+266,B (common),79.55,archaic/literary,N3,30.0,では・それでは・じゃあ,"If so, Well (then), In that case",https://bunpro.jp/grammar_points/%E3%81%A7%E3%81%AF-%E3%81%9D%E3%82%8C%E3%81%A7%E3%81%AF-%E3%81%98%E3%82%83%E3%81%82,では・それでは・じゃあ
+267,B (common),79.2,archaic/literary,N3,120.0,ではなくて・じゃなくて,"Not A but B, Conjunctive",https://bunpro.jp/grammar_points/%E3%81%A7%E3%81%AF%E3%81%AA%E3%81%8F%E3%81%A6-%E3%81%98%E3%82%83%E3%81%AA%E3%81%8F%E3%81%A6,ではなくて・じゃなくて
+268,B (common),78.95,general,N0,12.0,あわよくば,"If luck is on my side, If the time is right, If possible, all going well",https://bunpro.jp/grammar_points/%E3%81%82%E3%82%8F%E3%82%88%E3%81%8F%E3%81%B0,あわよくば
+269,B (common),78.5,general,N3,95.0,としたら・とすれば・とすると,"If it were the case that, Assuming that...",https://bunpro.jp/grammar_points/%E3%81%A8%E3%81%97%E3%81%9F%E3%82%89-%E3%81%A8%E3%81%99%E3%82%8C%E3%81%B0-%E3%81%A8%E3%81%99%E3%82%8B%E3%81%A8,としたら・とすれば・とすると
+270,B (common),78.5,general,N3,198.0,もしも～なら・もしも～でも," If, Supposing",https://bunpro.jp/grammar_points/%E3%82%82%E3%81%97%E3%82%82%EF%BD%9E%E3%81%AA%E3%82%89%E3%83%BB%E3%82%82%E3%81%97%E3%82%82%EF%BD%9E%E3%81%A7%E3%82%82,もしも~なら・もしも~でも
+271,B (common),78.0,general,N2,34.0,後(の) Noun,"…left, Rest, Remaining, In, …to, …else",https://bunpro.jp/grammar_points/%E5%BE%8C-%E3%81%AEnoun,後(の)Noun
+272,B (common),78.0,general,N2,72.0,つつ,"While, And",https://bunpro.jp/grammar_points/%E3%81%A4%E3%81%A4,つつ
+273,B (common),78.0,general,N2,209.0,とも,"Even if, No matter",https://bunpro.jp/grammar_points/%E3%81%A8%E3%82%82,とも
+274,B (common),77.65,general,N2,73.0,つつ(も),"Even while ~ing, Even though ~ing, Despite ~ing, Although ~ing",https://bunpro.jp/grammar_points/%E3%81%A4%E3%81%A4-%E3%82%82,つつ(も)
+275,B (common),77.65,general,N2,135.0,ものの,"Although, But, Even Though",https://bunpro.jp/grammar_points/%E3%82%82%E3%81%AE%E3%81%AE,ものの
+276,B (common),77.65,general,N2,153.0,ものか,"Definitely not, Absolutely not, Impossible, Do you really think~?",https://bunpro.jp/grammar_points/%E3%82%82%E3%81%AE%E3%81%8B,ものか
+277,B (common),77.65,general,N2,181.0,だけに,"As might be expected, Because, All the more because, It's only natural",https://bunpro.jp/grammar_points/%E3%81%A0%E3%81%91%E3%81%AB,だけに
+278,B (common),77.65,general,N2,182.0,だけは,"To do all that one can, As much or many ~ as one could",https://bunpro.jp/grammar_points/%E3%81%A0%E3%81%91%E3%81%AF,だけは
+279,B (common),77.65,general,N2,207.0,しかも,"Moreover, Furthermore",https://bunpro.jp/grammar_points/%E3%81%97%E3%81%8B%E3%82%82,しかも
+280,B (common),77.65,general,N2,208.0,てでも,"Even if I have to, By any or all means, No matter what",https://bunpro.jp/grammar_points/%E3%81%A6%E3%81%A7%E3%82%82,てでも
+281,B (common),77.65,archaic/literary,N2,42.0,につき,"Due to, On account of, Each or every",https://bunpro.jp/grammar_points/%E3%81%AB%E3%81%A4%E3%81%8D,につき
+282,B (common),77.3,general,N2,18.0,それなら,"Then, If that's the case",https://bunpro.jp/grammar_points/%E3%81%9D%E3%82%8C%E3%81%AA%E3%82%89,それなら
+283,B (common),77.3,general,N2,19.0,ものなら①,"If, If one could, If something would be possible",https://bunpro.jp/grammar_points/%E3%82%82%E3%81%AE%E3%81%AA%E3%82%89%E2%91%A0,ものなら
+284,B (common),77.3,formal/written,N2,74.0,に際して,"On the occasion of, At the time of",https://bunpro.jp/grammar_points/%E3%81%AB%E9%9A%9B%E3%81%97%E3%81%A6,に際して
+285,B (common),77.3,general,N2,78.0,つつある,"-ing, Be -ing",https://bunpro.jp/grammar_points/%E3%81%A4%E3%81%A4%E3%81%82%E3%82%8B,つつある
+286,B (common),77.3,general,N2,99.0,とっくに,"Already, A long time ago, Long ago",https://bunpro.jp/grammar_points/%E3%81%A8%E3%81%A3%E3%81%8F%E3%81%AB,とっくに
+287,B (common),77.3,general,N2,101.0,をもとに,"Based on, From, According to",https://bunpro.jp/grammar_points/%E3%82%92%E3%82%82%E3%81%A8%E3%81%AB,をもとに
+288,B (common),77.3,general,N2,102.0,からには,"As long as, Since, Given",https://bunpro.jp/grammar_points/%E3%81%8B%E3%82%89%E3%81%AB%E3%81%AF,からには
+289,B (common),77.3,general,N2,117.0,それとも,"Or, Or else, Rather",https://bunpro.jp/grammar_points/%E3%81%9D%E3%82%8C%E3%81%A8%E3%82%82,それとも
+290,B (common),77.3,general,N2,118.0,にしたら,From the point of view of,https://bunpro.jp/grammar_points/%E3%81%AB%E3%81%97%E3%81%9F%E3%82%89,にしたら
+291,B (common),77.3,general,N2,120.0,としては,"As a, For a, As for",https://bunpro.jp/grammar_points/%E3%81%A8%E3%81%97%E3%81%A6%E3%81%AF,としては
+292,B (common),77.3,general,N2,121.0,としても,"Even if (we assume), Assuming,  Also as",https://bunpro.jp/grammar_points/%E3%81%A8%E3%81%97%E3%81%A6%E3%82%82,としても
+293,B (common),77.3,general,N2,124.0,ことなく,Without ~ing,https://bunpro.jp/grammar_points/%E3%81%93%E3%81%A8%E3%81%AA%E3%81%8F,ことなく
+294,B (common),77.3,general,N2,140.0,からして,"Even..., Judging from, Based on",https://bunpro.jp/grammar_points/%E3%81%8B%E3%82%89%E3%81%97%E3%81%A6,からして
+295,B (common),77.3,general,N2,169.0,ことは〜が,"It is true...but, although, but",https://bunpro.jp/grammar_points/%E3%81%93%E3%81%A8%E3%81%AF-%E3%81%8C,ことはが
+296,B (common),77.3,general,N2,176.0,といった,"Such as, Like, So much as",https://bunpro.jp/grammar_points/%E3%81%A8%E3%81%84%E3%81%A3%E3%81%9F,といった
+297,B (common),77.0,general,N3,213.0,っけ,"What is…again?, Was it... that... ?, Did you say...?",https://bunpro.jp/grammar_points/%E3%81%A3%E3%81%91,っけ
+298,B (common),76.95,general,N2,71.0,～のうち(で),"Of the, Among(st)",https://bunpro.jp/grammar_points/-%E3%81%AE%E3%81%86%E3%81%A1-%E3%81%A7,~のうち(で)
+299,B (common),76.95,general,N2,105.0,はもとより,"Not only... but also, Let alone, Of course,",https://bunpro.jp/grammar_points/%E3%81%AF%E3%82%82%E3%81%A8%E3%82%88%E3%82%8A,はもとより
+300,B (common),76.95,general,N2,106.0,そうにない,"Unlikely to, Showing no signs of",https://bunpro.jp/grammar_points/%E3%81%9D%E3%81%86%E3%81%AB%E3%81%AA%E3%81%84,そうにない
+301,B (common),76.95,general,N2,127.0,思うように,"As one hopes, As desired, As one thought",https://bunpro.jp/grammar_points/%E6%80%9D%E3%81%86%E3%82%88%E3%81%86%E3%81%AB,思うように
+302,B (common),76.95,general,N2,134.0,という風に,"As if to say, As if to suggest that, In such a way that, Things like",https://bunpro.jp/grammar_points/%E3%81%A8%E3%81%84%E3%81%86%E9%A2%A8%E3%81%AB,という風に
+303,B (common),76.95,general,N2,137.0,から見ると,"From the point of view of, By the look of",https://bunpro.jp/grammar_points/%E3%81%8B%E3%82%89%E8%A6%8B%E3%82%8B%E3%81%A8,から見ると
+304,B (common),76.95,general,N2,142.0,そういえば,"Speaking of which, By the way, Come to think of it",https://bunpro.jp/grammar_points/%E3%81%9D%E3%81%86%E3%81%84%E3%81%88%E3%81%B0,そういえば
+305,B (common),76.95,general,N2,146.0,かのようだ,"As if, Just like",https://bunpro.jp/grammar_points/%E3%81%8B%E3%81%AE%E3%82%88%E3%81%86%E3%81%A0,かのようだ
+306,B (common),76.95,general,N2,159.0,ことだから,It is exactly because,https://bunpro.jp/grammar_points/%E3%81%93%E3%81%A8%E3%81%A0%E3%81%8B%E3%82%89,ことだから
+307,B (common),76.95,general,N2,160.0,ものだから,"Because, The reason is",https://bunpro.jp/grammar_points/%E3%82%82%E3%81%AE%E3%81%A0%E3%81%8B%E3%82%89,ものだから
+308,B (common),76.95,general,N2,162.0,ものがある,"Strong judgement, There is something, Feel strongly that",https://bunpro.jp/grammar_points/%E3%82%82%E3%81%AE%E3%81%8C%E3%81%82%E3%82%8B,ものがある
+309,B (common),76.95,general,N2,165.0,だけましだ,"At least, It's better than..., One should feel grateful for",https://bunpro.jp/grammar_points/%E3%81%A0%E3%81%91%E3%81%BE%E3%81%97%E3%81%A0,だけましだ
+310,B (common),76.95,general,N2,180.0,は別として,"Apart from, (Setting) aside, Whether or, Except for, Save for",https://bunpro.jp/grammar_points/%E3%81%AF%E5%88%A5%E3%81%A8%E3%81%97%E3%81%A6,は別として
+311,B (common),76.95,general,N2,183.0,だけあって,"Is only natural, …Being the case, Because, As might be expected",https://bunpro.jp/grammar_points/%E3%81%A0%E3%81%91%E3%81%82%E3%81%A3%E3%81%A6,だけあって
+312,B (common),76.95,general,N2,187.0,てならない,"Very, Extremely, Can't help but do",https://bunpro.jp/grammar_points/%E3%81%A6%E3%81%AA%E3%82%89%E3%81%AA%E3%81%84,てならない
+313,B (common),76.95,general,N2,189.0,それなのに,"And yet, Despite this",https://bunpro.jp/grammar_points/%E3%81%9D%E3%82%8C%E3%81%AA%E3%81%AE%E3%81%AB,それなのに
+314,B (common),76.95,general,N2,192.0,も～ば～も,"…And…, Both ... and ..., ... And ... as well",https://bunpro.jp/grammar_points/%E3%82%82-%E3%81%B0-%E3%82%82,も~ば~も
+315,B (common),76.95,general,N2,193.0,でしかない,"Merely, Nothing but, No more than",https://bunpro.jp/grammar_points/%E3%81%A7%E3%81%97%E3%81%8B%E3%81%AA%E3%81%84,でしかない
+316,B (common),76.95,general,N2,198.0,はともかく,"Setting aside, Apart from",https://bunpro.jp/grammar_points/%E3%81%AF%E3%81%A8%E3%82%82%E3%81%8B%E3%81%8F,はともかく
+317,B (common),76.95,archaic/literary,N2,188.0,のみならず,"Not only...but, Not just...but, What is more",https://bunpro.jp/grammar_points/%E3%81%AE%E3%81%BF%E3%81%AA%E3%82%89%E3%81%9A,のみならず
+318,B (common),76.65,general,N3,208.0,っぽい,"-ish, -like, Characteristic of, Typical of, Tendency to",https://bunpro.jp/grammar_points/%E3%81%A3%E3%81%BD%E3%81%84,っぽい
+319,B (common),76.6,general,N2,69.0,ねばならない,"Must, Have to, Should",https://bunpro.jp/grammar_points/%E3%81%AD%E3%81%B0%E3%81%AA%E3%82%89%E3%81%AA%E3%81%84,ねばならない
+320,B (common),76.6,general,N2,83.0,ところだった ②,"Was just about to do something, Was in the middle of...",https://bunpro.jp/grammar_points/%E3%81%A8%E3%81%93%E3%82%8D%E3%81%A0%E3%81%A3%E3%81%9F2,ところだった
+321,B (common),76.6,general,N2,103.0,いつの間にか,"Suddenly, Unnoticed, Without noticing, Too soon",https://bunpro.jp/grammar_points/%E3%81%84%E3%81%A4%E3%81%AE%E9%96%93%E3%81%AB%E3%81%8B,いつの間にか
+322,B (common),76.6,general,N2,122.0,それにしても,"Nevertheless, Even so",https://bunpro.jp/grammar_points/%E3%81%9D%E3%82%8C%E3%81%AB%E3%81%97%E3%81%A6%E3%82%82,それにしても
+323,B (common),76.6,general,N2,130.0,と考えられる,"Can be considered as, Is thought to be, One can think that, It is conceivable that",https://bunpro.jp/grammar_points/%E3%81%A8%E8%80%83%E3%81%88%E3%82%89%E3%82%8C%E3%82%8B,と考えられる
+324,B (common),76.6,general,N2,132.0,ということは,"That means, That is to say",https://bunpro.jp/grammar_points/%E3%81%A8%E3%81%84%E3%81%86%E3%81%93%E3%81%A8%E3%81%AF,ということは
+325,B (common),76.6,general,N2,136.0,というものだ,"Speaker's impression, Criticism or conclusion",https://bunpro.jp/grammar_points/%E3%81%A8%E3%81%84%E3%81%86%E3%82%82%E3%81%AE%E3%81%A0,というものだ
+326,B (common),76.6,general,N2,141.0,からといって,Just because,https://bunpro.jp/grammar_points/%E3%81%8B%E3%82%89%E3%81%A8%E3%81%84%E3%81%A3%E3%81%A6,からといって
+327,B (common),76.6,general,N2,179.0,何から何まで,"Everything and anything, From A to Z, From head to toe, Everything",https://bunpro.jp/grammar_points/%E4%BD%95%E3%81%8B%E3%82%89%E4%BD%95%E3%81%BE%E3%81%A7,何から何まで
+328,B (common),76.6,general,N2,185.0,何といっても,"By any account, All the same, No doubt",https://bunpro.jp/grammar_points/%E4%BD%95%E3%81%A8%E3%81%84%E3%81%A3%E3%81%A6%E3%82%82,何といっても
+329,B (common),76.6,general,N2,199.0,ならともかく,"If it's (A), sure, but (B), Putting aside (A), (B)",https://bunpro.jp/grammar_points/%E3%81%AA%E3%82%89%E3%81%A8%E3%82%82%E3%81%8B%E3%81%8F,ならともかく
+330,B (common),76.6,general,N2,201.0,しかしながら,"However, Nevertheless, But",https://bunpro.jp/grammar_points/%E3%81%97%E3%81%8B%E3%81%97%E3%81%AA%E3%81%8C%E3%82%89,しかしながら
+331,B (common),76.6,general,N2,204.0,てはならない,"Must not, Cannot, Should not",https://bunpro.jp/grammar_points/%E3%81%A6%E3%81%AF%E3%81%AA%E3%82%89%E3%81%AA%E3%81%84,てはならない
+332,B (common),76.25,general,N2,16.0,にほかならない,"Nothing but, None other than, Simply",https://bunpro.jp/grammar_points/%E3%81%AB%E3%81%BB%E3%81%8B%E3%81%AA%E3%82%89%E3%81%AA%E3%81%84,にほかならない
+333,B (common),76.25,formal/written,N2,41.0,に伴って・に伴い,"As, Due,  Along with, Hand-in-hand with, Resulted in, Be consequent upon",https://bunpro.jp/grammar_points/%E3%81%AB%E4%BC%B4%E3%81%A3%E3%81%A6-%E3%81%AB%E4%BC%B4%E3%81%84,に伴って・に伴い
+334,B (common),76.25,general,N2,65.0,てからでないと,"(Not) unless ~ cannot, (Not) until ~ cannot",https://bunpro.jp/grammar_points/%E3%81%A6%E3%81%8B%E3%82%89%E3%81%A7%E3%81%AA%E3%81%84%E3%81%A8,てからでないと
+335,B (common),76.25,general,N2,138.0,ところを見ると,"Judging from, Seeing that",https://bunpro.jp/grammar_points/%E3%81%A8%E3%81%93%E3%82%8D%E3%82%92%E8%A6%8B%E3%82%8B%E3%81%A8,ところを見ると
+336,B (common),76.25,general,N2,145.0,〜ようではないか,"Let's do something, Why don't we",https://bunpro.jp/grammar_points/%E3%82%88%E3%81%86%E3%81%A7%E3%81%AF%E3%81%AA%E3%81%84%E3%81%8B,ようではないか
+337,B (common),76.25,general,N2,212.0,のももっともだ,"May well, Have or has good reason for, No wonder, … Is only natural",https://bunpro.jp/grammar_points/%E3%81%AE%E3%82%82%E3%82%82%E3%81%A3%E3%81%A8%E3%82%82%E3%81%A0,のももっともだ
+338,B (common),75.9,general,N2,62.0,よりしかたがない,"There is no choice but, Can't be helped, Inevitable",https://bunpro.jp/grammar_points/%E3%82%88%E3%82%8A%E3%81%97%E3%81%8B%E3%81%9F%E3%81%8C%E3%81%AA%E3%81%84,よりしかたがない
+339,B (common),75.9,general,N2,80.0,か〜ないかのうちに,"Right after, As soon as, Just when, Barely",https://bunpro.jp/grammar_points/%E3%81%8B-%E3%81%AA%E3%81%84%E3%81%8B%E3%81%AE%E3%81%86%E3%81%A1%E3%81%AB,かないかのうちに
+340,B (common),75.9,general,N2,156.0,ことになっている,"To be expected to, To be scheduled to",https://bunpro.jp/grammar_points/%E3%81%93%E3%81%A8%E3%81%AB%E3%81%AA%E3%81%A3%E3%81%A6%E3%81%84%E3%82%8B,ことになっている
+341,B (common),75.9,general,N2,166.0,幸い・幸いなことに,"Luckily, Fortunately",https://bunpro.jp/grammar_points/%E5%B9%B8%E3%81%84-%E5%B9%B8%E3%81%84%E3%81%AA%E3%81%93%E3%81%A8%E3%81%AB,幸い・幸いなことに
+342,B (common),75.9,general,N2,202.0,ことにはならない,Just because… doesn't mean…,https://bunpro.jp/grammar_points/%E3%81%93%E3%81%A8%E3%81%AB%E3%81%AF%E3%81%AA%E3%82%89%E3%81%AA%E3%81%84,ことにはならない
+343,B (common),75.9,general,N2,203.0,だけのことはある,"No wonder, Not surprising that, As expected",https://bunpro.jp/grammar_points/%E3%81%A0%E3%81%91%E3%81%AE%E3%81%93%E3%81%A8%E3%81%AF%E3%81%82%E3%82%8B,だけのことはある
+344,B (common),75.9,archaic/literary,N2,167.0,ようでは・ようじゃ,"If, If it is true that",https://bunpro.jp/grammar_points/%E3%82%88%E3%81%86%E3%81%A7%E3%81%AF-%E3%82%88%E3%81%86%E3%81%98%E3%82%83,ようでは・ようじゃ
+345,B (common),75.55,general,N2,63.0,に越したことはない,"There is nothing better than, It is the best, Would be the best",https://bunpro.jp/grammar_points/%E3%81%AB%E8%B6%8A%E3%81%97%E3%81%9F%E3%81%93%E3%81%A8%E3%81%AF%E3%81%AA%E3%81%84,に越したことはない
+346,B (common),75.55,general,N2,67.0,ないことには～ない,Unless you do something,https://bunpro.jp/grammar_points/%E3%81%AA%E3%81%84%E3%81%93%E3%81%A8%E3%81%AB%E3%81%AF-%E3%81%AA%E3%81%84,ないことには~ない
+347,B (common),75.55,general,N2,119.0,にしても～にしても,Regardless of whether,https://bunpro.jp/grammar_points/%E3%81%AB%E3%81%97%E3%81%A6%E3%82%82-%E3%81%AB%E3%81%97%E3%81%A6%E3%82%82,にしても~にしても
+348,B (common),75.55,general,N2,129.0,というものでもない,"There is no guarantee that…, Not necessarily",https://bunpro.jp/grammar_points/%E3%81%A8%E3%81%84%E3%81%86%E3%82%82%E3%81%AE%E3%81%A7%E3%82%82%E3%81%AA%E3%81%84,というものでもない
+349,B (common),75.55,general,N2,147.0,のではないだろうか,"I think ... isn't it?, It might be that..., Don't you agree?",https://bunpro.jp/grammar_points/%E3%81%AE%E3%81%A7%E3%81%AF%E3%81%AA%E3%81%84%E3%81%A0%E3%82%8D%E3%81%86%E3%81%8B,のではないだろうか
+350,B (common),75.55,general,N2,161.0,ものですから・もので,"Because, My excuse is, My explanation is",https://bunpro.jp/grammar_points/%E3%82%82%E3%81%AE%E3%81%A7%E3%81%99%E3%81%8B%E3%82%89-%E3%82%82%E3%81%AE%E3%81%A7,ものですから・もので
+351,B (common),75.55,general,N2,211.0,というわけではない,"It is not that, It doesn't mean that, It is not always the case",https://bunpro.jp/grammar_points/%E3%81%A8%E3%81%84%E3%81%86%E3%82%8F%E3%81%91%E3%81%A7%E3%81%AF%E3%81%AA%E3%81%84,というわけではない
+352,B (common),75.2,general,N2,15.0,ようがない・ようもない,"There's no way to, It's impossible to",https://bunpro.jp/grammar_points/%E3%82%88%E3%81%86%E3%81%8C%E3%81%AA%E3%81%84%E3%83%BB%E3%82%88%E3%81%86%E3%82%82%E3%81%AA%E3%81%84,ようがない・ようもない
+353,B (common),75.2,general,N2,79.0,～ところに・～ところへ,"At the time, When, While, Timing",https://bunpro.jp/grammar_points/%EF%BD%9E%E3%81%A8%E3%81%93%E3%82%8D%E3%81%AB%E3%83%BB%EF%BD%9E%E3%81%A8%E3%81%93%E3%82%8D%E3%81%B8,~ところに・~ところへ
+354,B (common),75.2,general,N2,131.0,という点から考えると,"From the standpoint of, From the perspective of, From the viewpoint of, Think in terms of, Viewed from the angle of",https://bunpro.jp/grammar_points/%E3%81%A8%E3%81%84%E3%81%86%E7%82%B9%E3%81%8B%E3%82%89%E8%80%83%E3%81%88%E3%82%8B%E3%81%A8,という点から考えると
+355,B (common),75.2,general,N2,139.0,からすると・からすれば,"Judging from, Considering",https://bunpro.jp/grammar_points/%E3%81%8B%E3%82%89%E3%81%99%E3%82%8B%E3%81%A8-%E3%81%8B%E3%82%89%E3%81%99%E3%82%8C%E3%81%B0,からすると・からすれば
+356,B (common),75.2,general,N2,210.0,ないわけにはいかない,"Can't not, No way to avoid",https://bunpro.jp/grammar_points/%E3%81%AA%E3%81%84%E3%82%8F%E3%81%91%E3%81%AB%E3%81%AF%E3%81%84%E3%81%8B%E3%81%AA%E3%81%84,ないわけにはいかない
+357,B (common),74.85,general,N2,128.0,かと思ったら・かと思うと,"Then again, Just when I thought, No sooner than",https://bunpro.jp/grammar_points/%E3%81%8B%E3%81%A8%E6%80%9D%E3%81%A3%E3%81%9F%E3%82%89-%E3%81%8B%E3%81%A8%E6%80%9D%E3%81%86%E3%81%A8,かと思ったら・かと思うと
+358,B (common),74.3,general,N0,7.0,～やがる,"To have the nerve to (A), To have the gall to (A), To freaking (A)",https://bunpro.jp/grammar_points/%E3%82%84%E3%81%8C%E3%82%8B,~やがる
+359,B (common),74.0,general,N1,17.0,とは,"That..., (Surprised) that..., (Never expected) that..., (Shocked) that...",https://bunpro.jp/grammar_points/%E3%81%A8%E3%81%AF,とは
+360,B (common),74.0,general,N1,49.0,つ〜つ,two contrasting actions,https://bunpro.jp/grammar_points/%E3%81%A4-%E3%81%A4,つつ
+361,B (common),74.0,general,N1,174.0,との,"That, To",https://bunpro.jp/grammar_points/%E3%81%A8%E3%81%AE,との
+362,B (common),73.65,general,N1,29.0,ものを,"But, Although, If only, I wish I had",https://bunpro.jp/grammar_points/%E3%82%82%E3%81%AE%E3%82%92,ものを
+363,B (common),73.65,general,N1,58.0,なら〜で,"If ~ should, Before ~ should",https://bunpro.jp/grammar_points/%E3%81%AA%E3%82%89-%E3%81%A7,ならで
+364,B (common),73.65,general,N1,63.0,ゆえに,"Because, The reason is, Due to, Therefore, So",https://bunpro.jp/grammar_points/%E3%82%86%E3%81%88%E3%81%AB,ゆえに
+365,B (common),73.65,general,N1,64.0,という,"Every single, Each and every, Emphasis, Everything that could be called",https://bunpro.jp/grammar_points/%E3%81%A8%E3%81%84%E3%81%86,という
+366,B (common),73.65,general,N1,70.0,たら〜で,"Even if, If",https://bunpro.jp/grammar_points/%E3%81%9F%E3%82%89-%E3%81%A7,たらで
+367,B (common),73.65,general,N1,72.0,まま(に),"As (one likes, feels or pleases), Spur of the moment, Wherever one fancies, Spontaneously, On a whim",https://bunpro.jp/grammar_points/%E3%81%BE%E3%81%BE%E3%81%AB,まま(に)
+368,B (common),73.65,archaic/literary,N1,81.0,ずとも,"Even if not, Without, Don't have to",https://bunpro.jp/grammar_points/%E3%81%9A%E3%81%A8%E3%82%82,ずとも
+369,B (common),73.3,general,N1,27.0,からする,"About, Or more, Over, Starts at",https://bunpro.jp/grammar_points/%E3%81%8B%E3%82%89%E3%81%99%E3%82%8B,からする
+370,B (common),73.3,general,N1,33.0,とはいえ,"Though, Although (I admit that), Be that as it may, Nonetheless",https://bunpro.jp/grammar_points/%E3%81%A8%E3%81%AF%E3%81%84%E3%81%88,とはいえ
+371,B (common),73.3,general,N1,34.0,ならでは,"Unique to, Only, Impossible if not, Expected only of",https://bunpro.jp/grammar_points/%E3%81%AA%E3%82%89%E3%81%A7%E3%81%AF,ならでは
+372,B (common),73.3,general,N1,39.0,ながらに,"While being, Born (with), Traditional (old-fashioned, as it was long ago), As always, While crying or in tears, (Burned) alive",https://bunpro.jp/grammar_points/%E3%81%AA%E3%81%8C%E3%82%89%E3%81%AB,ながらに
+373,B (common),73.3,general,N1,46.0,ところを,"When, While, In spite of (the circumstances), Regardless of (the circumstances)",https://bunpro.jp/grammar_points/%E3%81%A8%E3%81%93%E3%82%8D%E3%82%92,ところを
+374,B (common),73.3,general,N1,47.0,からある,"As much as, As many as, At least",https://bunpro.jp/grammar_points/%E3%81%8B%E3%82%89%E3%81%82%E3%82%8B,からある
+375,B (common),73.3,general,N1,52.0,たら最後,"Once, Now that, As soon as",https://bunpro.jp/grammar_points/%E3%81%9F%E3%82%89%E6%9C%80%E5%BE%8C,たら最後
+376,B (common),73.3,general,N1,68.0,ことだし,"(And) so, Because, Since",https://bunpro.jp/grammar_points/%E3%81%93%E3%81%A8%E3%81%A0%E3%81%97,ことだし
+377,B (common),73.3,general,N1,82.0,とあって,"Since...(it is no wonder that), Because...(it is no wonder that), Due to...(it is no wonder that)",https://bunpro.jp/grammar_points/%E3%81%A8%E3%81%82%E3%81%A3%E3%81%A6,とあって
+378,B (common),73.3,general,N1,85.0,そばから,"As soon as, Right after, Even if … still",https://bunpro.jp/grammar_points/%E3%81%9D%E3%81%B0%E3%81%8B%E3%82%89,そばから
+379,B (common),73.3,general,N1,126.0,とあれば,"(Emphatic) if, If it is the case that, As (you wish)",https://bunpro.jp/grammar_points/%E3%81%A8%E3%81%82%E3%82%8C%E3%81%B0,とあれば
+380,B (common),73.3,general,N1,131.0,～ばこそ,"Precisely because, Only because, Because, Due to, Only if",https://bunpro.jp/grammar_points/%E3%81%B0%E3%81%93%E3%81%9D,~ばこそ
+381,B (common),73.3,general,N1,145.0,こととて,"Due to, Since, On account of, Because",https://bunpro.jp/grammar_points/%E3%81%93%E3%81%A8%E3%81%A8%E3%81%A6,こととて
+382,B (common),73.3,general,N1,162.0,ものなら②,"If you were to do, If you try to, If … happens, Should there be",https://bunpro.jp/grammar_points/%E3%82%82%E3%81%AE%E3%81%AA%E3%82%89%E2%91%A1,ものなら
+383,B (common),73.3,archaic/literary,N1,115.0,といわず,"Not only A or B but every-; A, B and every-; Not only A or B but all over;  A, B both, whether a or B",https://bunpro.jp/grammar_points/%E3%81%A8%E3%81%84%E3%82%8F%E3%81%9A,といわず
+384,B (common),73.3,archaic/literary,N1,128.0,ときたら,"When it comes to, That or this … of mine, That or this darn …, That or this blasted …",https://bunpro.jp/grammar_points/%E3%81%A8%E3%81%8D%E3%81%9F%E3%82%891,ときたら
+385,B (common),72.95,general,N1,2.0,たところで,"Even if ~ cannot or will not, Even though ~ not",https://bunpro.jp/grammar_points/%E3%81%9F%E3%81%A8%E3%81%93%E3%82%8D%E3%81%A7,たところで
+386,B (common),72.95,general,N1,6.0,といえども,"Even (if), Although, Even though",https://bunpro.jp/grammar_points/%E3%81%A8%E3%81%84%E3%81%88%E3%81%A9%E3%82%82,といえども
+387,B (common),72.95,general,N1,10.0,までもない,"There is no need to, Do not have to, It is not necessary to, Needless to",https://bunpro.jp/grammar_points/%E3%81%BE%E3%81%A7%E3%82%82%E3%81%AA%E3%81%84,までもない
+388,B (common),72.95,general,N1,44.0,あくまでも,"To the (bitter) end, Stubbornly, Persistently",https://bunpro.jp/grammar_points/%E3%81%82%E3%81%8F%E3%81%BE%E3%81%A7%E3%82%82,あくまでも
+389,B (common),72.95,general,N1,61.0,ものと思う,"Think that, Believe that, Expect that, Have confidence that, Absolutely",https://bunpro.jp/grammar_points/%E3%82%82%E3%81%AE%E3%81%A8%E6%80%9D%E3%81%86,ものと思う
+390,B (common),72.95,general,N1,79.0,ぐらいなら,"Would rather...than, Rather than, Better off",https://bunpro.jp/grammar_points/%E3%81%90%E3%82%89%E3%81%84%E3%81%AA%E3%82%89,ぐらいなら
+391,B (common),72.95,general,N1,89.0,んがため(に),"In order to, To, For the purpose of",https://bunpro.jp/grammar_points/%E3%82%93%E3%81%8C%E3%81%9F%E3%82%81-%E3%81%AB,んがため(に)
+392,B (common),72.95,general,N1,101.0,とばかり（に）,"As if (to say), Seeming that",https://bunpro.jp/grammar_points/%E3%81%A8%E3%81%B0%E3%81%8B%E3%82%8A,とばかり(に)
+393,B (common),72.95,formal/written,N1,103.0,に至っても,Even when,https://bunpro.jp/grammar_points/%E3%81%AB%E8%87%B3%E3%81%A3%E3%81%A6%E3%82%82,に至っても
+394,B (common),72.95,general,N1,110.0,んばかりに,"As if, As if it were about to, About to",https://bunpro.jp/grammar_points/%E3%82%93%E3%81%B0%E3%81%8B%E3%82%8A%E3%81%AB,んばかりに
+395,B (common),72.95,general,N1,135.0,ないまでも,"May not … but (at least), Even though not, Even if not",https://bunpro.jp/grammar_points/%E3%81%AA%E3%81%84%E3%81%BE%E3%81%A7%E3%82%82,ないまでも
+396,B (common),72.95,general,N1,157.0,ものとして,"Assuming, Supposing, (Interpret) as, On the assumption, Regarding, Considering",https://bunpro.jp/grammar_points/%E3%82%82%E3%81%AE%E3%81%A8%E3%81%97%E3%81%A6,ものとして
+397,B (common),72.95,general,N1,165.0,といおうか,"How to put it, How shall I put it, How should I put it, Or perhaps, Or maybe, Call it … or",https://bunpro.jp/grammar_points/%E3%81%A8%E3%81%84%E3%81%8A%E3%81%86%E3%81%8B,といおうか
+398,B (common),72.95,general,N1,173.0,ものとする,"Shall, To assume, To suppose, To consider",https://bunpro.jp/grammar_points/%E3%82%82%E3%81%AE%E3%81%A8%E3%81%99%E3%82%8B,ものとする
+399,B (common),72.95,general,N1,176.0,ともあろう,"Of all people, Such,",https://bunpro.jp/grammar_points/%E3%81%A8%E3%82%82%E3%81%82%E3%82%8D%E3%81%86,ともあろう
+400,B (common),72.95,archaic/literary,N1,66.0,と思いきや,"Thought...but, When...thought that...but, Despite having thought...",https://bunpro.jp/grammar_points/%E3%81%A8%E6%80%9D%E3%81%84%E3%81%8D%E3%82%84,と思いきや
+401,B (common),72.95,archaic/literary,N1,156.0,と来（き）たら,"For …(is the best), When it comes to, Concerning",https://bunpro.jp/grammar_points/%E3%81%A8%E3%81%8D%E3%81%9F%E3%82%892,と来(き)たら
+402,B (common),72.6,general,N1,9.0,ならまだしも,"A is fine...but B is not, If it's ~ then it is ok...but ~ is not, It's different when...but, It's not so bad when...but",https://bunpro.jp/grammar_points/%E3%81%AA%E3%82%89%E3%81%BE%E3%81%A0%E3%81%97%E3%82%82,ならまだしも
+403,B (common),72.6,general,N1,12.0,をいいことに,To take advantage of,https://bunpro.jp/grammar_points/%E3%82%92%E3%81%84%E3%81%84%E3%81%93%E3%81%A8%E3%81%AB,をいいことに
+404,B (common),72.6,general,N1,42.0,にしてみれば,"For (A), In the case of (A), From (A)'s point of view, In the eyes of (A)",https://bunpro.jp/grammar_points/%E3%81%AB%E3%81%97%E3%81%A6%E3%81%BF%E3%82%8C%E3%81%B0,にしてみれば
+405,B (common),72.6,general,N1,80.0,ってば・ったら,"I said...!, I told you...!, !",https://bunpro.jp/grammar_points/%E3%81%A3%E3%81%A6%E3%81%B0-%E3%81%A3%E3%81%9F%E3%82%89,ってば・ったら
+406,B (common),72.6,general,N1,95.0,ないでもない,"Kind of, Might, Slightly, It’s not (impossible) that, Somewhat, In some respects",https://bunpro.jp/grammar_points/%E3%81%AA%E3%81%84%E3%81%A7%E3%82%82%E3%81%AA%E3%81%84,ないでもない
+407,B (common),72.6,general,N1,122.0,というところ,"I would say (about), I guess (about), It could be said that, About, at best",https://bunpro.jp/grammar_points/%E3%81%A8%E3%81%84%E3%81%86%E3%81%A8%E3%81%93%E3%82%8D,というところ
+408,B (common),72.6,general,N1,133.0,には及ばない①,"There is no need to, It is fine if you don’t, Unnecessary",https://bunpro.jp/grammar_points/%E3%81%AB%E3%81%AF%E5%8F%8A%E3%81%B0%E3%81%AA%E3%81%841,には及ばない
+409,B (common),72.6,general,N1,147.0,には及ばない②,"To be no match (for), To not compare (with), To fall short (of), To not reach, Cannot win with, To be out of reach (for), To not be on par (with)",https://bunpro.jp/grammar_points/%E3%81%AB%E3%81%AF%E5%8F%8A%E3%81%B0%E3%81%AA%E3%81%84%E2%91%A1,には及ばない
+410,B (common),72.6,archaic/literary,N1,65.0,にとどまらず,"Not limited to, Not only...but also, Not stopping at",https://bunpro.jp/grammar_points/%E3%81%AB%E3%81%A8%E3%81%A9%E3%81%BE%E3%82%89%E3%81%9A,にとどまらず
+411,B (common),72.25,general,N1,60.0,には当たらない,"No need to/for, Cannot, Not worth it to, Not suitable",https://bunpro.jp/grammar_points/%E3%81%AB%E3%81%AF%E5%BD%93%E3%81%9F%E3%82%89%E3%81%AA%E3%81%84,には当たらない
+412,B (common),72.25,general,N1,116.0,にもほどがある,"There is a limit to, You are too ..., How …!, How … one can be!",https://bunpro.jp/grammar_points/%E3%81%AB%E3%82%82%E3%81%BB%E3%81%A9%E3%81%8C%E3%81%82%E3%82%8B,にもほどがある
+413,B (common),72.25,general,N1,130.0,にしたところで,"Even, Even for, Even from the perspective of, Even in the case of",https://bunpro.jp/grammar_points/%E3%81%AB%E3%81%97%E3%81%9F%E3%81%A8%E3%81%93%E3%82%8D%E3%81%A7,にしたところで
+414,B (common),72.25,general,N1,148.0,とは言うものの,"Although, But, Although I say, Although it is said, Having said that",https://bunpro.jp/grammar_points/%E3%81%A8%E3%81%AF%E8%A8%80%E3%81%86%E3%82%82%E3%81%AE%E3%81%AE,とは言うものの
+415,B (common),72.25,general,N1,154.0,ようによっては,"Depending on the way, Depending on how",https://bunpro.jp/grammar_points/%E3%82%88%E3%81%86%E3%81%AB%E3%82%88%E3%81%A3%E3%81%A6%E3%81%AF,ようによっては
+416,B (common),72.25,archaic/literary,N1,59.0,をものともせず,"Making nothing of, Ignoring, In defiance of, Regardless of, Disregarding",https://bunpro.jp/grammar_points/%E3%82%92%E3%82%82%E3%81%AE%E3%81%A8%E3%82%82%E3%81%9B%E3%81%9A,をものともせず
+417,B (common),72.25,archaic/literary,N1,151.0,ならいざ知らず,"Don’t know about it, Maybe it would or might be possible for",https://bunpro.jp/grammar_points/%E3%81%AA%E3%82%89%E3%81%B0%E3%81%84%E3%81%96%E7%9F%A5%E3%82%89%E3%81%9A,ならいざ知らず
+418,B (common),71.9,general,N1,19.0,てからというもの,"After, Since, Ever since then",https://bunpro.jp/grammar_points/%E3%81%A6%E3%81%8B%E3%82%89%E3%81%A8%E3%81%84%E3%81%86%E3%82%82%E3%81%AE,てからというもの
+419,B (common),71.9,general,N1,55.0,れる・られる + ままに,"Do as (one is told or ordered…), In accordance with, In compliance with, Just like",https://bunpro.jp/grammar_points/verb-passive-%E3%81%BE%E3%81%BE%E3%81%AB,れる・られる+ままに
+420,B (common),71.9,general,N1,83.0,でもなんでもない,"Not at all, By no means, Definitely not, Nothing like that, Not really",https://bunpro.jp/grammar_points/%E3%81%A7%E3%82%82%E3%81%AA%E3%82%93%E3%81%A7%E3%82%82%E3%81%AA%E3%81%84,でもなんでもない
+421,B (common),71.9,general,N1,96.0,もさることながら,"It is a fact that, But, Even more than, It goes without saying, Not only but also,",https://bunpro.jp/grammar_points/%E3%82%82%E3%81%95%E3%82%8B%E3%81%93%E3%81%A8%E3%81%AA%E3%81%8C%E3%82%89,もさることながら
+422,B (common),71.9,general,N1,97.0,ものと思っていた,"Was under the impression that, (Always) the thought used to think",https://bunpro.jp/grammar_points/%E3%82%82%E3%81%AE%E3%81%A8%E6%80%9D%E3%81%A3%E3%81%A6%E3%81%84%E3%81%9F,ものと思っていた
+423,B (common),71.9,general,N1,105.0,Verb[ない]もの(だろう)か,"(Why) can’t, Isn’t there, Wish that, If only",https://bunpro.jp/grammar_points/verb-%E3%81%AA%E3%81%84%E3%82%82%E3%81%AE-%E3%81%A0%E3%82%8D%E3%81%86%E3%81%8B,Verb[ない]もの(だろう)か
+424,B (common),71.9,general,N1,123.0,１～たりとも～ない,"Not even one, Not a single, No (at all)",https://bunpro.jp/grammar_points/%EF%BC%91-%E3%82%8A%E3%81%A8%E3%82%82-%E3%81%AA%E3%81%84,1~たりとも~ない
+425,B (common),71.9,general,N1,132.0,ても差し支えない,"May, Is bit a bother if, Do you mind if, Is it a problem if",https://bunpro.jp/grammar_points/%E3%81%A6%E3%82%82%E5%B7%AE%E3%81%97%E6%94%AF%E3%81%88%E3%81%AA%E3%81%84,ても差し支えない
+426,B (common),71.9,general,N1,144.0,ったら・といったら,"Cannot tell, describe, say, express or find words for how, Words cannot express, Too … for words, Extremely",https://bunpro.jp/grammar_points/%E3%81%A3%E3%81%9F%E3%82%89-%E3%81%A8%E3%81%84%E3%81%A3%E3%81%9F%E3%82%89,ったら・といったら
+427,B (common),71.55,general,N1,24.0,ともなく・ともなしに,"Absentmindedly, Mindlessly, Unconsciously, Without paying attention",https://bunpro.jp/grammar_points/%E3%81%A8%E3%82%82%E3%81%AA%E3%81%8F-%E3%81%A8%E3%82%82%E3%81%AA%E3%81%97%E3%81%AB,ともなく・ともなしに
+428,B (common),71.55,general,N1,92.0,い-Adj[く] + もなんともない,"Not... or anything, Not at all, Not, By no means, Definitely not, Nothing like that",https://bunpro.jp/grammar_points/%E3%81%84-adj-%E3%81%8F-%E3%82%82%E3%81%AA%E3%82%93%E3%81%A8%E3%82%82%E3%81%AA%E3%81%84,い-Adj[く]+もなんともない
+429,B (common),71.2,general,N1,11.0,ともなると・にもなると,"When, If, Once, As",https://bunpro.jp/grammar_points/%E3%81%A8%E3%82%82%E3%81%AA%E3%82%8B%E3%81%A8-%E3%81%AB%E3%82%82%E3%81%AA%E3%82%8B%E3%81%A8,ともなると・にもなると
+430,B (common),71.2,general,N1,125.0,に照らして・に照らすと,"In light of, Based on, According to, Referencing, Comparing against, In view of",https://bunpro.jp/grammar_points/%E3%81%AB%E7%85%A7%E3%82%89%E3%81%97%E3%81%A6%E3%83%BB%E3%81%AB%E7%85%A7%E3%82%89%E3%81%99%E3%81%A8,に照らして・に照らすと
+431,B (common),71.2,general,N1,137.0,に限ったことではない,"Not limited to, Not restricted to, Not only",https://bunpro.jp/grammar_points/%E3%81%AB%E9%99%90%E3%81%A3%E3%81%9F%E3%81%93%E3%81%A8%E3%81%A7%E3%81%AF%E3%81%AA%E3%81%84,に限ったことではない
+432,B (common),70.85,general,N1,138.0,とは比べものにならない,"Nothing compared to, Cannot be compared to, Much more, Way better, Above comparison (beyond comparison), Far greater than",https://bunpro.jp/grammar_points/%E3%81%A8%E3%81%AF%E6%AF%94%E3%81%B9%E3%82%82%E3%81%AE%E3%81%AB%E3%81%AA%E3%82%89%E3%81%AA%E3%81%84,とは比べものにならない
+433,B (common),70.5,general,N1,124.0,ったらない・といったらない,"Cannot tell, describe, say or express how, Words cannot express, Too … for words, Extremely",https://bunpro.jp/grammar_points/%E3%81%A3%E3%81%9F%E3%82%89%E3%81%AA%E3%81%84%E3%83%BB%E3%81%A8%E3%81%84%E3%81%A3%E3%81%9F%E3%82%89%E3%81%AA%E3%81%84,ったらない・といったらない
+434,B (common),70.0,general,N5,72.0,Verbs (Non-past),(Non-past),https://bunpro.jp/grammar_points/verb-non-past,Verbs(Non-past)
+435,B (common),70.0,general,N5,10.0,い-Adjectives,Adjectives ending in い,https://bunpro.jp/grammar_points/%E3%81%84-adjectives,い-Adjectives
+436,B (common),70.0,general,N5,11.0,な-Adjectives,Adjectives that are also nouns,https://bunpro.jp/grammar_points/%E3%81%AA-adjectives,な-Adjectives
+437,B (common),70.0,general,N5,16.0,る-Verb (Dictionary),る + ます (Ichidan Verbs),https://bunpro.jp/grammar_points/%E3%82%8B-Verbs,る-Verb(Dictionary)
+438,B (common),70.0,general,N5,17.0,う-Verb (Dictionary),う + ます (Godan Verbs),https://bunpro.jp/grammar_points/%E3%81%86-Verbs,う-Verb(Dictionary)
+439,B (common),70.0,general,N5,19.0,る-Verb (Negative),Will/Does/Do (not),https://bunpro.jp/grammar_points/%E3%82%8Bverb-%E3%81%AA%E3%81%84,る-Verb(Negative)
+440,B (common),70.0,general,N5,20.0,う-Verb (Negative),Will/Does/Do (not),https://bunpro.jp/grammar_points/%E3%81%86verb--%E3%81%AA%E3%81%84,う-Verb(Negative)
+441,B (common),70.0,general,N5,37.0,い-Adjective (Past),"Was, Were (Past tense)",https://bunpro.jp/grammar_points/past-tense-%E3%81%84-adjectives,い-Adjective(Past)
+442,B (common),70.0,general,N5,39.0,い-Adjective + Noun,Describing a noun,https://bunpro.jp/grammar_points/%E3%81%84-adjective-noun,い-Adjective+Noun
+443,B (common),70.0,general,N5,40.0,な-Adjective + Noun,Describing a noun,https://bunpro.jp/grammar_points/%E3%81%AA-adjective-noun,な-Adjective+Noun
+444,B (common),70.0,general,N5,44.0,る-Verb (Past),る - Verbs (Past tense),https://bunpro.jp/grammar_points/%E3%82%8B-verb-past,る-Verb(Past)
+445,B (common),70.0,general,N5,45.0,う-Verb (Past),う - Verbs (Past tense),https://bunpro.jp/grammar_points/%E3%81%86-verb-past,う-Verb(Past)
+446,B (common),70.0,general,N5,57.0,る-Verb (Negative-Past),る - Verbs (Negative-past tense),https://bunpro.jp/grammar_points/%E3%82%8B-verb-neg-past,る-Verb(Negative-Past)
+447,B (common),70.0,general,N5,58.0,う-Verb (Negative-Past),う - Verbs (Negative-past tense),https://bunpro.jp/grammar_points/%E3%81%86-verb-neg-past,う-Verb(Negative-Past)
+448,B (common),70.0,general,N5,59.0,Verb + て,"And, Then (Linking events)",https://bunpro.jp/grammar_points/verb-%E3%81%A6,Verb+て
+449,B (common),70.0,general,N5,64.0,い-Adjective (Predicate),い-Adjective (Predicate),https://bunpro.jp/grammar_points/%E3%81%84-adjective-predicate,い-Adjective(Predicate)
+450,B (common),70.0,general,N5,82.0,Verb + て+ B,"And, And then, After that (sequence)",https://bunpro.jp/grammar_points/verb-%E3%81%A6-b,Verb+て+B
+451,B (common),70.0,general,N5,118.0,Adjective + て + B,"And..., Both and (Conjunctive)",https://bunpro.jp/grammar_points/adjective-%E3%81%A6-b,Adjective+て+B
+452,B (common),70.0,general,N5,65.0,な-Adjective だ,な-Adjective (Predicate),https://bunpro.jp/grammar_points/%E3%81%AA-adjective-predicate,な-Adjectiveだ
+453,B (common),70.0,general,N5,93.0,Noun + まで,"Until, Till,  To (but no further than)",https://bunpro.jp/grammar_points/noun-%E3%81%BE%E3%81%A7,Noun+まで
+454,B (common),70.0,general,N5,94.0,Verb + まで,Until (something) happens,https://bunpro.jp/grammar_points/v-%E3%81%BE%E3%81%A7,Verb+まで
+455,B (common),70.0,general,N5,117.0,Adjective + て・Noun + で,And... (Conjunctive),https://bunpro.jp/grammar_points/adjective-%E3%81%A6-noun-%E3%81%A7,Adjective+て・Noun+で
+456,B (common),70.0,general,N5,121.0,Adjective + の(は),"The 'one' that... (Indefinite pronoun, Adjective nominalization)",Adjective + の(は) (JLPT N5) | Bunpro,Adjective+の(は)
+457,C (situational/formal),69.65,general,N5,49.0,がある + Noun,"Noun (B) that has Noun (A), Noun (B) with Noun (A)",https://bunpro.jp/grammar_points/%E3%81%8C%E3%81%82%E3%82%8B-noun,がある+Noun
+458,C (situational/formal),69.65,general,N5,62.0,Verb + にいく,"To go ~, To go in order to ~",https://bunpro.jp/grammar_points/verb-%E3%81%AB%E3%81%84%E3%81%8F,Verb+にいく
+459,C (situational/formal),69.3,general,N5,50.0,い-Adjectives くない,Not (Adjective),https://bunpro.jp/grammar_points/negative-%E3%81%84-adjectives,い-Adjectivesくない
+460,C (situational/formal),69.3,general,N5,73.0,Verb［た・ている］+ Noun,"Verb modified noun, Relative clause",https://bunpro.jp/grammar_points/verb-%E3%81%9F-noun,Verb[た・ている]+Noun
+461,C (situational/formal),68.6,general,N5,69.0,い-Adjective くなかった,"Was not, Wasn't (Adjective)",https://bunpro.jp/grammar_points/%E3%81%84-Adjective-%E3%81%8F%E3%81%AA%E3%81%8B%E3%81%A3%E3%81%9F,い-Adjectiveくなかった
+462,C (situational/formal),68.4,general,N1,143.0,に言わせれば・に言わせると・に言わせたら,"If you ask, In … opinion, According to",https://bunpro.jp/grammar_points/%E3%81%AB%E8%A8%80%E3%82%8F%E3%81%9B%E3%82%8C%E3%81%B0,に言わせれば・に言わせると・に言わせたら
+463,C (situational/formal),66.3,formal/written,N3,159.0,につれて,"As…then, In proportion to, (Along) with",https://bunpro.jp/grammar_points/%E3%81%AB%E3%81%A4%E3%82%8C%E3%81%A6,につれて
+464,C (situational/formal),66.0,general,N4,100.0,Causative-Passive,"Verbs (Causative-passive voice), To be made to do something, To be forced to do",https://bunpro.jp/grammar_points/causative-passive,Causative-Passive
+465,C (situational/formal),66.0,general,N4,29.0,に (Frequency),"Times (In each time period), Every, Frequency of",https://bunpro.jp/grammar_points/%E3%81%AB-frequency,に(Frequency)
+466,C (situational/formal),66.0,general,N4,73.0,Number + も,"Emphasis, As ~ as, Not even",https://bunpro.jp/grammar_points/number-%E3%82%82,Number+も
+467,C (situational/formal),66.0,general,N4,84.0,Number/Amount + は,"At least, Sort of, Or so",https://bunpro.jp/grammar_points/number-amount-%E3%81%AF,Number/Amount+は
+468,C (situational/formal),66.0,general,N4,93.0,Verb[て],Please do for me (Casual request),https://bunpro.jp/grammar_points/verb%E3%81%A6-request,Verb[て]
+469,C (situational/formal),66.0,general,N4,99.0,Verb[て] + B,"And・and so, Due to, Because of, Since, Conjunctive",https://bunpro.jp/grammar_points/verb%E3%81%A6-b2,Verb[て]+B
+470,C (situational/formal),66.0,general,N4,112.0,Verb[て] + B,"Non-sequence, And, But (Contrast), Parallel action/state",https://bunpro.jp/grammar_points/verb%E3%81%A6-b,Verb[て]+B
+471,C (situational/formal),66.0,general,N4,171.0,Question-phrase + か,Including questions within sentences,https://bunpro.jp/grammar_points/question-phrase-%E3%81%8B,Question-phrase+か
+472,C (situational/formal),66.0,general,N4,101.0,Verb[て]・Noun[で] + B,"By, With, On, By means of, ~ing with",https://bunpro.jp/grammar_points/verb-%E3%81%A6-noun-%E3%81%A7-b,Verb[て]・Noun[で]+B
+473,C (situational/formal),65.65,general,N4,85.0,なん + counter + か,"Some, Several, A few",https://bunpro.jp/grammar_points/%E3%81%AA%E3%82%93-counter-%E3%81%8B,なん+counter+か
+474,C (situational/formal),65.65,general,N4,113.0,Verb[ないで],"(Please) do not (for me), Casual request",https://bunpro.jp/grammar_points/verb-%E3%81%AA%E3%81%84%E3%81%A7,Verb[ないで]
+475,C (situational/formal),64.95,general,N4,15.0,Verb［れる・られる］,"Was done to ~ by ~, Done without consent, Done to one's dismay",https://bunpro.jp/grammar_points/Verb%5Bpassive%5D,Verb[れる・られる]
+476,C (situational/formal),64.95,general,N4,95.0,Verb［せる・させる］,To make/let/have (somebody do something),https://bunpro.jp/grammar_points/causative,Verb[せる・させる]
+477,C (situational/formal),64.95,general,N4,132.0,れる・られる (Potential),"To be able, Can (Potential)",https://bunpro.jp/grammar_points/Verb%5Bpotential%5D,れる・られる(Potential)
+478,C (situational/formal),62.3,formal/written,N2,30.0,を中心に,"Focused on, Centered on or around, Mainly, Most notably",https://bunpro.jp/grammar_points/%E3%82%92%E4%B8%AD%E5%BF%83%E3%81%AB,を中心に
+479,C (situational/formal),62.3,formal/written,N2,38.0,に沿って,"Along, In accordance with, In line with",https://bunpro.jp/grammar_points/%E3%81%AB%E6%B2%BF%E3%81%A3%E3%81%A6,に沿って
+480,C (situational/formal),62.3,formal/written,N2,107.0,に反して,"Go against, Contrary to",https://bunpro.jp/grammar_points/%E3%81%AB%E5%8F%8D%E3%81%97%E3%81%A6,に反して
+481,C (situational/formal),62.3,formal/written,N2,116.0,に応えて,"In response to, Meet",https://bunpro.jp/grammar_points/%E3%81%AB%E5%BF%9C%E3%81%88%E3%81%A6,に応えて
+482,C (situational/formal),62.3,formal/written,N2,178.0,に加えて,"Not only...but also, In addition, Not to mention",https://bunpro.jp/grammar_points/%E3%81%AB%E5%8A%A0%E3%81%88%E3%81%A6,に加えて
+483,C (situational/formal),62.3,archaic/literary,N2,114.0,に応じて,"Depending or based on, According to, In response to, Suitable for or to",https://bunpro.jp/grammar_points/%E3%81%AB%E5%BF%9C%E3%81%98%E3%81%A6,に応じて
+484,C (situational/formal),62.0,general,N3,21.0,Noun＋型,"Model, Type, Pattern, Kind, Shape, Size(d)",https://bunpro.jp/grammar_points/noun-%E5%9E%8B,Noun+型
+485,C (situational/formal),62.0,general,N3,23.0,Particle + の,Combined particles,https://bunpro.jp/grammar_points/particle-%E3%81%AE,Particle+の
+486,C (situational/formal),62.0,general,N3,84.0,さ - Interjection,"All right, There we go, Now, You see, Well (I don't know, let me see)",https://bunpro.jp/grammar_points/%E3%81%95-interjection,さ-Interjection
+487,C (situational/formal),62.0,general,N3,85.0,さ - Filler,"Like, You know, You see, Listen, Uhh",https://bunpro.jp/grammar_points/%E3%81%95-filler,さ-Filler
+488,C (situational/formal),62.0,general,N3,86.0,さ - Casual よ,Casual よ,https://bunpro.jp/grammar_points/%E3%81%95-casual%E3%82%88,さ-Casualよ
+489,C (situational/formal),61.95,formal/written,N2,37.0,にわたって,"Across, Throughout, Extends, Over (a period of time or range)",https://bunpro.jp/grammar_points/%E3%81%AB%E3%82%8F%E3%81%9F%E3%81%A3%E3%81%A6,にわたって
+490,C (situational/formal),61.6,formal/written,N2,40.0,にしたがって,"As, Following, As then, According to, In accordance with",https://bunpro.jp/grammar_points/%E3%81%AB%E3%81%97%E3%81%9F%E3%81%8C%E3%81%A3%E3%81%A6,にしたがって
+491,C (situational/formal),61.6,archaic/literary,N2,52.0,にかかわらず,"Regardless of, Whether or, No matter, With or without",https://bunpro.jp/grammar_points/%E3%81%AB%E3%81%8B%E3%81%8B%E3%82%8F%E3%82%89%E3%81%9A,にかかわらず
+492,C (situational/formal),60.95,general,N3,20.0,のはXの方だ,"It is...that..., It is...who..., ...is the one that..., ...is the one who...",https://bunpro.jp/grammar_points/%E3%81%AE%E3%81%AFx%E3%81%AE%E6%96%B9%E3%81%A0,のはXの方だ
+493,C (situational/formal),60.9,archaic/literary,N2,115.0,を通じて・を通して,"Through, Via, Throughout",https://bunpro.jp/grammar_points/%E3%82%92%E9%80%9A%E3%81%98%E3%81%A6-%E3%82%92%E9%80%9A%E3%81%97%E3%81%A6,を通じて・を通して
+494,C (situational/formal),60.55,formal/written,N2,76.0,にあたり・にあたって,"When, When doing something, On the occasion, At the time",https://bunpro.jp/grammar_points/%E3%81%AB%E3%81%82%E3%81%9F%E3%82%8A-%E3%81%AB%E3%81%82%E3%81%9F%E3%81%A3%E3%81%A6,にあたり・にあたって
+495,C (situational/formal),60.0,general,N5,8.0,の,Indicates possession,https://bunpro.jp/grammar_points/%E3%81%AE,の
+496,C (situational/formal),60.0,general,N5,38.0,の,"Verb nominalizer, The one who..., That which...",https://bunpro.jp/grammar_points/%E3%81%AE%E3%81%AF,の
+497,C (situational/formal),60.0,general,N5,63.0,誰,Who,https://bunpro.jp/grammar_points/%E3%81%A0%E3%82%8C,誰
+498,C (situational/formal),60.0,general,N5,74.0,の,Possessive use (Noun omission),https://bunpro.jp/grammar_points/%E3%81%AE-noun-ommission,の
+499,C (situational/formal),60.0,general,N5,75.0,な,"Do not, Don't (Prohibitive)",https://bunpro.jp/grammar_points/%E3%81%AA,な
+500,C (situational/formal),60.0,general,N5,9.0,いい,い-Adjective meaning 'good',https://bunpro.jp/grammar_points/%E3%81%84%E3%81%84,いい
+501,C (situational/formal),60.0,general,N5,43.0,くる,To come,https://bunpro.jp/grammar_points/%E3%81%8F%E3%82%8B,くる
+502,C (situational/formal),60.0,general,N5,71.0,って,Casual quotation,https://bunpro.jp/grammar_points/%E3%81%A3%E3%81%A6,って
+503,C (situational/formal),60.0,general,N5,77.0,どれ,Which (of three or more),https://bunpro.jp/grammar_points/%E3%81%A9%E3%82%8C,どれ
+504,C (situational/formal),60.0,general,N5,79.0,どの,"Which (of three or more), What (kind)",https://bunpro.jp/grammar_points/%E3%81%A9%E3%81%AE,どの
+505,C (situational/formal),60.0,archaic/literary,N5,46.0,好き,"Like, Fond of",https://bunpro.jp/grammar_points/%E3%81%99%E3%81%8D,好き
+506,C (situational/formal),59.65,general,N5,31.0,がある,"To be, There is",https://bunpro.jp/grammar_points/%E3%81%8C%E3%81%82%E3%82%8B,がある
+507,C (situational/formal),59.65,general,N5,32.0,がいる,"To be, There is,  To remain (in a state)",https://bunpro.jp/grammar_points/%E3%81%8C%E3%81%84%E3%82%8B,がいる
+508,C (situational/formal),59.65,general,N5,41.0,へいく,"To go to, To head toward",https://bunpro.jp/grammar_points/%E3%81%B8%E3%81%84%E3%81%8F,へいく
+509,C (situational/formal),59.65,general,N5,91.0,まえに,"Before, In front of",https://bunpro.jp/grammar_points/%E3%81%BE%E3%81%88%E3%81%AB,まえに
+510,C (situational/formal),59.65,general,N5,95.0,すぎる,"Too much, Very",https://bunpro.jp/grammar_points/%E3%81%99%E3%81%8E%E3%82%8B,すぎる
+511,C (situational/formal),59.65,general,N5,96.0,にする,"To decide on, To choose, To make something into, To view something as",https://bunpro.jp/grammar_points/%E3%81%AB%E3%81%99%E3%82%8B,にする
+512,C (situational/formal),59.65,general,N5,122.0,あげる,"To give (away), To present, To provide",https://bunpro.jp/grammar_points/%E3%81%82%E3%81%92%E3%82%8B,あげる
+513,C (situational/formal),59.65,general,N5,123.0,くれる,"To give (me), To be given",https://bunpro.jp/grammar_points/%E3%81%8F%E3%82%8C%E3%82%8B,くれる
+514,C (situational/formal),59.65,general,N5,124.0,もらう,"To receive, To get, To obtain",https://bunpro.jp/grammar_points/%E3%82%82%E3%82%89%E3%81%86,もらう
+515,C (situational/formal),59.65,archaic/literary,N5,47.0,きらい,"Dislike, Not fond of",https://bunpro.jp/grammar_points/%E3%81%8D%E3%82%89%E3%81%84,きらい
+516,C (situational/formal),59.3,general,N5,89.0,けっこう,"Quite, A lot, Fairly, Rather",https://bunpro.jp/grammar_points/%E3%81%91%E3%81%A3%E3%81%93%E3%81%86,けっこう
+517,C (situational/formal),59.3,general,N5,90.0,たくさん,"Many, A lot of, Plenty, Enough",https://bunpro.jp/grammar_points/%E3%81%9F%E3%81%8F%E3%81%95%E3%82%93,たくさん
+518,C (situational/formal),59.3,general,N5,102.0,ましょう,"Let's, Shall we (Polite volitional)",https://bunpro.jp/grammar_points/%E3%81%BE%E3%81%97%E3%82%87%E3%81%86,ましょう
+519,C (situational/formal),59.3,general,N5,104.0,ませんか,"Won't you, Would you not, Why don't we",https://bunpro.jp/grammar_points/%E3%81%BE%E3%81%9B%E3%82%93%E3%81%8B,ませんか
+520,C (situational/formal),59.3,general,N5,119.0,のがへた,"To be bad at, Poor at, Unskillful",https://bunpro.jp/grammar_points/%E3%81%AE%E3%81%8C%E3%81%B8%E3%81%9F,のがへた
+521,C (situational/formal),59.3,general,N5,126.0,つもりだ,"To plan to, To intend to",https://bunpro.jp/grammar_points/%E3%81%A4%E3%82%82%E3%82%8A%E3%81%A0,つもりだ
+522,C (situational/formal),59.3,archaic/literary,N5,48.0,のがすき,"Like doing, Love doing",https://bunpro.jp/grammar_points/%E3%81%AE%E3%81%8C%E3%81%99%E3%81%8D,のがすき
+523,C (situational/formal),58.95,polite/honorific,N5,106.0,てください,Please do (Polite request),https://bunpro.jp/grammar_points/%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84,てください
+524,C (situational/formal),58.6,general,N5,66.0,だった・でした,"Was, Were (Past tense) ",https://bunpro.jp/grammar_points/%E3%81%A0%E3%81%A3%E3%81%9F-%E3%81%A7%E3%81%97%E3%81%9F,だった・でした
+525,C (situational/formal),58.6,general,N5,100.0,なにか・なにも,"Something, Nothing, Anything, Not anything, Some kind of, Not any kind of",https://bunpro.jp/grammar_points/%E3%81%AA%E3%81%AB%E3%81%8B-%E3%81%AA%E3%81%AB%E3%82%82,なにか・なにも
+526,C (situational/formal),58.6,general,N5,103.0,～ましょうか,"Shall we, Shall I",https://bunpro.jp/grammar_points/%E3%81%BE%E3%81%97%E3%82%87%E3%81%86%E3%81%8B,~ましょうか
+527,C (situational/formal),58.6,general,N5,111.0,たほうがいい,"It'd be better to, Should do",https://bunpro.jp/grammar_points/%E3%81%9F%E3%81%BB%E3%81%86%E3%81%8C%E3%81%84%E3%81%84,たほうがいい
+528,C (situational/formal),58.6,archaic/literary,N5,120.0,のがじょうず,"To be good at, Proficient",https://bunpro.jp/grammar_points/%E3%81%AE%E3%81%8C%E3%81%98%E3%82%87%E3%81%86%E3%81%9A,のがじょうず
+529,C (situational/formal),58.3,formal/written,N1,32.0,をもって,"As of, With, Effective from",https://bunpro.jp/grammar_points/%E3%82%92%E3%82%82%E3%81%A3%E3%81%A6,をもって
+530,C (situational/formal),58.25,general,N5,88.0,たり～たりする,Things like ~ and ~,https://bunpro.jp/grammar_points/%E3%81%9F%E3%82%8A-%E3%81%9F%E3%82%8A%E3%81%99%E3%82%8B,たり~たりする
+531,C (situational/formal),58.25,general,N5,99.0,より～のほうが,To be more ~ than ~,https://bunpro.jp/grammar_points/%E3%82%88%E3%82%8A-%E3%81%AE%E3%81%BB%E3%81%86%E3%81%8C,より~のほうが
+532,C (situational/formal),58.25,polite/honorific,N5,107.0,ないでください,Please don't (Polite request),https://bunpro.jp/grammar_points/%E3%81%AA%E3%81%84%E3%81%A7%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84,ないでください
+533,C (situational/formal),58.25,general,N5,112.0,ないほうがいい,"It'd be better not to, Shouldn't do",https://bunpro.jp/grammar_points/%E3%81%AA%E3%81%84%E3%81%BB%E3%81%86%E3%81%8C%E3%81%84%E3%81%84,ないほうがいい
+534,C (situational/formal),57.95,formal/written,N1,1.0,に至るまで,"(Everything) from...to..., From…up until..., Starting with...ending with...",https://bunpro.jp/grammar_points/%E3%81%AB%E8%87%B3%E3%82%8B%E3%81%BE%E3%81%A7,に至るまで
+535,C (situational/formal),57.95,formal/written,N1,22.0,に至っては,"When it comes to, As for, In particular, What is worse or more",https://bunpro.jp/grammar_points/%E3%81%AB%E8%87%B3%E3%81%A3%E3%81%A6%E3%81%AF,に至っては
+536,C (situational/formal),57.9,general,N5,85.0,まだ～ていません,Still haven't done (something),https://bunpro.jp/grammar_points/%E3%81%BE%E3%81%A0-%E3%81%A6%E3%81%84%E3%81%BE%E3%81%9B%E3%82%93,まだ~ていません
+537,C (situational/formal),57.9,general,N5,97.0,～になる・～くなる,To become (Adjective),https://bunpro.jp/grammar_points/%E3%81%AB%E3%81%AA%E3%82%8B-%E3%81%8F%E3%81%AA%E3%82%8B,~になる・~くなる
+538,C (situational/formal),57.25,formal/written,N1,86.0,に至って・に至り,"When it came to, Only when, Only after, Go as far as",https://bunpro.jp/grammar_points/%E3%81%AB%E8%87%B3%E3%81%A3%E3%81%A6-%E3%81%AB%E8%87%B3%E3%82%8A,に至って・に至り
+539,C (situational/formal),57.2,general,N5,101.0,誰か・どこか・誰も・どこも,"Someone, Somewhere, Not anyone, Not anywhere",https://bunpro.jp/grammar_points/%E8%AA%B0%E3%81%8B-%E3%81%A9%E3%81%93%E3%81%8B-%E8%AA%B0%E3%82%82-%E3%81%A9%E3%81%93%E3%82%82,誰か・どこか・誰も・どこも
+540,C (situational/formal),57.0,archaic/literary,N3,173.0,ずに,Without doing,https://bunpro.jp/grammar_points/%E3%81%9A%E3%81%AB,ずに
+541,C (situational/formal),56.0,general,N4,76.0,各,"Each, Every, Respective, Various",https://bunpro.jp/grammar_points/%E5%90%84,各
+542,C (situational/formal),56.0,general,N4,165.0,風,"-style, Way, Fashion",https://bunpro.jp/grammar_points/%E9%A2%A8,風
+543,C (situational/formal),56.0,general,N4,6.0,～ら,"We, Them, They, These, Those",https://bunpro.jp/grammar_points/%E3%82%89,~ら
+544,C (situational/formal),56.0,general,N4,9.0,かた,"Way of ~ing, How to ~, Manner of ~ing",https://bunpro.jp/grammar_points/%E3%81%8B%E3%81%9F,かた
+545,C (situational/formal),56.0,general,N4,23.0,また,"Also, As well, Moreover, Again, Additionally",https://bunpro.jp/grammar_points/%E3%81%BE%E3%81%9F,また
+546,C (situational/formal),56.0,general,N4,26.0,ごろ,"Around, About",https://bunpro.jp/grammar_points/%E3%81%94%E3%82%8D,ごろ
+547,C (situational/formal),56.0,general,N4,51.0,がる,"To feel, To think, To act as if, To want, To desire",https://bunpro.jp/grammar_points/%E3%81%8C%E3%82%8B,がる
+548,C (situational/formal),56.0,general,N4,71.0,だす,"To suddenly begin, To start doing",https://bunpro.jp/grammar_points/%E3%81%A0%E3%81%99,だす
+549,C (situational/formal),56.0,general,N4,72.0,～代,"Teens, Twenties, Thirties, 1910s, 20s/30s",https://bunpro.jp/grammar_points/%E4%BB%A3,~代
+550,C (situational/formal),56.0,general,N4,77.0,以上 ①,"More than (or equal to), Over・(and) above, Any more・Greater, Exceeding",https://bunpro.jp/grammar_points/%E4%BB%A5%E4%B8%8A1,以上
+551,C (situational/formal),56.0,general,N4,78.0,いか,"Less than (or equal to), Under・(and) below, Any less・fewer, Not exceeding",https://bunpro.jp/grammar_points/%E3%81%84%E3%81%8B,いか
+552,C (situational/formal),56.0,general,N4,86.0,真(っ),"Completely, Exactly, Right",https://bunpro.jp/grammar_points/%E7%9C%9F(%E3%81%A3),真(っ)
+553,C (situational/formal),56.0,general,N4,143.0,もし,If (For emphasis),https://bunpro.jp/grammar_points/%E3%82%82%E3%81%97,もし
+554,C (situational/formal),56.0,archaic/literary,N4,20.0,まず,"To start with, Firstly",https://bunpro.jp/grammar_points/%E3%81%BE%E3%81%9A,まず
+555,C (situational/formal),55.65,general,N4,2.0,やすい,"Easy to, Likely to",https://bunpro.jp/grammar_points/%E3%82%84%E3%81%99%E3%81%84,やすい
+556,C (situational/formal),55.65,general,N4,3.0,にくい,"Difficult to, Hard to",https://bunpro.jp/grammar_points/%E3%81%AB%E3%81%8F%E3%81%84,にくい
+557,C (situational/formal),55.65,general,N4,12.0,なくて,"To not ~ and ~, Not ~ and ~ (Conjugations)",https://bunpro.jp/grammar_points/%E3%81%AA%E3%81%8F%E3%81%A6-conjunction,なくて
+558,C (situational/formal),55.65,general,N4,13.0,なくて,"Not ~ and, Not so, Because not (Examples)",https://bunpro.jp/grammar_points/%E3%81%AA%E3%81%8F%E3%81%A6,なくて
+559,C (situational/formal),55.65,general,N4,14.0,ないで,"Without doing, Not ~ and ~",https://bunpro.jp/grammar_points/%E3%81%AA%E3%81%84%E3%81%A7,ないで
+560,C (situational/formal),55.65,general,N4,17.0,なおす,"To do over, To redo",https://bunpro.jp/grammar_points/%E3%81%AA%E3%81%8A%E3%81%99,なおす
+561,C (situational/formal),55.65,general,N4,22.0,までに,"By ~, By the time that ~, Before ~",https://bunpro.jp/grammar_points/%E3%81%BE%E3%81%A7%E3%81%AB,までに
+562,C (situational/formal),55.65,general,N4,25.0,おわる,"To finish, To end",https://bunpro.jp/grammar_points/%E3%81%8A%E3%82%8F%E3%82%8B,おわる
+563,C (situational/formal),55.65,general,N4,28.0,ていた,Was doing ~,https://bunpro.jp/grammar_points/%E3%81%A6%E3%81%84%E3%81%9F,ていた
+564,C (situational/formal),55.65,general,N4,52.0,がする,"To give off, Smell, Sound, Taste, Sensation",https://bunpro.jp/grammar_points/%E3%81%8C%E3%81%99%E3%82%8B,がする
+565,C (situational/formal),55.65,general,N4,53.0,たがる,To want to (Third person),https://bunpro.jp/grammar_points/%E3%81%9F%E3%81%8C%E3%82%8B,たがる
+566,C (situational/formal),55.65,general,N4,70.0,見える,"To be visible, To seem, To be in sight",https://bunpro.jp/grammar_points/%E8%A6%8B%E3%81%88%E3%82%8B,見える
+567,C (situational/formal),55.65,general,N4,79.0,いがい,"Except・besides, Other than, With the exception of",https://bunpro.jp/grammar_points/%E3%81%84%E3%81%8C%E3%81%84,いがい
+568,C (situational/formal),55.65,general,N4,102.0,てある,"Something is done, Has been done, Remaining state",https://bunpro.jp/grammar_points/%E3%81%A6%E3%81%82%E3%82%8B,てある
+569,C (situational/formal),55.65,polite/honorific,N4,111.0,なさい,Command to do,https://bunpro.jp/grammar_points/%E3%81%AA%E3%81%95%E3%81%84,なさい
+570,C (situational/formal),55.65,polite/honorific,N4,118.0,なさる,To do (Honorific),https://bunpro.jp/grammar_points/%E3%81%AA%E3%81%95%E3%82%8B,なさる
+571,C (situational/formal),55.65,general,N4,123.0,お〜する,"I humbly do, I am obliged to do, Humble speech",https://bunpro.jp/grammar_points/%E3%81%8A-%E3%81%99%E3%82%8B,おする
+572,C (situational/formal),55.65,polite/honorific,N4,124.0,いたす,To do (Humble),https://bunpro.jp/grammar_points/%E3%81%84%E3%81%9F%E3%81%99,いたす
+573,C (situational/formal),55.65,general,N4,144.0,し～し,"And, Giving reasons",https://bunpro.jp/grammar_points/%E3%81%97-%E3%81%97,し~し
+574,C (situational/formal),55.65,general,N4,158.0,化する,"-ification, -ization, To make something, To change, To become, Transform into",https://bunpro.jp/grammar_points/%E5%8C%96%E3%81%99%E3%82%8B,化する
+575,C (situational/formal),55.65,general,N4,159.0,命令形,"(Verb)!, Do (something)!",https://bunpro.jp/grammar_points/%E5%91%BD%E4%BB%A4%E5%BD%A2,命令形
+576,C (situational/formal),55.65,general,N4,169.0,それに,"And, Besides, Moreover, In addition",https://bunpro.jp/grammar_points/%E3%81%9D%E3%82%8C%E3%81%AB,それに
+577,C (situational/formal),55.65,general,N4,170.0,それで,"Because of that, So?, And then?, Therefore, With that",https://bunpro.jp/grammar_points/%E3%81%9D%E3%82%8C%E3%81%A7,それで
+578,C (situational/formal),55.3,general,N4,4.0,だんだん,"Gradually, Little by little, Step by step",https://bunpro.jp/grammar_points/%E3%81%A0%E3%82%93%E3%81%A0%E3%82%93,だんだん
+579,C (situational/formal),55.3,general,N4,5.0,どんどん,"Progressively, Rapidly increasing, More and more",https://bunpro.jp/grammar_points/%E3%81%A9%E3%82%93%E3%81%A9%E3%82%93,どんどん
+580,C (situational/formal),55.3,general,N4,33.0,なるべく,"As ~ as possible, Wherever practicable",https://bunpro.jp/grammar_points/%E3%81%AA%E3%82%8B%E3%81%B9%E3%81%8F,なるべく
+581,C (situational/formal),55.3,general,N4,46.0,ぜんぜん,(Not) at all,https://bunpro.jp/grammar_points/%E3%81%9C%E3%82%93%E3%81%9C%E3%82%93,ぜんぜん
+582,C (situational/formal),55.3,general,N4,66.0,がほしい,"To want something, To be in need of",https://bunpro.jp/grammar_points/%E3%81%8C%E3%81%BB%E3%81%97%E3%81%84,がほしい
+583,C (situational/formal),55.3,general,N4,67.0,てほしい,I want you to,https://bunpro.jp/grammar_points/%E3%81%A6%E3%81%BB%E3%81%97%E3%81%84,てほしい
+584,C (situational/formal),55.3,general,N4,69.0,聞こえる,"To be audible, To sound (like), (Can) hear, To be heard",https://bunpro.jp/grammar_points/%E8%81%9E%E3%81%93%E3%81%88%E3%82%8B,聞こえる
+585,C (situational/formal),55.3,general,N4,81.0,だいたい,"Most・mostly, Adequately・generally, For the most part, Roughly・approximately, In the first place",https://bunpro.jp/grammar_points/%E3%81%A0%E3%81%84%E3%81%9F%E3%81%84,だいたい
+586,C (situational/formal),55.3,general,N4,82.0,のなかで,"In, Among, Within",https://bunpro.jp/grammar_points/%E3%81%AE%E3%81%AA%E3%81%8B%E3%81%A7,のなかで
+587,C (situational/formal),55.3,general,N4,108.0,てあげる,"To do something for someone, As a favor for",https://bunpro.jp/grammar_points/%E3%81%A6%E3%81%82%E3%81%92%E3%82%8B,てあげる
+588,C (situational/formal),55.3,general,N4,109.0,てくれる,To do something for someone (usually you),https://bunpro.jp/grammar_points/%E3%81%A6%E3%81%8F%E3%82%8C%E3%82%8B,てくれる
+589,C (situational/formal),55.3,general,N4,129.0,そんなに,"So (much), That much, Like that",https://bunpro.jp/grammar_points/%E3%81%9D%E3%82%93%E3%81%AA%E3%81%AB,そんなに
+590,C (situational/formal),55.3,general,N4,135.0,かどうか,"Whether or not, If...or not",https://bunpro.jp/grammar_points/%E3%81%8B%E3%81%A9%E3%81%86%E3%81%8B,かどうか
+591,C (situational/formal),55.3,general,N4,153.0,つづける,To continue,https://bunpro.jp/grammar_points/%E3%81%A4%E3%81%A5%E3%81%91%E3%82%8B,つづける
+592,C (situational/formal),55.3,general,N4,155.0,よていだ,"Plan to, Intend to",https://bunpro.jp/grammar_points/%E3%82%88%E3%81%A6%E3%81%84%E3%81%A0,よていだ
+593,C (situational/formal),55.3,general,N4,163.0,にみえる,"To look, To seem, To appear",https://bunpro.jp/grammar_points/%E3%81%AB%E3%81%BF%E3%81%88%E3%82%8B,にみえる
+594,C (situational/formal),55.3,archaic/literary,N4,24.0,はじめる,"To start, To begin to",https://bunpro.jp/grammar_points/%E3%81%AF%E3%81%98%E3%82%81%E3%82%8B,はじめる
+595,C (situational/formal),54.95,general,N4,11.0,だが・ですが,"But, Still, However, Nevertheless",https://bunpro.jp/grammar_points/%E3%81%A0%E3%81%8C%E3%83%BB%E3%81%A7%E3%81%99%E3%81%8C,だが・ですが
+596,C (situational/formal),54.95,general,N4,94.0,てよかった,I'm glad that,https://bunpro.jp/grammar_points/%E3%81%A6%E3%82%88%E3%81%8B%E3%81%A3%E3%81%9F,てよかった
+597,C (situational/formal),54.95,general,N4,117.0,お～になる,To do (Honorific),https://bunpro.jp/grammar_points/%E3%81%8A-%E3%81%AB%E3%81%AA%E3%82%8B,お~になる
+598,C (situational/formal),54.95,polite/honorific,N4,121.0,ございます,"To be, To exist (Polite)",https://bunpro.jp/grammar_points/%E3%81%94%E3%81%96%E3%81%84%E3%81%BE%E3%81%99,ございます
+599,C (situational/formal),54.95,general,N4,166.0,がみられる,"Can see, Can be seen, Can observe, Can be observed, Be evident, Chance to see something",https://bunpro.jp/grammar_points/%E3%81%8C%E3%81%BF%E3%82%89%E3%82%8C%E3%82%8B,がみられる
+600,C (situational/formal),54.95,archaic/literary,N4,167.0,にきがつく,"To notice (that), To realize (that)",https://bunpro.jp/grammar_points/%E3%81%AB%E3%81%8D%E3%81%8C%E3%81%A4%E3%81%8F,にきがつく
+601,C (situational/formal),54.9,archaic/literary,N3,174.0,ずにはいられない,"Cannot help doing something, Cannot resist doing something",https://bunpro.jp/grammar_points/%E3%81%9A%E3%81%AB%E3%81%AF%E3%81%84%E3%82%89%E3%82%8C%E3%81%AA%E3%81%84,ずにはいられない
+602,C (situational/formal),54.6,general,N4,16.0,他動詞・自動詞,Done through action vs. occurring on its own,https://bunpro.jp/grammar_points/transitive-intransitive-verbs,他動詞・自動詞
+603,C (situational/formal),54.6,general,N4,48.0,あまり～ない,"Not very, Not much, Not really, Hardly",https://bunpro.jp/grammar_points/%E3%81%82%E3%81%BE%E3%82%8A-%E3%81%AA%E3%81%84,あまり~ない
+604,C (situational/formal),54.6,general,N4,91.0,すくなくない,"Quite a few, Quite a lot, Many, Not a few, Not a little",https://bunpro.jp/grammar_points/%E3%81%99%E3%81%8F%E3%81%AA%E3%81%8F%E3%81%AA%E3%81%84,すくなくない
+605,C (situational/formal),54.6,general,N4,107.0,てすみません,I'm sorry for,https://bunpro.jp/grammar_points/%E3%81%A6%E3%81%99%E3%81%BF%E3%81%BE%E3%81%9B%E3%82%93,てすみません
+606,C (situational/formal),54.6,general,N4,116.0,～のだろうか,I wonder...,https://bunpro.jp/grammar_points/%E3%81%AE%E3%81%A0%E3%82%8D%E3%81%86%E3%81%8B,~のだろうか
+607,C (situational/formal),54.6,polite/honorific,N4,119.0,お～ください,Please do (Honorific),https://bunpro.jp/grammar_points/%E3%81%8A-%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84,お~ください
+608,C (situational/formal),54.6,general,N4,120.0,いらっしゃる,"To be (Honorific), To come (Honorific), To go (Honorific)",https://bunpro.jp/grammar_points/%E3%81%84%E3%82%89%E3%81%A3%E3%81%97%E3%82%83%E3%82%8B,いらっしゃる
+609,C (situational/formal),54.6,polite/honorific,N4,122.0,でございます,"To be, Polite copula",https://bunpro.jp/grammar_points/%E3%81%A7%E3%81%94%E3%81%96%E3%81%84%E3%81%BE%E3%81%99,でございます
+610,C (situational/formal),54.25,general,N4,88.0,～は～の一つだ,〜 is one of (many) 〜,https://bunpro.jp/grammar_points/%E3%81%AF-%E3%81%AE%E4%B8%80%E3%81%A4%E3%81%A0,~は~の一つだ
+611,C (situational/formal),54.25,general,N4,89.0,～ない～はない,There is not ~ that is not/does not,https://bunpro.jp/grammar_points/%E3%81%AA%E3%81%84-%E3%81%AF%E3%81%AA%E3%81%84,~ない~はない
+612,C (situational/formal),54.25,general,N4,90.0,すこしも～ない,"Not even a little, Not at all, Not in the least, Never",https://bunpro.jp/grammar_points/%E3%81%99%E3%81%93%E3%81%97%E3%82%82-%E3%81%AA%E3%81%84,すこしも~ない
+613,C (situational/formal),54.0,general,N1,93.0,Verb + だに,"Just, Even just, Even merely",https://bunpro.jp/grammar_points/verb-%E3%81%A0%E3%81%AB,Verb+だに
+614,C (situational/formal),53.9,general,N4,59.0,～にする・～くする,"Adjective + する, To make something/someone (more)",https://bunpro.jp/grammar_points/%E3%81%AB%E3%81%99%E3%82%8B-%E3%81%8F%E3%81%99%E3%82%8B,~にする・~くする
+615,C (situational/formal),53.9,general,N4,127.0,ほかに(も)・ほか(に)は,"Other, Another, Any other, Anything else, As well as, Besides, In addition",https://bunpro.jp/grammar_points/%E3%81%BB%E3%81%8B%E3%81%AB%E3%82%82-%E3%81%BB%E3%81%8B%E3%81%AB%E3%81%AF,ほかに(も)・ほか(に)は
+616,C (situational/formal),53.65,general,N1,112.0,Adj限りだ,"Extremely, Really, Very, As ... as one can be",https://bunpro.jp/grammar_points/adj%E9%99%90%E3%82%8A%E3%81%A0,Adj限りだ
+617,C (situational/formal),53.3,general,N1,106.0,Verb[て] + みせる,"I will definitely, I will certainly, Just watch, Whatever it takes, I swear, for sure",https://bunpro.jp/grammar_points/verb-%E3%81%A6-%E3%81%BF%E3%81%9B%E3%82%8B,Verb[て]+みせる
+618,C (situational/formal),52.5,general,N4,75.0,そんな・こんな・あんな・どんな,"Such a・Kind of, Something like ~",https://bunpro.jp/grammar_points/%E3%81%9D%E3%82%93%E3%81%AA-%E3%81%93%E3%82%93%E3%81%AA-%E3%81%82%E3%82%93%E3%81%AA-%E3%81%A9%E3%82%93%E3%81%AA,そんな・こんな・あんな・どんな
+619,C (situational/formal),52.3,archaic/literary,N2,113.0,ずに済む,"Get by without doing something, To get away with",https://bunpro.jp/grammar_points/%E3%81%9A%E3%81%AB%E6%B8%88%E3%82%80,ずに済む
+620,C (situational/formal),52.0,general,N3,3.0,中,"During, While, Throughout, In the process of",https://bunpro.jp/grammar_points/%E4%B8%AD,中
+621,C (situational/formal),52.0,general,N3,37.0,的,"~ly・~like・~al, Typical",https://bunpro.jp/grammar_points/%E7%9A%84,的
+622,C (situational/formal),52.0,general,N3,44.0,点,"Aspect, Respect, Point, Way, In terms of, In that, From the point of view",https://bunpro.jp/grammar_points/%E7%82%B9,点
+623,C (situational/formal),52.0,general,N3,139.0,み,"~ness, Used to indicate conditions or nature",https://bunpro.jp/grammar_points/%E3%81%BF,み
+624,C (situational/formal),52.0,general,N3,9.0,って,"As for, Speaking of, Casual は (Sentence topic marker)",https://bunpro.jp/grammar_points/%E3%81%A3%E3%81%A6-slang,って
+625,C (situational/formal),52.0,general,N3,41.0,上で,"After, Upon",https://bunpro.jp/grammar_points/%E4%B8%8A%E3%81%A7,上で
+626,C (situational/formal),52.0,general,N3,46.0,こそ,"For sure, For certain, Even more so, Underlined or bolded text",https://bunpro.jp/grammar_points/%E3%81%93%E3%81%9D,こそ
+627,C (situational/formal),52.0,general,N3,59.0,合う,"To or for one another, Mutually, With",https://bunpro.jp/grammar_points/%E5%90%88%E3%81%86,合う
+628,C (situational/formal),52.0,general,N3,107.0,さえ,Even,https://bunpro.jp/grammar_points/%E3%81%95%E3%81%88,さえ
+629,C (situational/formal),52.0,general,N3,110.0,さて,"Well, Well then",https://bunpro.jp/grammar_points/%E3%81%95%E3%81%A6,さて
+630,C (situational/formal),52.0,general,N3,113.0,即ち,"In other words, That is, Namely",https://bunpro.jp/grammar_points/%E5%8D%B3%E3%81%A1,即ち
+631,C (situational/formal),52.0,general,N3,138.0,再び,"Again, Once more, A second time",https://bunpro.jp/grammar_points/%E5%86%8D%E3%81%B3,再び
+632,C (situational/formal),52.0,general,N3,149.0,割に,"Although, Despite, Rather...for, Unexpectedly, Comparatively, Considering",https://bunpro.jp/grammar_points/%E3%82%8F%E3%82%8A%E3%81%AB,割に
+633,C (situational/formal),52.0,general,N3,156.0,又〜も,"Moreover, Additionally, And also, In addition, Furthermore, Or",https://bunpro.jp/grammar_points/%E5%8F%88-%E3%82%82,又も
+634,C (situational/formal),52.0,general,N3,167.0,第一,"Start, First (point), Foremost, To begin with",https://bunpro.jp/grammar_points/%E7%AC%AC%E4%B8%80,第一
+635,C (situational/formal),52.0,general,N3,171.0,遂に,"Finally, At last",https://bunpro.jp/grammar_points/%E9%81%82%E3%81%AB,遂に
+636,C (situational/formal),52.0,general,N3,175.0,なし,"Without, No",https://bunpro.jp/grammar_points/%E3%81%AA%E3%81%97,なし
+637,C (situational/formal),52.0,general,N3,176.0,あり,"Possibility, To have, With",https://bunpro.jp/grammar_points/%E3%81%82%E3%82%8A,あり
+638,C (situational/formal),52.0,general,N3,181.0,向け,"Intended for, Aimed at",https://bunpro.jp/grammar_points/%E5%90%91%E3%81%91,向け
+639,C (situational/formal),52.0,general,N3,183.0,切る,"To do something completely to the end, Utterly, Resolutely",https://bunpro.jp/grammar_points/%E5%88%87%E3%82%8B,切る
+640,C (situational/formal),52.0,general,N3,186.0,かけ,"Half-, Not yet finished, About to, Begin to",https://bunpro.jp/grammar_points/%E3%81%8B%E3%81%91,かけ
+641,C (situational/formal),52.0,general,N3,188.0,たて,"Freshly ~ed, Just ~ed",https://bunpro.jp/grammar_points/%E3%81%9F%E3%81%A6,たて
+642,C (situational/formal),52.0,general,N3,189.0,込む ①,"To go into, To put into ",https://bunpro.jp/grammar_points/%E8%BE%BC%E3%82%801,込む
+643,C (situational/formal),52.0,general,N3,190.0,込む ②,"Remain, To do thoroughly, Deeply, Intensely",https://bunpro.jp/grammar_points/%E8%BE%BC%E3%82%802,込む
+644,C (situational/formal),52.0,general,N3,194.0,次第,As soon as,https://bunpro.jp/grammar_points/%E6%AC%A1%E7%AC%AC,次第
+645,C (situational/formal),52.0,general,N3,199.0,同士,"Fellow, With each other, Mutually, Between, Among, Together, With",https://bunpro.jp/grammar_points/%E5%90%8C%E5%A3%AB,同士
+646,C (situational/formal),52.0,general,N3,203.0,つい,"Accidentally, Unconsciously, Against one's better judgement",https://bunpro.jp/grammar_points/%E3%81%A4%E3%81%84,つい
+647,C (situational/formal),52.0,general,N3,206.0,がち,"Apt to do, Tend to do, Prone to do",https://bunpro.jp/grammar_points/%E3%81%8C%E3%81%A1,がち
+648,C (situational/formal),52.0,general,N3,207.0,ぎみ,"Looking, Feeling a little, Touch of, Tending to, Slightly",https://bunpro.jp/grammar_points/%E3%81%8E%E3%81%BF,ぎみ
+649,C (situational/formal),52.0,general,N3,211.0,一体,"(What) the heck?, (Who) in the world?, (Where) on earth?, (How many) f*ing...",https://bunpro.jp/grammar_points/%E4%B8%80%E4%BD%93,一体
+650,C (situational/formal),52.0,general,N3,212.0,折角,"With trouble, At great pains, Take the trouble, Might as well..., Rare/long-awaited occasion",https://bunpro.jp/grammar_points/%E3%81%9B%E3%81%A3%E3%81%8B%E3%81%8F,折角
+651,C (situational/formal),52.0,archaic/literary,N3,180.0,向き,"Suitable for, Facing",https://bunpro.jp/grammar_points/%E5%90%91%E3%81%8D,向き
+652,C (situational/formal),52.0,archaic/literary,N3,185.0,きり,"Only, Just, Since",https://bunpro.jp/grammar_points/%E3%81%8D%E3%82%8A,きり
+653,C (situational/formal),51.65,general,N3,24.0,である,"Formal or literary だ, Authoritative, Copula",https://bunpro.jp/grammar_points/%E3%81%A7%E3%81%82%E3%82%8B,である
+654,C (situational/formal),51.65,general,N3,40.0,最中に,In the middle of,https://bunpro.jp/grammar_points/%E6%9C%80%E4%B8%AD%E3%81%AB,最中に
+655,C (situational/formal),51.65,general,N3,62.0,～(の)姿,"Figure, Shape, Appearance, Looks, Wearing, Dressed in, Presence",https://bunpro.jp/grammar_points/%E3%81%AE%E5%A7%BF,~(の)姿
+656,C (situational/formal),51.65,general,N3,77.0,だって,"I heard/was said, Because, But, Even or also, Even if or even though",https://bunpro.jp/grammar_points/%E3%81%A0%E3%81%A3%E3%81%A6,だって
+657,C (situational/formal),51.65,general,N3,89.0,そこで,"Accordingly, Now, Therefore, To that end",https://bunpro.jp/grammar_points/%E3%81%9D%E3%81%93%E3%81%A7,そこで
+658,C (situational/formal),51.65,general,N3,111.0,むしろ,"Rather, Instead, Over",https://bunpro.jp/grammar_points/%E3%82%80%E3%81%97%E3%82%8D,むしろ
+659,C (situational/formal),51.65,general,N3,112.0,つまり,"In short, To sum up, In other words",https://bunpro.jp/grammar_points/%E3%81%A4%E3%81%BE%E3%82%8A,つまり
+660,C (situational/formal),51.65,general,N3,114.0,却って,"All the more, On the contrary, Conversely",https://bunpro.jp/grammar_points/%E5%8D%B4%E3%81%A3%E3%81%A6,却って
+661,C (situational/formal),51.65,general,N3,136.0,だらけ,"Completely covered in, Full of",https://bunpro.jp/grammar_points/%E3%81%A0%E3%82%89%E3%81%91,だらけ
+662,C (situational/formal),51.65,general,N3,144.0,当たり,"Per~, A~, Apiece, Each",https://bunpro.jp/grammar_points/%E5%BD%93%E3%81%9F%E3%82%8A,当たり
+663,C (situational/formal),51.65,general,N3,146.0,に限る,"Nothing better than, There's nothing like, Limited to",https://bunpro.jp/grammar_points/%E3%81%AB%E9%99%90%E3%82%8B,に限る
+664,C (situational/formal),51.65,general,N3,160.0,直ちに,"At once, Immediately, As soon as",https://bunpro.jp/grammar_points/%E7%9B%B4%E3%81%A1%E3%81%AB,直ちに
+665,C (situational/formal),51.65,general,N3,163.0,たびに,"Each time, Every time, Whenever",https://bunpro.jp/grammar_points/%E3%81%9F%E3%81%B3%E3%81%AB,たびに
+666,C (situational/formal),51.65,general,N3,169.0,一方だ,"More and more, Continue to, Keep on, -er and -er",https://bunpro.jp/grammar_points/%E4%B8%80%E6%96%B9%E3%81%A0,一方だ
+667,C (situational/formal),51.65,general,N3,170.0,一方で,"On the other hand, At the same time, While",https://bunpro.jp/grammar_points/%E4%B8%80%E6%96%B9%E3%81%A7,一方で
+668,C (situational/formal),51.65,general,N3,172.0,すでに,"Already, Too late",https://bunpro.jp/grammar_points/%E3%81%99%E3%81%A7%E3%81%AB,すでに
+669,C (situational/formal),51.65,general,N3,179.0,連用形,Formal Conjunctive,https://bunpro.jp/grammar_points/%E9%80%A3%E7%94%A8%E5%BD%A2,連用形
+670,C (situational/formal),51.65,general,N3,200.0,がたい,"Hard to, Difficult to",https://bunpro.jp/grammar_points/%E3%81%8C%E3%81%9F%E3%81%84,がたい
+671,C (situational/formal),51.65,general,N3,201.0,まさか,"I never dreamed, Never, No way, Don't tell me, You don't say",https://bunpro.jp/grammar_points/%E3%81%BE%E3%81%95%E3%81%8B,まさか
+672,C (situational/formal),51.65,general,N3,205.0,くせに,"Even though, And yet, Despite",https://bunpro.jp/grammar_points/%E3%81%8F%E3%81%9B%E3%81%AB,くせに
+673,C (situational/formal),51.65,archaic/literary,N3,71.0,かなり,"Quite, Considerably, Pretty, Fairly",https://bunpro.jp/grammar_points/%E3%81%8B%E3%81%AA%E3%82%8A,かなり
+674,C (situational/formal),51.65,archaic/literary,N3,134.0,～ずつ,"One at a time, Per, Each, Gradually",https://bunpro.jp/grammar_points/%E3%81%9A%E3%81%A4,~ずつ
+675,C (situational/formal),51.65,archaic/literary,N3,162.0,おきに,"Repeated at intervals, Every other, Every, At intervals of",https://bunpro.jp/grammar_points/%E3%81%8A%E3%81%8D%E3%81%AB,おきに
+676,C (situational/formal),51.3,general,N3,10.0,なかなか,"Very, Quite, Considerably",https://bunpro.jp/grammar_points/%E3%81%AA%E3%81%8B%E3%81%AA%E3%81%8B,なかなか
+677,C (situational/formal),51.3,general,N3,22.0,てごらん,"(Please) try to, (Please) look",https://bunpro.jp/grammar_points/%E3%81%A6%E3%81%94%E3%82%89%E3%82%93,てごらん
+678,C (situational/formal),51.3,general,N3,66.0,その結果,As a result,https://bunpro.jp/grammar_points/%E3%81%9D%E3%81%AE%E7%B5%90%E6%9E%9C,その結果
+679,C (situational/formal),51.3,general,N3,67.0,に比べて,"Compared to, When compared to",https://bunpro.jp/grammar_points/%E3%81%AB%E6%AF%94%E3%81%B9%E3%81%A6,に比べて
+680,C (situational/formal),51.3,general,N3,72.0,あまりに,"So much...that, (Way) too...",https://bunpro.jp/grammar_points/%E3%81%82%E3%81%BE%E3%82%8A%E3%81%AB,あまりに
+681,C (situational/formal),51.3,general,N3,78.0,んだって,"I heard that, He or She said that",https://bunpro.jp/grammar_points/%E3%82%93%E3%81%A0%E3%81%A3%E3%81%A6,んだって
+682,C (situational/formal),51.3,general,N3,87.0,それぞれ,"Each, Respectively",https://bunpro.jp/grammar_points/%E3%81%9D%E3%82%8C%E3%81%9E%E3%82%8C,それぞれ
+683,C (situational/formal),51.3,general,N3,97.0,にしては,"(Even) considering, (Even) for",https://bunpro.jp/grammar_points/%E3%81%AB%E3%81%97%E3%81%A6%E3%81%AF,にしては
+684,C (situational/formal),51.3,general,N3,101.0,に取って,"To, For, Concerning",https://bunpro.jp/grammar_points/%E3%81%AB%E5%8F%96%E3%81%A3%E3%81%A6,に取って
+685,C (situational/formal),51.3,general,N3,106.0,て初めて,"For the first time, Not until, Only after, Only when, Only because",https://bunpro.jp/grammar_points/%E3%81%A6%E5%88%9D%E3%82%81%E3%81%A6,て初めて
+686,C (situational/formal),51.3,general,N3,118.0,別に〜ない,"Not really, Not particularly, It's not like...",https://bunpro.jp/grammar_points/%E5%88%A5%E3%81%AB-%E3%81%AA%E3%81%84,別にない
+687,C (situational/formal),51.3,general,N3,145.0,に当たる,"Correspond to, Amounts to, Equals to, Is appropriate",https://bunpro.jp/grammar_points/%E3%81%AB%E5%BD%93%E3%81%9F%E3%82%8B,に当たる
+688,C (situational/formal),51.3,general,N3,157.0,ついでに,"While you are at it, On the occasion",https://bunpro.jp/grammar_points/%E3%81%A4%E3%81%84%E3%81%A7%E3%81%AB,ついでに
+689,C (situational/formal),51.3,general,N3,164.0,あるいは,"Or, Possibly, Maybe, Perhaps, Or possibly",https://bunpro.jp/grammar_points/%E3%81%82%E3%82%8B%E3%81%84%E3%81%AF,あるいは
+690,C (situational/formal),51.3,general,N3,168.0,ますます,"Increasingly, More and more, Decreasingly, Less and less, Keep -ing",https://bunpro.jp/grammar_points/%E3%81%BE%E3%81%99%E3%81%BE%E3%81%99,ますます
+691,C (situational/formal),51.3,general,N3,184.0,切れない,Being unable to finish or complete,https://bunpro.jp/grammar_points/%E5%88%87%E3%82%8C%E3%81%AA%E3%81%84,切れない
+692,C (situational/formal),51.3,general,N3,187.0,にかけて,"Over (a period), From ~ until, Through",https://bunpro.jp/grammar_points/%E3%81%AB%E3%81%8B%E3%81%91%E3%81%A6,にかけて
+693,C (situational/formal),51.3,general,N3,209.0,っぱなし,"Leaving something in a certain state, Left as is, Keep on -ing",https://bunpro.jp/grammar_points/%E3%81%A3%E3%81%B1%E3%81%AA%E3%81%97,っぱなし
+694,C (situational/formal),51.3,general,N3,210.0,わざわざ,"Expressly, Especially, Go out of one's way, Take the trouble to",https://bunpro.jp/grammar_points/%E3%82%8F%E3%81%96%E3%82%8F%E3%81%96,わざわざ
+695,C (situational/formal),51.3,general,N3,214.0,代わりに,"Instead of,  In place of, In exchange for",https://bunpro.jp/grammar_points/%E4%BB%A3%E3%82%8F%E3%82%8A%E3%81%AB,代わりに
+696,C (situational/formal),51.3,general,N3,216.0,どころか,"Far from, Anything but",https://bunpro.jp/grammar_points/%E3%81%A9%E3%81%93%E3%82%8D%E3%81%8B,どころか
+697,C (situational/formal),51.3,general,N3,219.0,左右する,"Influence, Impact, Control",https://bunpro.jp/grammar_points/%E5%B7%A6%E5%8F%B3%E3%81%99%E3%82%8B,左右する
+698,C (situational/formal),51.3,archaic/literary,N3,105.0,をはじめ,"Not only...but also..., Starting with",https://bunpro.jp/grammar_points/%E3%82%92%E3%81%AF%E3%81%98%E3%82%81,をはじめ
+699,C (situational/formal),51.3,archaic/literary,N3,178.0,必ずしも,"Not always, Not entirely, Not necessarily",https://bunpro.jp/grammar_points/%E5%BF%85%E3%81%9A%E3%81%97%E3%82%82,必ずしも
+700,C (situational/formal),50.95,general,N3,15.0,全く～ない,Not~at all,https://bunpro.jp/grammar_points/%E5%85%A8%E3%81%8F-%E3%81%AA%E3%81%84,全く~ない
+701,C (situational/formal),50.95,general,N3,79.0,関係がある,"(Not) involved with, (Not) concerned with, (No) connection with, (No) relationship with, (Not) related to",https://bunpro.jp/grammar_points/%E9%96%A2%E4%BF%82%E3%81%8C%E3%81%82%E3%82%8B,関係がある
+702,C (situational/formal),50.95,general,N3,104.0,はもちろん,"Not only but also, Let alone, Not to mention, Of course",https://bunpro.jp/grammar_points/%E3%81%AF%E3%82%82%E3%81%A1%E3%82%8D%E3%82%93,はもちろん
+703,C (situational/formal),50.95,general,N3,124.0,決して〜ない,"Never, By no means",https://bunpro.jp/grammar_points/%E6%B1%BA%E3%81%97%E3%81%A6-%E3%81%AA%E3%81%84,決してない
+704,C (situational/formal),50.95,general,N3,191.0,ふりをする,"To pretend, To act as if",https://bunpro.jp/grammar_points/%E3%81%B5%E3%82%8A%E3%82%92%E3%81%99%E3%82%8B,ふりをする
+705,C (situational/formal),50.95,general,N3,215.0,に代わって,"In place of, On behalf of, To succeed",https://bunpro.jp/grammar_points/%E3%81%AB%E4%BB%A3%E3%82%8F%E3%81%A3%E3%81%A6,に代わって
+706,C (situational/formal),50.6,general,N3,55.0,～は～で有名,Is famous for,https://bunpro.jp/grammar_points/%E3%81%AF-%E3%81%A7%E6%9C%89%E5%90%8D,~は~で有名
+707,C (situational/formal),50.6,general,N3,148.0,めったに〜ない,"Hardly, Rarely, Seldom",https://bunpro.jp/grammar_points/%E3%82%81%E3%81%A3%E3%81%9F%E3%81%AB-%E3%81%AA%E3%81%84,めったにない
+708,C (situational/formal),50.6,general,N3,155.0,なんか・なんて,"Such as, Things like, Emphasis",https://bunpro.jp/grammar_points/%E3%81%AA%E3%82%93%E3%81%8B-%E3%81%AA%E3%82%93%E3%81%A6,なんか・なんて
+709,C (situational/formal),50.6,general,N3,177.0,考えられない,"Unthinkable, Inconceivable, Unimaginable, Cannot think",https://bunpro.jp/grammar_points/%E8%80%83%E3%81%88%E3%82%89%E3%82%8C%E3%81%AA%E3%81%84,考えられない
+710,C (situational/formal),50.6,general,N3,182.0,上がる・上げる,"Something is finished, To finish something, Something has come to an end, To do something completely, To do something through",https://bunpro.jp/grammar_points/%E4%B8%8A%E3%81%8C%E3%82%8B-%E4%B8%8A%E3%81%92%E3%82%8B,上がる・上げる
+711,C (situational/formal),50.25,general,N3,12.0,なかなか～ない,"Not really, Hardly, Not easily or readily, By no means, Far from",https://bunpro.jp/grammar_points/%E3%81%AA%E3%81%8B%E3%81%AA%E3%81%8B-%E3%81%AA%E3%81%84,なかなか~ない
+712,C (situational/formal),50.0,general,N0,4.0,い,"So?, Well? (friendly or familiar)",https://bunpro.jp/grammar_points/%E3%81%84,い
+713,D (rare/literary),49.55,general,N3,60.0,に合わせて・に合った,"In accordance with, Matching, Fitting, Suitable for, Adjust or tune to",https://bunpro.jp/grammar_points/%E3%81%AB%E5%90%88%E3%82%8F%E3%81%9B%E3%81%A6-%E3%81%AB%E5%90%88%E3%81%A3%E3%81%9F,に合わせて・に合った
+714,D (rare/literary),48.65,archaic/literary,N1,146.0,ずくめ,"Completely, Entirely, All in, Nothing but, A real streak of, Without exception, Jet",https://bunpro.jp/grammar_points/%E3%81%9A%E3%81%8F%E3%82%81,ずくめ
+715,D (rare/literary),48.0,general,N2,24.0,上,From the standpoint of,https://bunpro.jp/grammar_points/%E4%B8%8A,上
+716,D (rare/literary),48.0,general,N2,157.0,気,"Feel like ~, Spirit",https://bunpro.jp/grammar_points/%E6%B0%97,気
+717,D (rare/literary),48.0,general,N2,158.0,げ,"Seemingly, Giving appearance of, [Expresses emotions or feelings]",https://bunpro.jp/grammar_points/%E3%81%92,げ
+718,D (rare/literary),48.0,general,N2,11.0,一応 ①,"Just in case, Just to be sure",https://bunpro.jp/grammar_points/%E4%B8%80%E5%BF%9C1,一応
+719,D (rare/literary),48.0,general,N2,12.0,一応 ②,"more or less, for the time being, tentatively・roughly",https://bunpro.jp/grammar_points/%E4%B8%80%E5%BF%9C2,一応
+720,D (rare/literary),48.0,general,N2,25.0,上に,"As well, Besides, In addition to",https://bunpro.jp/grammar_points/%E4%B8%8A%E3%81%AB,上に
+721,D (rare/literary),48.0,general,N2,26.0,以上 ②,"Since, Now that, As long as, If",https://bunpro.jp/grammar_points/%E4%BB%A5%E4%B8%8A2,以上
+722,D (rare/literary),48.0,general,N2,29.0,中を,"In, On, Into, Inside of",https://bunpro.jp/grammar_points/%E4%B8%AD%E3%82%92,中を
+723,D (rare/literary),48.0,general,N2,32.0,上は,"Once, Since, Now that, As long as",https://bunpro.jp/grammar_points/%E4%B8%8A%E3%81%AF,上は
+724,D (rare/literary),48.0,general,N2,35.0,手前,"Before, In front of, From one's standpoint or side",https://bunpro.jp/grammar_points/%E6%89%8B%E5%89%8D,手前
+725,D (rare/literary),48.0,general,N2,56.0,なお①,"Still, Even, Yet",https://bunpro.jp/grammar_points/%E3%81%AA%E3%81%8A1,なお
+726,D (rare/literary),48.0,general,N2,57.0,なお②,"In addition, Incidentally, Furthermore, Moreover",https://bunpro.jp/grammar_points/%E3%81%AA%E3%81%8A2,なお
+727,D (rare/literary),48.0,general,N2,58.0,限り,"As long as, While… is the case, Limited to",https://bunpro.jp/grammar_points/%E9%99%90%E3%82%8A,限り
+728,D (rare/literary),48.0,general,N2,75.0,際に,"When, At the time of, In case of, On the occasion of",https://bunpro.jp/grammar_points/%E9%9A%9B%E3%81%AB,際に
+729,D (rare/literary),48.0,general,N2,86.0,ては,"If, With, Since, Because",https://bunpro.jp/grammar_points/%E3%81%A6%E3%81%AF,ては
+730,D (rare/literary),48.0,general,N2,88.0,も又,"Too, Also (with more emphasis than も alone), Again",https://bunpro.jp/grammar_points/%E3%82%82%E5%8F%88,も又
+731,D (rare/literary),48.0,general,N2,90.0,以来,"Since, Henceforth",https://bunpro.jp/grammar_points/%E4%BB%A5%E6%9D%A5,以来
+732,D (rare/literary),48.0,general,N2,104.0,一旦,"Once …, If … for a short time, Temporarily (stop), For now or the time being",https://bunpro.jp/grammar_points/%E4%B8%80%E6%97%A6,一旦
+733,D (rare/literary),48.0,general,N2,108.0,逆に,On the contrary,https://bunpro.jp/grammar_points/%E9%80%86%E3%81%AB,逆に
+734,D (rare/literary),48.0,general,N2,109.0,反面,"While, On the other hand, Although, However, On the flip side",https://bunpro.jp/grammar_points/%E5%8F%8D%E9%9D%A2,反面
+735,D (rare/literary),48.0,general,N2,110.0,抜く,"All~, Completely, See through, Overcome, To the bitter end",https://bunpro.jp/grammar_points/%E6%8A%9C%E3%81%8F,抜く
+736,D (rare/literary),48.0,general,N2,125.0,にて,"In, At, With, Using, By",https://bunpro.jp/grammar_points/%E3%81%AB%E3%81%A6,にて
+737,D (rare/literary),48.0,general,N2,126.0,には,"In order to, In regard to, For",https://bunpro.jp/grammar_points/%E3%81%AB%E3%81%AF,には
+738,D (rare/literary),48.0,general,N2,170.0,更に,"Even more or further, Again, More and more",https://bunpro.jp/grammar_points/%E3%81%95%E3%82%89%E3%81%AB,更に
+739,D (rare/literary),48.0,general,N2,171.0,精々,"(At) most , (At) best, No more than, Barely",https://bunpro.jp/grammar_points/%E7%B2%BE%E3%80%85,精々
+740,D (rare/literary),47.65,general,N2,2.0,〜得ない,"Unable to, Cannot",https://bunpro.jp/grammar_points/%E5%BE%97%E3%81%AA%E3%81%84,得ない
+741,D (rare/literary),47.65,general,N2,4.0,～ざる,"To not ~, Un~",https://bunpro.jp/grammar_points/%E3%81%96%E3%82%8B,~ざる
+742,D (rare/literary),47.65,general,N2,6.0,どうせ,"Anyhow, At any rate, In any case, I have no doubt that, Probably",https://bunpro.jp/grammar_points/%E3%81%A9%E3%81%86%E3%81%9B,どうせ
+743,D (rare/literary),47.65,general,N2,7.0,せめて,At least,https://bunpro.jp/grammar_points/%E3%81%9B%E3%82%81%E3%81%A6,せめて
+744,D (rare/literary),47.65,general,N2,10.0,確かに,"Surely, Certainly",https://bunpro.jp/grammar_points/%E7%A2%BA%E3%81%8B%E3%81%AB,確かに
+745,D (rare/literary),47.65,general,N2,14.0,万が一,"Just in case, In the worst-case scenario, In the unlikely event, By any chance",https://bunpro.jp/grammar_points/%E4%B8%87%E3%81%8C%E4%B8%80,万が一
+746,D (rare/literary),47.65,general,N2,21.0,活かす,"To make use of (something), To take full advantage of, To capitalize on, To leverage (skills), Bring out (the quality of)",https://bunpro.jp/grammar_points/%E6%B4%BB%E3%81%8B%E3%81%99,活かす
+747,D (rare/literary),47.65,general,N2,27.0,以上に,"More than, No less than, Even more",https://bunpro.jp/grammar_points/%E4%BB%A5%E4%B8%8A%E3%81%AB,以上に
+748,D (rare/literary),47.65,general,N2,31.0,その上,"Besides, In addition, Furthermore",https://bunpro.jp/grammar_points/%E3%81%9D%E3%81%AE%E4%B8%8A,その上
+749,D (rare/literary),47.65,general,N2,33.0,の下で,"Under, Under the supervision of, On the basis of",https://bunpro.jp/grammar_points/%E3%81%AE%E4%B8%8B%E3%81%A7,の下で
+750,D (rare/literary),47.65,general,N2,43.0,につけ,"Whenever, Every time something happens",https://bunpro.jp/grammar_points/%E3%81%AB%E3%81%A4%E3%81%91,につけ
+751,D (rare/literary),47.65,general,N2,49.0,かねる,"Cannot, Be unable to, Hard to, Hesitant to",https://bunpro.jp/grammar_points/%E3%81%8B%E3%81%AD%E3%82%8B,かねる
+752,D (rare/literary),47.65,general,N2,81.0,がけに,"On the way to, As you go",https://bunpro.jp/grammar_points/%E3%81%8C%E3%81%91%E3%81%AB,がけに
+753,D (rare/literary),47.65,general,N2,85.0,ぶりに,"For the first time in, Haven't done for some time",https://bunpro.jp/grammar_points/%E3%81%B6%E3%82%8A%E3%81%AB,ぶりに
+754,D (rare/literary),47.65,general,N2,94.0,やがて,"Before long, All too soon, In the end, Eventually",https://bunpro.jp/grammar_points/%E3%82%84%E3%81%8C%E3%81%A6,やがて
+755,D (rare/literary),47.65,general,N2,96.0,あげく,"After, In the end, After all, Eventually",https://bunpro.jp/grammar_points/%E3%81%82%E3%81%92%E3%81%8F,あげく
+756,D (rare/literary),47.65,general,N2,100.0,未だに,"Still, Not yet, Even now",https://bunpro.jp/grammar_points/%E6%9C%AA%E3%81%A0%E3%81%AB,未だに
+757,D (rare/literary),47.65,general,N2,133.0,ふうに,"~ way, In a way that suggests, Like ~",https://bunpro.jp/grammar_points/%E3%81%B5%E3%81%86%E3%81%AB,ふうに
+758,D (rare/literary),47.65,general,N2,168.0,さすが,"as one would expect, only natural, that is just like..., even",https://bunpro.jp/grammar_points/%E3%81%95%E3%81%99%E3%81%8C,さすが
+759,D (rare/literary),47.65,general,N2,172.0,僅かに,"Only, Slightly, A little, Barely, Merely",https://bunpro.jp/grammar_points/%E5%83%85%E3%81%8B%E3%81%AB,僅かに
+760,D (rare/literary),47.65,general,N2,173.0,および,"And, As well as",https://bunpro.jp/grammar_points/%E3%81%8A%E3%82%88%E3%81%B3,および
+761,D (rare/literary),47.65,general,N2,184.0,何より,"Be glad, Be relieved, Most, Best, Above all else, More than anything",https://bunpro.jp/grammar_points/%E4%BD%95%E3%82%88%E3%82%8A,何より
+762,D (rare/literary),47.65,general,N2,186.0,か何か,"Or something, Or something like that",https://bunpro.jp/grammar_points/%E3%81%8B%E4%BD%95%E3%81%8B,か何か
+763,D (rare/literary),47.65,general,N2,196.0,何しろ,"No wonder, After all, In fact, Because, At any rate",https://bunpro.jp/grammar_points/%E4%BD%95%E3%81%97%E3%82%8D,何しろ
+764,D (rare/literary),47.65,general,N2,213.0,たって,"Even if, Even though, No matter how",https://bunpro.jp/grammar_points/%E3%81%9F%E3%81%A3%E3%81%A6,たって
+765,D (rare/literary),47.65,archaic/literary,N2,70.0,たまえ,"(Please) do!, Ask to, Beg to, (Order somebody to do something)",https://bunpro.jp/grammar_points/%E3%81%9F%E3%81%BE%E3%81%88,たまえ
+766,D (rare/literary),47.65,archaic/literary,N2,111.0,抜きで,"Without, Unless",https://bunpro.jp/grammar_points/%E6%8A%9C%E3%81%8D%E3%81%A7,抜きで
+767,D (rare/literary),47.3,general,N2,1.0,得る・得る,"Is able to, Can, Possible",https://bunpro.jp/grammar_points/%E5%BE%97%E3%82%8B-%E5%BE%97%E3%82%8B,得る・得る
+768,D (rare/literary),47.3,general,N2,5.0,つもりで,"With the intention of doing, Instead of..., Act as if or pretend, Believing that..., Thinking that...",https://bunpro.jp/grammar_points/%E3%81%A4%E3%82%82%E3%82%8A%E3%81%A7,つもりで
+769,D (rare/literary),47.3,general,N2,8.0,どうやら,"Apparently, Looks Like, Seems like",https://bunpro.jp/grammar_points/%E3%81%A9%E3%81%86%E3%82%84%E3%82%89,どうやら
+770,D (rare/literary),47.3,general,N2,17.0,っこない,"There is no chance of, There is no way of, Impossible",https://bunpro.jp/grammar_points/%E3%81%A3%E3%81%93%E3%81%AA%E3%81%84,っこない
+771,D (rare/literary),47.3,general,N2,22.0,おおよそ,"Approximately, Roughly, About",https://bunpro.jp/grammar_points/%E3%81%8A%E3%81%8A%E3%82%88%E3%81%9D,おおよそ
+772,D (rare/literary),47.3,general,N2,36.0,を巡って,"Concerning, In regard to, About, (Split) over",https://bunpro.jp/grammar_points/%E3%82%92%E5%B7%A1%E3%81%A3%E3%81%A6,を巡って
+773,D (rare/literary),47.3,general,N2,39.0,た末・の末,"After, As a conclusion of",https://bunpro.jp/grammar_points/%E3%81%9F%E6%9C%AB-%E3%81%AE%E6%9C%AB,た末・の末
+774,D (rare/literary),47.3,general,N2,50.0,かねない,"Might, Could be, Capable of, Possible",https://bunpro.jp/grammar_points/%E3%81%8B%E3%81%AD%E3%81%AA%E3%81%84,かねない
+775,D (rare/literary),47.3,general,N2,51.0,を除いて,"Except, With the exception of, Unless",https://bunpro.jp/grammar_points/%E3%82%92%E9%99%A4%E3%81%84%E3%81%A6,を除いて
+776,D (rare/literary),47.3,general,N2,54.0,に限って,"Particularly when, Those who, Only when",https://bunpro.jp/grammar_points/%E3%81%AB%E9%99%90%E3%81%A3%E3%81%A6,に限って
+777,D (rare/literary),47.3,general,N2,60.0,～てこそ,"Only if, Because, By, Unless, Until",https://bunpro.jp/grammar_points/-%E3%81%A6%E3%81%93%E3%81%9D,~てこそ
+778,D (rare/literary),47.3,general,N2,64.0,要するに,"To sum up, In summary, In short",https://bunpro.jp/grammar_points/%E8%A6%81%E3%81%99%E3%82%8B%E3%81%AB,要するに
+779,D (rare/literary),47.3,general,N2,77.0,を契機に,"Lead to, As a good opportunity to, As a result of, As a trigger",https://bunpro.jp/grammar_points/%E3%82%92%E5%A5%91%E6%A9%9F%E3%81%AB,を契機に
+780,D (rare/literary),47.3,general,N2,82.0,ていては,"If one keeps doing something, When, If something is...",https://bunpro.jp/grammar_points/%E3%81%A6%E3%81%84%E3%81%A6%E3%81%AF,ていては
+781,D (rare/literary),47.3,general,N2,87.0,ては〜ては,"Repeating action, If, Since",https://bunpro.jp/grammar_points/%E3%81%A6%E3%81%AF-%E3%81%A6%E3%81%AF,てはては
+782,D (rare/literary),47.3,general,N2,91.0,に先立ち,"Before, Prior to, In preference over",https://bunpro.jp/grammar_points/%E3%81%AB%E5%85%88%E7%AB%8B%E3%81%A1,に先立ち
+783,D (rare/literary),47.3,general,N2,92.0,はたして,"Wonder if ~ (really)?, Wonder how ~ (actually)?, Sure enough, As expected",https://bunpro.jp/grammar_points/%E3%81%AF%E3%81%9F%E3%81%97%E3%81%A6,はたして
+784,D (rare/literary),47.3,general,N2,112.0,いよいよ,"At last, Finally, More and more",https://bunpro.jp/grammar_points/%E3%81%84%E3%82%88%E3%81%84%E3%82%88,いよいよ
+785,D (rare/literary),47.3,general,N2,143.0,お～願う,"Please, Could you please",https://bunpro.jp/grammar_points/%E3%81%8A-%E9%A1%98%E3%81%86,お~願う
+786,D (rare/literary),47.3,general,N2,148.0,て当然だ,"Natural, As a matter of course",https://bunpro.jp/grammar_points/%E3%81%A6%E5%BD%93%E7%84%B6%E3%81%A0,て当然だ
+787,D (rare/literary),47.3,general,N2,150.0,たった(の),"Only, Just, No more than",https://bunpro.jp/grammar_points/%E3%81%9F%E3%81%A3%E3%81%9F-%E3%81%AE,たった(の)
+788,D (rare/literary),47.3,general,N2,152.0,おそらく,"Probably, Perhaps, (Most) likely, (I) fear that",https://bunpro.jp/grammar_points/%E3%81%8A%E3%81%9D%E3%82%89%E3%81%8F,おそらく
+789,D (rare/literary),47.3,general,N2,154.0,おまけに,"In addition, On top of that, What is more, To make matters worse",https://bunpro.jp/grammar_points/%E3%81%8A%E3%81%BE%E3%81%91%E3%81%AB,おまけに
+790,D (rare/literary),47.3,general,N2,174.0,たちまち,"Immediately, Quickly, Suddenly, In a moment or flash",https://bunpro.jp/grammar_points/%E3%81%9F%E3%81%A1%E3%81%BE%E3%81%A1,たちまち
+791,D (rare/literary),47.3,general,N2,177.0,を込めて,"Full of, Filled with, With ～",https://bunpro.jp/grammar_points/%E3%82%92%E8%BE%BC%E3%82%81%E3%81%A6,を込めて
+792,D (rare/literary),47.3,general,N2,190.0,いわゆる,"What is called, So-called, Generally known",https://bunpro.jp/grammar_points/%E3%81%84%E3%82%8F%E3%82%86%E3%82%8B,いわゆる
+793,D (rare/literary),47.3,archaic/literary,N2,48.0,も構わず,Without worrying about,https://bunpro.jp/grammar_points/%E3%82%82%E3%81%8B%E3%81%BE%E3%82%8F%E3%81%9A,も構わず
+794,D (rare/literary),47.3,archaic/literary,N2,55.0,に限らず,"Not just, Not only… but also",https://bunpro.jp/grammar_points/%E3%81%AB%E9%99%90%E3%82%89%E3%81%9A,に限らず
+795,D (rare/literary),47.3,archaic/literary,N2,61.0,を問わず,"Regardless of, Whether or not, No matter, With or without",https://bunpro.jp/grammar_points/%E3%82%92%E5%95%8F%E3%82%8F%E3%81%9A,を問わず
+796,D (rare/literary),47.3,archaic/literary,N2,97.0,きっかけ,"Lead to, Because of, As a start or trigger of, An opportunity",https://bunpro.jp/grammar_points/%E3%81%8D%E3%81%A3%E3%81%8B%E3%81%91,きっかけ
+797,D (rare/literary),47.3,archaic/literary,N2,175.0,いきなり,"For no reason, Suddenly, All of a sudden",https://bunpro.jp/grammar_points/%E3%81%84%E3%81%8D%E3%81%AA%E3%82%8A,いきなり
+798,D (rare/literary),47.25,archaic/literary,N1,159.0,ずにはすまない,"Won't get away without, Won't get off without, Have to, Have no choice but to, Can’t not",https://bunpro.jp/grammar_points/%E3%81%9A%E3%81%AB%E3%81%AF%E3%81%99%E3%81%BE%E3%81%AA%E3%81%84,ずにはすまない
+799,D (rare/literary),47.25,archaic/literary,N1,166.0,ずにはおかない,"Will definitely, Will certainly, Bound to, Not fail to",https://bunpro.jp/grammar_points/%E3%81%9A%E3%81%AB%E3%81%AF%E3%81%8A%E3%81%8B%E3%81%AA%E3%81%84,ずにはおかない
+800,D (rare/literary),46.95,general,N2,13.0,に相違ない,"Without a doubt, Certainly, Surely, Not mistaken",https://bunpro.jp/grammar_points/%E3%81%AB%E7%9B%B8%E9%81%95%E3%81%AA%E3%81%84,に相違ない
+801,D (rare/literary),46.95,general,N2,44.0,にかかわる,"To relate to, To have to do with, Concerning, Depends on",https://bunpro.jp/grammar_points/%E3%81%AB%E3%81%8B%E3%81%8B%E3%82%8F%E3%82%8B,にかかわる
+802,D (rare/literary),46.95,general,N2,46.0,が気になる,"To be interested in, To be concerned about",https://bunpro.jp/grammar_points/%E3%81%8C%E6%B0%97%E3%81%AB%E3%81%AA%E3%82%8B,が気になる
+803,D (rare/literary),46.95,general,N2,66.0,なくはない,"It's not that…, Kind of, might, Slightly, Somewhat, In some respects",https://bunpro.jp/grammar_points/%E3%81%AA%E3%81%8F%E3%81%AF%E3%81%AA%E3%81%84,なくはない
+804,D (rare/literary),46.95,general,N2,89.0,結果・の結果,As a result of,https://bunpro.jp/grammar_points/%E7%B5%90%E6%9E%9C%E3%83%BB%E3%81%AE%E7%B5%90%E6%9E%9C,結果・の結果
+805,D (rare/literary),46.95,general,N2,93.0,甲斐がある,"To be (not) worth, To (not) pay off",https://bunpro.jp/grammar_points/%E7%94%B2%E6%96%90%E3%81%8C%E3%81%82%E3%82%8B,甲斐がある
+806,D (rare/literary),46.95,general,N2,95.0,したがって,"Therefore, Thus, As a result",https://bunpro.jp/grammar_points/%E3%81%97%E3%81%9F%E3%81%8C%E3%81%A3%E3%81%A6,したがって
+807,D (rare/literary),46.95,general,N2,98.0,にかけては,"When it comes to, Regarding, Concerning",https://bunpro.jp/grammar_points/%E3%81%AB%E3%81%8B%E3%81%91%E3%81%A6%E3%81%AF,にかけては
+808,D (rare/literary),46.95,general,N2,149.0,のも当然だ,"It is only natural that, It is no wonder",https://bunpro.jp/grammar_points/%E3%81%AE%E3%82%82%E5%BD%93%E7%84%B6%E3%81%A0,のも当然だ
+809,D (rare/literary),46.95,general,N2,151.0,恐れがある,"There is a risk or fear that, Be in danger of, Possibility of",https://bunpro.jp/grammar_points/%E6%81%90%E3%82%8C%E3%81%8C%E3%81%82%E3%82%8B,恐れがある
+810,D (rare/literary),46.95,general,N2,163.0,傾向がある,"Tendency, Trend, Inclination",https://bunpro.jp/grammar_points/%E5%82%BE%E5%90%91%E3%81%8C%E3%81%82%E3%82%8B,傾向がある
+811,D (rare/literary),46.95,general,N2,191.0,にすぎない,"No more than, Just, Merely",https://bunpro.jp/grammar_points/%E3%81%AB%E3%81%99%E3%81%8E%E3%81%AA%E3%81%84,にすぎない
+812,D (rare/literary),46.95,general,N2,200.0,やら～やら,"Whether or, Things like, And … so on",https://bunpro.jp/grammar_points/%E3%82%84%E3%82%89-%E3%82%84%E3%82%89,やら~やら
+813,D (rare/literary),46.95,general,N2,206.0,陸に～ない,"Not well or properly, Not much or enough, Barely, Hardly",https://bunpro.jp/grammar_points/%E9%99%B8%E3%81%AB-%E3%81%AA%E3%81%84,陸に~ない
+814,D (rare/literary),46.6,general,N2,3.0,ざるを得ない,"Can't help doing, Have no choice but",https://bunpro.jp/grammar_points/%E3%81%96%E3%82%8B%E3%82%92%E5%BE%97%E3%81%AA%E3%81%84,ざるを得ない
+815,D (rare/literary),46.6,general,N2,9.0,よりほかない,"To have no choice but, No other way than, Have to",https://bunpro.jp/grammar_points/%E3%82%88%E3%82%8A%E3%81%BB%E3%81%8B%E3%81%AA%E3%81%84,よりほかない
+816,D (rare/literary),46.6,general,N2,28.0,途中に・途中で,"On the way, Partway, In the middle of",https://bunpro.jp/grammar_points/%E9%80%94%E4%B8%AD%E3%81%AB%E3%83%BB%E9%80%94%E4%B8%AD%E3%81%A7,途中に・途中で
+817,D (rare/literary),46.6,general,N2,47.0,に気をつける,"Take care, Be careful, Pay attention, Make sure, Watch out",https://bunpro.jp/grammar_points/%E3%81%AB%E6%B0%97%E3%82%92%E3%81%A4%E3%81%91%E3%82%8B,に気をつける
+818,D (rare/literary),46.6,general,N2,59.0,次第だ・次第で,"Depending on, So",https://bunpro.jp/grammar_points/%E6%AC%A1%E7%AC%AC%E3%81%A0-%E6%AC%A1%E7%AC%AC%E3%81%A7,次第だ・次第で
+819,D (rare/literary),46.6,general,N2,194.0,てたまらない,"Can't help but want to, Very, Extremely",https://bunpro.jp/grammar_points/%E3%81%A6%E3%81%9F%E3%81%BE%E3%82%89%E3%81%AA%E3%81%84,てたまらない
+820,D (rare/literary),46.6,general,N2,195.0,にせよ・にしろ,"Even if, Even though, No matter, Whether… or",https://bunpro.jp/grammar_points/%E3%81%AB%E3%81%9B%E3%82%88-%E3%81%AB%E3%81%97%E3%82%8D,にせよ・にしろ
+821,D (rare/literary),46.25,general,N2,20.0,～を～に任せる,"Leave 〜 up to, Entrust 〜 to",https://bunpro.jp/grammar_points/%E3%82%92-%E3%81%AB%E4%BB%BB%E3%81%9B%E3%82%8B,~を~に任せる
+822,D (rare/literary),46.25,general,N2,84.0,どころではない,"This is not the time for…, Far from, Out of the question",https://bunpro.jp/grammar_points/%E3%81%A9%E3%81%93%E3%82%8D%E3%81%A7%E3%81%AF%E3%81%AA%E3%81%84,どころではない
+823,D (rare/literary),46.25,general,N2,155.0,に決まっている,"Surely, Bound to, Certainly, Be decided",https://bunpro.jp/grammar_points/%E3%81%AB%E6%B1%BA%E3%81%BE%E3%81%A3%E3%81%A6%E3%81%84%E3%82%8B,に決まっている
+824,D (rare/literary),46.25,general,N2,164.0,てしょうがない,"Extremely, Very, Really, It can't be helped",https://bunpro.jp/grammar_points/%E3%81%A6%E3%81%97%E3%82%87%E3%81%86%E3%81%8C%E3%81%AA%E3%81%84,てしょうがない
+825,D (rare/literary),46.25,general,N2,197.0,にしろ～にしろ,Whether… or,https://bunpro.jp/grammar_points/%E3%81%AB%E3%81%97%E3%82%8D-%E3%81%AB%E3%81%97%E3%82%8D,にしろ~にしろ
+826,D (rare/literary),46.25,general,N2,205.0,てはいられない,"Can't afford to, Unable to",https://bunpro.jp/grammar_points/%E3%81%A6%E3%81%AF%E3%81%84%E3%82%89%E3%82%8C%E3%81%AA%E3%81%84,てはいられない
+827,D (rare/literary),46.25,archaic/literary,N2,53.0,にもかかわらず,"Despite, In spite of, Regardless, Nevertheless",https://bunpro.jp/grammar_points/%E3%81%AB%E3%82%82%E3%81%8B%E3%81%8B%E3%82%8F%E3%82%89%E3%81%9A,にもかかわらず
+828,D (rare/literary),45.55,general,N2,45.0,に向かって・に向けて,"Towards, To face, To head to",https://bunpro.jp/grammar_points/%E3%81%AB%E5%90%91%E3%81%8B%E3%81%A3%E3%81%A6-%E3%81%AB%E5%90%91%E3%81%91%E3%81%A6,に向かって・に向けて
+829,D (rare/literary),45.55,general,N2,68.0,ないではいられない,"Cannot help doing something, Cannot resist doing something",https://bunpro.jp/grammar_points/%E3%81%AA%E3%81%84%E3%81%A7%E3%81%AF%E3%81%84%E3%82%89%E3%82%8C%E3%81%AA%E3%81%84,ないではいられない
+830,D (rare/literary),44.0,general,N1,13.0,如何,Depending on,https://bunpro.jp/grammar_points/%E5%A6%82%E4%BD%95,如何
+831,D (rare/literary),44.0,general,N1,25.0,塗れ,"Stained, Covered in, Smeared, Dirty with, Soaked in",https://bunpro.jp/grammar_points/%E5%A1%97%E3%82%8C,塗れ
+832,D (rare/literary),44.0,general,N1,35.0,すら,Even,https://bunpro.jp/grammar_points/%E3%81%99%E3%82%89,すら
+833,D (rare/literary),44.0,general,N1,43.0,だの,"Things like, And so on, Or something, And whatnot",https://bunpro.jp/grammar_points/%E3%81%A0%E3%81%AE,だの
+834,D (rare/literary),44.0,general,N1,45.0,べく,"For the purpose of, In order to, To ensure",https://bunpro.jp/grammar_points/%E3%81%B9%E3%81%8F,べく
+835,D (rare/literary),44.0,general,N1,57.0,たる,"To be (in a position of), As a, For",https://bunpro.jp/grammar_points/%E3%81%9F%E3%82%8B,たる
+836,D (rare/literary),44.0,general,N1,102.0,わ〜わ,"~and ~and, Keep ~ing, One after another, So much, So many, One after the other",https://bunpro.jp/grammar_points/%E3%82%8F-%E3%82%8F,わわ
+837,D (rare/literary),44.0,general,N1,127.0,さぞ,"You must be very, How … you must be, I dare to say, I am sure or certain that you must be very",https://bunpro.jp/grammar_points/%E3%81%95%E3%81%9E,さぞ
+838,D (rare/literary),44.0,general,N1,129.0,びる,"-like, Looking, Feeling, With an air of, To become",https://bunpro.jp/grammar_points/%E3%81%B3%E3%82%8B,びる
+839,D (rare/literary),44.0,general,N1,175.0,以前,"Before, Not even, Before even, Precede, Far from",https://bunpro.jp/grammar_points/%E4%BB%A5%E5%89%8D,以前
+840,D (rare/literary),44.0,general,N1,178.0,並み,"As, On par with, Worthy of",https://bunpro.jp/grammar_points/%E4%B8%A6%E3%81%BF,並み
+841,D (rare/literary),44.0,archaic/literary,N1,23.0,なり,"As soon as, The moment, When",https://bunpro.jp/grammar_points/%E3%81%AA%E3%82%8A,なり
+842,D (rare/literary),43.65,general,N1,4.0,に足る,"To be worthy of, To be enough, To be sufficient",https://bunpro.jp/grammar_points/%E3%81%AB%E8%B6%B3%E3%82%8B,に足る
+843,D (rare/literary),43.65,general,N1,7.0,を以て,"By means of, With, By, Via, In view of",https://bunpro.jp/grammar_points/%E3%82%92%E4%BB%A5%E3%81%A6,を以て
+844,D (rare/literary),43.65,general,N1,28.0,にして①,"At, Over, In, Only (after, when, or because)",https://bunpro.jp/grammar_points/%E3%81%AB%E3%81%97%E3%81%A61,にして
+845,D (rare/literary),43.65,general,N1,30.0,であれ,"Even if, Even, No matter",https://bunpro.jp/grammar_points/%E3%81%A7%E3%81%82%E3%82%8C,であれ
+846,D (rare/literary),43.65,general,N1,38.0,を経て,"Via, Through, After (experience at job, university, etc.), Pass through",https://bunpro.jp/grammar_points/%E3%82%92%E7%B5%8C%E3%81%A6,を経て
+847,D (rare/literary),43.65,general,N1,41.0,の極み,"Ultimate, Extreme, Utter, Epitome, Peak",https://bunpro.jp/grammar_points/%E3%81%AE%E6%A5%B5%E3%81%BF,の極み
+848,D (rare/literary),43.65,general,N1,48.0,にして②,"To be ~ and ~, To be ~ as well as ~, Both ~ and ~",https://bunpro.jp/grammar_points/%E3%81%AB%E3%81%97%E3%81%A62,にして
+849,D (rare/literary),43.65,general,N1,69.0,か否か,Whether or not,https://bunpro.jp/grammar_points/%E3%81%8B%E5%90%A6%E3%81%8B,か否か
+850,D (rare/literary),43.65,general,N1,74.0,〜に〜ない,"Cannot even...if wants, Would like to...but cannot, Wants to...but cannot",https://bunpro.jp/grammar_points/-%E3%81%AB-%E3%81%AA%E3%81%84,にない
+851,D (rare/literary),43.65,general,N1,88.0,がてら,"On the occasion of, While … as well, While …  (one is) at it, During, Along the way",https://bunpro.jp/grammar_points/%E3%81%8C%E3%81%A6%E3%82%89,がてら
+852,D (rare/literary),43.65,general,N1,100.0,折には,"When, Occasion, Opportunity, Time",https://bunpro.jp/grammar_points/%E6%8A%98%E3%81%AB%E3%81%AF,折には
+853,D (rare/literary),43.65,general,N1,118.0,まくる,"Like crazy, Keep doing (without a second thought), Nothing but, On and on, Do … all around, To do a lot of, One after another, All over, Keep, Everything, Constantly, All the time ",https://bunpro.jp/grammar_points/%E3%81%BE%E3%81%8F%E3%82%8B,まくる
+854,D (rare/literary),43.65,general,N1,119.0,わ〜わ（で）,"And...so, And...because, Since",https://bunpro.jp/grammar_points/%E3%82%8F-%E3%82%8F%E3%81%A7,わわ(で)
+855,D (rare/literary),43.65,general,N1,120.0,や否や,"As soon as, No sooner than, The minute",https://bunpro.jp/grammar_points/%E3%82%84%E5%90%A6%E3%82%84,や否や
+856,D (rare/literary),43.65,general,N1,140.0,の至り,"Utmost, Height of, Extreme, Heartiest, Such a, Very, really, Completely, Deeply",https://bunpro.jp/grammar_points/%E3%81%AE%E8%87%B3%E3%82%8A,の至り
+857,D (rare/literary),43.65,general,N1,161.0,始末だ,"Ends up, Finally, In the end, (Unfortunately) As a result, This is what happened, To come about, To wind up",https://bunpro.jp/grammar_points/%E5%A7%8B%E6%9C%AB%E3%81%A0,始末だ
+858,D (rare/literary),43.65,general,N1,180.0,を機に,"Opportunity, Occasion",https://bunpro.jp/grammar_points/%E3%82%92%E6%A9%9F%E3%81%AB,を機に
+859,D (rare/literary),43.65,archaic/literary,N1,54.0,なりに,"In one's own way, Of someone's own, Do one's best in one's own way, As much as one can",https://bunpro.jp/grammar_points/%E3%81%AA%E3%82%8A%E3%81%AB,なりに
+860,D (rare/literary),43.3,general,N1,15.0,にあって,"At, In the (place or situation), Under ~ conditions or circumstances, During, Suited to",https://bunpro.jp/grammar_points/%E3%81%AB%E3%81%82%E3%81%A3%E3%81%A6,にあって
+861,D (rare/literary),43.3,general,N1,20.0,かたわら,"While, Besides, In addition to",https://bunpro.jp/grammar_points/%E3%81%8B%E3%81%9F%E3%82%8F%E3%82%89,かたわら
+862,D (rare/literary),43.3,general,N1,36.0,あっての,"Exist only because of or due to, Owe everything to",https://bunpro.jp/grammar_points/%E3%81%82%E3%81%A3%E3%81%A6%E3%81%AE,あっての
+863,D (rare/literary),43.3,general,N1,53.0,いかなる,"What kind of, No matter what kind of, No … (with a negative verb), Any... (with a negative verb)",https://bunpro.jp/grammar_points/%E3%81%84%E3%81%8B%E3%81%AA%E3%82%8B,いかなる
+864,D (rare/literary),43.3,general,N1,67.0,どうにも,"Cannot, There is no way one can, Nothing one can do, Cannot possibly not by any means, Cannot do no matter how hard one tries, Nothing will come out, It is meaningless to",https://bunpro.jp/grammar_points/%E3%81%A9%E3%81%86%E3%81%AB%E3%82%82,どうにも
+865,D (rare/literary),43.3,general,N1,71.0,べくして,"As expected, Meant to, Supposed to, Destined to, Sure to",https://bunpro.jp/grammar_points/%E3%81%B9%E3%81%8F%E3%81%97%E3%81%A6,べくして
+866,D (rare/literary),43.3,general,N1,73.0,かれ〜かれ,"Or, Either or",https://bunpro.jp/grammar_points/%E3%81%8B%E3%82%8C-%E3%81%8B%E3%82%8C,かれかれ
+867,D (rare/literary),43.3,general,N1,84.0,ぐるみで,"Whole, -wide, Across the, Entire, All of, With … altogether",https://bunpro.jp/grammar_points/%E3%81%90%E3%82%8B%E3%81%BF%E3%81%A7,ぐるみで
+868,D (rare/literary),43.3,general,N1,104.0,を兼ねて,"And also, Also (partly) to, Also (partly) for (the purpose of), At the same time, To double as, When … also, While … as well, And as",https://bunpro.jp/grammar_points/%E3%82%92%E5%85%BC%E3%81%AD%E3%81%A6,を兼ねて
+869,D (rare/literary),43.3,general,N1,107.0,相まって,"Combined with, Coupled with, Together with",https://bunpro.jp/grammar_points/%E7%9B%B8%E3%81%BE%E3%81%A3%E3%81%A6,相まって
+870,D (rare/literary),43.3,general,N1,113.0,はおろか,"Let alone, Much less, Needless to say, Not to mention, Not only but also",https://bunpro.jp/grammar_points/%E3%81%AF%E3%81%8A%E3%82%8D%E3%81%8B,はおろか
+871,D (rare/literary),43.3,general,N1,121.0,次第です,"Because the reason is, Therefore, The present situation is like this, This is how (it is), Those are the circumstances, This is why",https://bunpro.jp/grammar_points/%E6%AC%A1%E7%AC%AC%E3%81%A7%E3%81%99,次第です
+872,D (rare/literary),43.3,general,N1,134.0,に即して,"In line with, Based on, In accordance with",https://bunpro.jp/grammar_points/%E3%81%AB%E5%8D%B3%E3%81%97%E3%81%A6,に即して
+873,D (rare/literary),43.3,general,N1,136.0,をよそに,"Ignoring, Disregarding, Despite",https://bunpro.jp/grammar_points/%E3%82%92%E3%82%88%E3%81%9D%E3%81%AB,をよそに
+874,D (rare/literary),43.3,general,N1,149.0,が早いか,"As soon as, No sooner than, The instant that, No sooner had",https://bunpro.jp/grammar_points/%E3%81%8C%E6%97%A9%E3%81%84%E3%81%8B,が早いか
+875,D (rare/literary),43.3,general,N1,158.0,を前提に,On the premise of,https://bunpro.jp/grammar_points/%E3%82%92%E5%89%8D%E6%8F%90%E3%81%AB,を前提に
+876,D (rare/literary),43.3,general,N1,167.0,を限りに,"As of (the end of), (Starting) from, (No longer) after, By (the), Ending with",https://bunpro.jp/grammar_points/%E3%82%92%E9%99%90%E3%82%8A%E3%81%AB,を限りに
+877,D (rare/literary),43.3,general,N1,169.0,かたがた,"Partly for (the purpose of), In addition to, Along with, By the way, And also to, Incidentally, While",https://bunpro.jp/grammar_points/%E3%81%8B%E3%81%9F%E3%81%8C%E3%81%9F,かたがた
+878,D (rare/literary),43.3,general,N1,171.0,～てやる,"Just wait and see, Just you wait, To do a favor, For you, Definitely, For sure",https://bunpro.jp/grammar_points/%E3%81%A6%E3%82%84%E3%82%8B,~てやる
+879,D (rare/literary),43.3,general,N1,172.0,ただ〜のみ,"Nothing but, Should, Have to, Only, All that remains,",https://bunpro.jp/grammar_points/%E3%81%9F%E3%81%A0-%E3%81%AE%E3%81%BF,ただのみ
+880,D (rare/literary),43.3,archaic/literary,N1,90.0,いかん〜ず,"Regardless of (whatever … is), Irrespective of (whatever … is)",https://bunpro.jp/grammar_points/%E3%81%84%E3%81%8B%E3%82%93-%E3%81%9A,いかんず
+881,D (rare/literary),42.95,general,N1,14.0,～るまでだ,"Just, Merely, Simply, Only",https://bunpro.jp/grammar_points/%EF%BD%9E%E3%82%8B%E3%81%BE%E3%81%A7%E3%81%A0,~るまでだ
+882,D (rare/literary),42.95,general,N1,21.0,を皮切りに,"Beginning of, Starting with",https://bunpro.jp/grammar_points/%E3%82%92%E7%9A%AE%E5%88%87%E3%82%8A%E3%81%AB,を皮切りに
+883,D (rare/literary),42.95,general,N1,37.0,～たまでだ,"Just, Merely, Simply, Only",https://bunpro.jp/grammar_points/%E3%81%9F%E3%81%BE%E3%81%A7%E3%81%A0,~たまでだ
+884,D (rare/literary),42.95,general,N1,50.0,飽くまで(も),"Just, Only, Merely, Strictly",https://bunpro.jp/grammar_points/%E9%A3%BD%E3%81%8F%E3%81%BE%E3%81%A7-%E3%82%82,飽くまで(も)
+885,D (rare/literary),42.95,general,N1,56.0,にまつわる,"Surrounding, Related or relating to, Associated with, Connected to",https://bunpro.jp/grammar_points/%E3%81%AB%E3%81%BE%E3%81%A4%E3%82%8F%E3%82%8B,にまつわる
+886,D (rare/literary),42.95,general,N1,62.0,を踏まえて,"Based on, Considering, Keeping in mind, Taking into account, Therefore",https://bunpro.jp/grammar_points/%E3%82%92%E8%B8%8F%E3%81%BE%E3%81%88%E3%81%A6,を踏まえて
+887,D (rare/literary),42.95,general,N1,75.0,なくして(は),"Without, If not for",https://bunpro.jp/grammar_points/%E3%81%AA%E3%81%8F%E3%81%97%E3%81%A6-%E3%81%AF,なくして(は)
+888,D (rare/literary),42.95,general,N1,78.0,てやまない,"Never cease to, Always, Sincerely, Greatly, From the bottom of one's heart",https://bunpro.jp/grammar_points/%E3%81%A6%E3%82%84%E3%81%BE%E3%81%AA%E3%81%84,てやまない
+889,D (rare/literary),42.95,general,N1,87.0,だに + しない,"Not even, Not at all, Never could have",https://bunpro.jp/grammar_points/%E3%81%A0%E3%81%AB-%E3%81%97%E3%81%AA%E3%81%84,だに+しない
+890,D (rare/literary),42.95,general,N1,91.0,にも～ない,"Cannot... even if one wants or tries, Would like but cannot, Wants or tries but cannot",https://bunpro.jp/grammar_points/%E3%81%AB%E3%82%82-%E3%81%AA%E3%81%84,にも~ない
+891,D (rare/literary),42.95,general,N1,108.0,に足りない,"To not be worthy, To not be enough, To not be sufficient, To lack",https://bunpro.jp/grammar_points/%E3%81%AB%E8%B6%B3%E3%82%8A%E3%81%AA%E3%81%84,に足りない
+892,D (rare/literary),42.95,general,N1,114.0,めく・めいた,"Like, To show signs of,  To have the appearance of, To come to a (state) similar to, Somewhat, An air of,  Feels almost like",https://bunpro.jp/grammar_points/%E3%82%81%E3%81%8F-%E3%82%81%E3%81%84%E3%81%9F,めく・めいた
+893,D (rare/literary),42.95,general,N1,117.0,にもまして,"Even -er than, Even more than, More than anything, More than anybody, More than ever",https://bunpro.jp/grammar_points/%E3%81%AB%E3%82%82%E3%81%BE%E3%81%97%E3%81%A6,にもまして
+894,D (rare/literary),42.95,general,N1,150.0,に難くない,"Not hard to, Not difficult to, Easy to, Is obvious that",https://bunpro.jp/grammar_points/%E3%81%AB%E9%9B%A3%E3%81%8F%E3%81%AA%E3%81%84,に難くない
+895,D (rare/literary),42.95,general,N1,155.0,べくもない,"No (doubt or hope), There is no way, It is impossible, Not a hope in hell",https://bunpro.jp/grammar_points/%E3%81%B9%E3%81%8F%E3%82%82%E3%81%AA%E3%81%84,べくもない
+896,D (rare/literary),42.95,general,N1,160.0,に堪えない,"Cannot bear to, Cannot stand to, Too much to, Cannot go on doing, Cannot tolerate",https://bunpro.jp/grammar_points/%E3%81%AB%E5%A0%AA%E3%81%88%E3%81%AA%E3%81%84,に堪えない
+897,D (rare/literary),42.95,general,N1,164.0,それまでだ,"If… then it is all in vain, It's done, It is useless, No point, It is a waste, That's it, It is all gone, ",https://bunpro.jp/grammar_points/%E3%81%9D%E3%82%8C%E3%81%BE%E3%81%A7%E3%81%A0,それまでだ
+898,D (rare/literary),42.95,general,N1,179.0,に先駆けて,"First, Prior to, Pioneer, Ahead of",https://bunpro.jp/grammar_points/%E3%81%AB%E5%85%88%E9%A7%86%E3%81%91%E3%81%A6,に先駆けて
+899,D (rare/literary),42.95,archaic/literary,N1,40.0,たなり・なり,"While... ~ing, Remaining, Not or ever since, Keep or leave",https://bunpro.jp/grammar_points/%E3%81%9F%E3%81%AA%E3%82%8A-%E3%81%AA%E3%82%8A,たなり・なり
+900,D (rare/literary),42.95,archaic/literary,N1,141.0,に恥じない,"Lives up to, Truly to …’s name, Worthy of, Not dishonor, Not putting to shame, Measure to",https://bunpro.jp/grammar_points/%E3%81%AB%E6%81%A5%E3%81%98%E3%81%AA%E3%81%84,に恥じない
+901,D (rare/literary),42.95,archaic/literary,N1,163.0,にひきかえ,"In stark contrast, In comparison, On the other hand, While, In sharp contrast",https://bunpro.jp/grammar_points/%E3%81%AB%E3%81%B2%E3%81%8D%E3%81%8B%E3%81%88,にひきかえ
+902,D (rare/literary),42.6,general,N1,51.0,であれ〜であれ,"Whether or, Or, No matter which, In either case",https://bunpro.jp/grammar_points/%E3%81%A7%E3%81%82%E3%82%8C-%E3%81%A7%E3%81%82%E3%82%8C,であれであれ
+903,D (rare/literary),42.6,general,N1,76.0,のなんのって,"So much that, Extremely, Very",https://bunpro.jp/grammar_points/%E3%81%AE%E3%81%AA%E3%82%93%E3%81%AE%E3%81%A3%E3%81%A6,のなんのって
+904,D (rare/literary),42.6,general,N1,153.0,にかこつけて,"In the name of, Using the excuse of, To use as a pretext of, Under the guise or pretense of",https://bunpro.jp/grammar_points/%E3%81%AB%E3%81%8B%E3%81%93%E3%81%A4%E3%81%91%E3%81%A6,にかこつけて
+905,D (rare/literary),42.6,general,N1,177.0,こそすれ〜ない,"And certainly not, But certainly not, But, Although, Even though",https://bunpro.jp/grammar_points/%E3%81%93%E3%81%9D%E3%81%99%E3%82%8C-%E3%81%AA%E3%81%84,こそすれない
+906,D (rare/literary),42.6,archaic/literary,N1,8.0,きらいがある,"Have a tendency to, Tend to, Be slightly~",https://bunpro.jp/grammar_points/%E3%81%8D%E3%82%89%E3%81%84%E3%81%8C%E3%81%82%E3%82%8B,きらいがある
+907,D (rare/literary),42.6,archaic/literary,N1,94.0,～なり～なり,"Or, Either or",https://bunpro.jp/grammar_points/-%E3%81%AA%E3%82%8A-%E3%81%AA%E3%82%8A,~なり~なり
+908,D (rare/literary),42.6,archaic/literary,N1,152.0,を禁じ得ない,"Cannot help feeling, Cannot but, Cannot hold back",https://bunpro.jp/grammar_points/%E3%82%92%E7%A6%81%E3%81%98%E5%BE%97%E3%81%AA%E3%81%84,を禁じ得ない
+909,D (rare/literary),42.25,general,N1,77.0,にかかっている,To depend on,https://bunpro.jp/grammar_points/%E3%81%AB%E3%81%8B%E3%81%8B%E3%81%A3%E3%81%A6%E3%81%84%E3%82%8B,にかかっている
+910,D (rare/literary),42.25,general,N1,111.0,に則って・に則り,"According to, In accordance with, Based on, In line with",https://bunpro.jp/grammar_points/%E3%81%AB%E5%89%87%E3%81%A3%E3%81%A6-%E3%81%AB%E5%89%87%E3%82%8A,に則って・に則り
+911,D (rare/literary),42.25,general,N1,168.0,てはかなわない,"It's unbearable when, It'd be unbearable if, I can't stand it when, I couldn’t stand it if",https://bunpro.jp/grammar_points/%E3%81%A6%E3%81%AF%E3%81%8B%E3%81%AA%E3%82%8F%E3%81%AA%E3%81%84,てはかなわない
+912,D (rare/literary),41.9,general,N1,5.0,極まりない・極まる,"Extreme, Extremely",https://bunpro.jp/grammar_points/%E6%A5%B5%E3%81%BE%E3%82%8A%E3%81%AA%E3%81%84-%E6%A5%B5%E3%81%BE%E3%82%8B,極まりない・極まる
+913,D (rare/literary),41.9,general,N1,16.0,を余儀なくされる,To be forced to do something,https://bunpro.jp/grammar_points/%E3%82%92%E4%BD%99%E5%84%80%E3%81%AA%E3%81%8F%E3%81%95%E3%82%8C%E3%82%8B,を余儀なくされる
+914,D (rare/literary),41.9,general,N1,170.0,を余儀なくさせる,"Force to, To compel, Make unavoidable",https://bunpro.jp/grammar_points/%E3%82%92%E4%BD%99%E5%84%80%E3%81%AA%E3%81%8F%E3%81%95%E3%81%9B%E3%82%8B,を余儀なくさせる
+915,D (rare/literary),41.55,general,N1,31.0,をおいてほかに〜ない,"No...but, Nothing else but, None other than",https://bunpro.jp/grammar_points/%E3%82%92%E3%81%8A%E3%81%84%E3%81%A6%E3%81%BB%E3%81%8B%E3%81%AB-%E3%81%AA%E3%81%84,をおいてほかにない
+916,D (rare/literary),41.55,general,N1,98.0,でなくてなんだろう,If … is not … then what is?,https://bunpro.jp/grammar_points/%E3%81%A7%E3%81%AA%E3%81%8F%E3%81%A6%E3%81%AA%E3%82%93%E3%81%A0%E3%82%8D%E3%81%86,でなくてなんだろう
+917,D (rare/literary),40.85,archaic/literary,N1,99.0,はさておき・はさておいて,"(Leaving or putting) aside, Apart",https://bunpro.jp/grammar_points/%E3%81%AF%E3%81%95%E3%81%A6%E3%81%8A%E3%81%8D-%E3%81%AF%E3%81%95%E3%81%A6%E3%81%8A%E3%81%84%E3%81%A6,はさておき・はさておいて
+918,D (rare/literary),36.25,archaic/literary,N4,62.0,まい～のように,"Almost every ~, Nearly every ~, On a ~ basis",https://bunpro.jp/grammar_points/%E3%81%BE%E3%81%84-%E3%81%AE%E3%82%88%E3%81%86%E3%81%AB,まい~のように
+919,D (rare/literary),31.65,general,N0,9.0,かろう,"Probably, Right?",https://bunpro.jp/grammar_points/%E3%81%8B%E3%82%8D%E3%81%86,かろう
+920,D (rare/literary),30.0,archaic/literary,N2,123.0,ぬ,"Classical negative, Classical verb [ない]",https://bunpro.jp/grammar_points/%E3%81%AC,ぬ
+921,D (rare/literary),30.0,archaic/literary,N2,23.0,まい,"Won't, Intend not to, Probably not",https://bunpro.jp/grammar_points/%E3%81%BE%E3%81%84,まい
+922,D (rare/literary),25.65,archaic/literary,N1,139.0,まじき,"Unbecoming of, Unworthy of, Not proper for, Should not, Must not, Cannot",https://bunpro.jp/grammar_points/%E3%81%BE%E3%81%98%E3%81%8D,まじき
+923,D (rare/literary),25.3,archaic/literary,N1,109.0,べからず,"Do not, Must not, Should not, Cannot (べからざる)",https://bunpro.jp/grammar_points/%E3%81%B9%E3%81%8B%E3%82%89%E3%81%9A,べからず
+924,D (rare/literary),25.3,archaic/literary,N1,142.0,ずじまい,"Ended up not, Did not (in the end), Never did",https://bunpro.jp/grammar_points/%E3%81%9A%E3%81%98%E3%81%BE%E3%81%84,ずじまい
+925,D (rare/literary),24.6,archaic/literary,N1,3.0,如く・如き・如し,"Like, Similar to, As if, The same as",https://bunpro.jp/grammar_points/%E5%A6%82%E3%81%8F-%E5%A6%82%E3%81%8D-%E5%A6%82%E3%81%97,如く・如き・如し
+926,D (rare/literary),24.25,archaic/literary,N1,18.0,じゃあるまいし,"You are not ~ so..., it isn't ~ so...",https://bunpro.jp/grammar_points/%E3%81%98%E3%82%83%E3%81%82%E3%82%8B%E3%81%BE%E3%81%84%E3%81%97,じゃあるまいし
+927,D (rare/literary),24.25,archaic/literary,N1,26.0,ようが～まいが,"Even if, No matter what, Whether or not, [Emphatic], Volitional + が",https://bunpro.jp/grammar_points/-%E3%82%88%E3%81%86--%E3%81%86-%E3%81%BE%E3%81%84%20-%20%E3%81%8C-%E3%81%A8,ようが~まいが

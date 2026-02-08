@@ -1,0 +1,120 @@
+{% extends "base.html" %}
+
+{% block title %}Add Content - Japanese Learning App{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8 mx-auto">
+        <h2>➕ Add Content</h2>
+        <p class="text-muted">Add new learning materials to your Japanese study collection</p>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">📝 Vocabulary</h5>
+                        <p class="card-text">Add Japanese words and phrases</p>
+                        <a href="{{ url_for('add_vocabulary') }}" class="btn btn-primary">Add Vocabulary</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">🈷️ Kanji</h5>
+                        <p class="card-text">Add kanji characters with readings and meanings</p>
+                        <a href="{{ url_for('add_kanji') }}" class="btn btn-primary">Add Kanji</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">📚 Grammar</h5>
+                        <p class="card-text">Add grammar points and explanations</p>
+                        <a href="{{ url_for('add_grammar') }}" class="btn btn-primary">Add Grammar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">💬 Phrases</h5>
+                        <p class="card-text">Add common phrases and expressions</p>
+                        <a href="{{ url_for('add_phrase') }}" class="btn btn-primary">Add Phrases</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">🎭 Idioms</h5>
+                        <p class="card-text">Add Japanese idioms and sayings</p>
+                        <a href="{{ url_for('add_idiom') }}" class="btn btn-primary">Add Idioms</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">🖼️ Process Image</h5>
+                        <p class="card-text">Extract Japanese content from images using AI</p>
+                        <a href="{{ url_for('process_image') }}" class="btn btn-info">Process Image</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">💬 Process Discord Log</h5>
+                        <p class="card-text">Extract Japanese content from Discord chat logs</p>
+                        <a href="{{ url_for('process_discord') }}" class="btn btn-info">Process Discord Log</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">🎮 Process RenPy File</h5>
+                        <p class="card-text">Extract dialogue from RenPy visual novel scripts</p>
+                        <a href="{{ url_for('process_renpy') }}" class="btn btn-info">Process RenPy File</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">📝 Process Raw Text</h5>
+                        <p class="card-text">Extract Japanese from mixed raw text/markdown</p>
+                        <a href="{{ url_for('process_raw_text') }}" class="btn btn-info">Process Raw Text</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="alert alert-info">
+            <h5>💡 Pro Tips:</h5>
+            <ul class="mb-0">
+                <li>Use the image processing feature to quickly add content from textbooks or manga</li>
+                <li>Process Discord logs to learn from real conversations</li>
+                <li>Extract dialogue from RenPy visual novels for contextual learning</li>
+                <li>Add readings and meanings when possible for better AI exercise generation</li>
+                <li>The system automatically creates multiple learning aspects for each item</li>
+                <li>Duplicate detection prevents adding the same content twice</li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}

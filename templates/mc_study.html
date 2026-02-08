@@ -1,0 +1,568 @@
+{% extends "base.html" %}
+
+{% block title %}{{ title }} - Japanese Learning App{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8 mx-auto">
+        <div class="card">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <div>
+                    <h3 class="mb-0">{{ icon }} {{ title }}</h3>
+                    <small class="text-muted">{{ subtitle }}</small>
+                </div>
+                <div id="queue-indicator" class="text-muted small">
+                    <span class="spinner-border spinner-border-sm d-none" id="bg-spinner"></span>
+                    <span id="queue-count"></span>
+                </div>
+            </div>
+            <div class="card-body">
+                <div id="bunpro-container">
+                    <div id="loading-state" class="text-center">
+                        <div class="spinner-border text-primary" role="status"><span class="visually-hidden">Loading...</span></div>
+                        <p class="mt-3">🤖 Generating questions...</p>
+                        <p class="text-muted small">Loading a batch of questions for smooth studying</p>
+                    </div>
+                    <div id="no-cards-state" class="text-center" style="display: none;">
+                        <div class="alert alert-success">
+                            <h4>🎉 All caught up!</h4>
+                            <p>No cards are due for review right now.</p>
+                            <a href="{{ url_for('index') }}" class="btn btn-secondary">Back to Home</a>
+                        </div>
+                    </div>
+                    <div id="study-card-state" style="display: none;">
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="badge bg-info" id="jlpt-badge"></span>
+                                    <span class="badge bg-secondary" id="rank-badge"></span>
+                                    <span class="badge bg-warning text-dark d-none" id="new-badge">NEW</span>
+                                </div>
+                                <span id="session-stats" class="text-muted">
+                                    Session: <span id="cards-studied">0</span> cards |
+                                    <span id="correct-count">0</span> correct
+                                </span>
+                            </div>
+                        </div>
+                        <div class="mb-3 p-2 bg-light rounded" id="grammar-point-header">
+                            <h5 class="mb-0">
+                                <span id="grammar-point" class="text-primary fs-4"></span>
+                                <small class="text-muted ms-2" id="grammar-meaning-hint"></small>
+                            </h5>
+                        </div>
+
+                        <!-- All questions rendered here -->
+                        <div id="all-questions-container"></div>
+
+                        <!-- Action buttons -->
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-center mt-3" id="action-buttons">
+                            <button type="button" class="btn btn-outline-primary d-none" id="teach-me-btn">📖 Teach Me First</button>
+                            <button type="button" class="btn btn-info" id="chat-tutor-btn">💬 Chat with Tutor</button>
+                            <button type="button" class="btn btn-outline-secondary" id="manual-override-btn">🎛️ Manual Recall</button>
+                            <button type="button" class="btn btn-warning" id="skip-card-btn">Skip</button>
+                            <button type="button" class="btn btn-danger" id="end-session-btn">End Session</button>
+                        </div>
+
+                        <!-- Manual recall override panel (hidden by default) -->
+                        <div id="manual-override-panel" style="display: none;">
+                            <div class="card mt-2 border-secondary">
+                                <div class="card-body text-center py-2">
+                                    <small class="text-muted d-block mb-2">I already know this — set SRS interval manually:</small>
+                                    <div class="btn-group w-100" role="group">
+                                        <button type="button" class="btn btn-danger btn-sm" data-quality="1" title="Reset — see again soon">1 Again</button>
+                                        <button type="button" class="btn btn-warning btn-sm" data-quality="2" title="Struggled — shorter interval">2 Hard</button>
+                                        <button type="button" class="btn btn-info btn-sm" data-quality="3" title="Recalled with effort">3 Good</button>
+                                        <button type="button" class="btn btn-success btn-sm" data-quality="4" title="Recalled easily">4 Easy</button>
+                                        <button type="button" class="btn btn-primary btn-sm" data-quality="5" title="Perfect — push far out">5 Perfect</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Aggregate result (shown after all questions answered) -->
+                        <div id="aggregate-feedback" style="display: none;">
+                            <div class="alert mt-3" id="aggregate-alert">
+                                <h5 id="aggregate-result"></h5>
+                                <p id="aggregate-detail"></p>
+                            </div>
+                            <div class="d-grid">
+                                <button type="button" class="btn btn-primary btn-lg" id="next-card-btn">Next Card</button>
+                            </div>
+                        </div>
+
+                        <div id="lesson-display" style="display: none;">
+                            <div class="card mt-3 border-info">
+                                <div class="card-header bg-info text-white"><h5 class="mb-0">📖 Lesson</h5></div>
+                                <div class="card-body" id="lesson-content"></div>
+                                <div class="card-footer">
+                                    <button type="button" class="btn btn-success" id="lesson-quiz-btn">Got it, quiz me!</button>
+                                    <button type="button" class="btn btn-outline-secondary" id="lesson-skip-btn">Skip for now</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="chat-interface" style="display: none;">
+                            <div class="card mt-3">
+                                <div class="card-header"><h5 class="mb-0">💬 Chat with AI Tutor</h5></div>
+                                <div class="card-body">
+                                    <div id="chat-messages" style="max-height: 300px; overflow-y: auto; margin-bottom: 15px;"></div>
+                                    <div class="input-group">
+                                        <textarea class="form-control" id="chat-input" rows="2" placeholder="Ask your tutor a question..."></textarea>
+                                        <button class="btn btn-primary" type="button" id="send-chat-btn">
+                                            <span class="spinner-border spinner-border-sm d-none me-2" id="chat-spinner"></span>Send
+                                        </button>
+                                    </div>
+                                    <div class="mt-2">
+                                        <small class="text-muted">Press Ctrl+Enter to send</small>
+                                        <button type="button" class="btn btn-secondary btn-sm ms-2" id="close-chat-btn">Close Chat</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="error-state" style="display: none;">
+                        <div class="alert alert-danger">
+                            <h4>❌ Error</h4><p id="error-message"></p>
+                            <button type="button" class="btn btn-primary" id="retry-btn">Try Again</button>
+                            <a href="{{ url_for('index') }}" class="btn btn-secondary">Back to Home</a>
+                        </div>
+                    </div>
+                    <div id="session-summary" style="display: none;">
+                        <div class="alert alert-info">
+                            <h4>📊 Session Complete</h4>
+                            <p><strong>Cards studied:</strong> <span id="summary-cards"></span></p>
+                            <p><strong>Correct answers:</strong> <span id="summary-correct"></span></p>
+                            <p><strong>Accuracy:</strong> <span id="summary-accuracy"></span>%</p>
+                            <hr>
+                            <a href="{{ new_session_url }}" class="btn btn-success">New Session</a>
+                            <a href="{{ url_for('index') }}" class="btn btn-secondary">Back to Home</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+const STUDY_CONFIG = {
+    batchUrl: "{{ batch_url }}",
+    answerUrl: "{{ answer_url }}",
+    lessonUrl: "{{ lesson_url }}",
+    chatUrl: "{{ chat_url }}",
+    displayField: "{{ display_field }}",
+};
+
+class MCStudySession {
+    constructor() {
+        this.currentCard = null;
+        this.cardCorrectCount = 0;
+        this.answeredCount = 0;
+        this.totalQuestions = 0;
+
+        this.cardsStudied = 0;
+        this.correctCount = 0;
+        this.sessionActive = true;
+        this.chatHistory = [];
+        this.cardQueue = [];
+        this.BATCH_SIZE = {{ batch_size }};
+        this.REPLENISH_THRESHOLD = Math.max(1, Math.floor({{ batch_size }} / 2));
+        this.isFetchingBatch = false;
+        this.initializeEventListeners();
+        this.fetchBatch().then(() => this.showNextCard());
+    }
+
+    initializeEventListeners() {
+        document.getElementById('teach-me-btn').addEventListener('click', () => this.showLesson());
+        document.getElementById('chat-tutor-btn').addEventListener('click', () => this.openChat());
+        document.getElementById('skip-card-btn').addEventListener('click', () => this.skipCard());
+        document.getElementById('end-session-btn').addEventListener('click', () => this.endSession());
+        document.getElementById('next-card-btn').addEventListener('click', () => this.showNextCard());
+        document.getElementById('retry-btn').addEventListener('click', () => this.fetchBatch().then(() => this.showNextCard()));
+        document.getElementById('lesson-quiz-btn').addEventListener('click', () => this.closeLessonAndQuiz());
+        document.getElementById('lesson-skip-btn').addEventListener('click', () => this.skipCard());
+        document.getElementById('send-chat-btn').addEventListener('click', () => this.sendChat());
+        document.getElementById('close-chat-btn').addEventListener('click', () => this.closeChat());
+        document.getElementById('chat-input').addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' && e.ctrlKey) this.sendChat();
+        });
+
+        // Manual recall override
+        document.getElementById('manual-override-btn').addEventListener('click', () => {
+            const panel = document.getElementById('manual-override-panel');
+            panel.style.display = panel.style.display === 'none' ? 'block' : 'none';
+        });
+        document.querySelectorAll('#manual-override-panel [data-quality]').forEach(btn => {
+            btn.addEventListener('click', () => this.manualRecallOverride(parseInt(btn.dataset.quality)));
+        });
+    }
+
+    async fetchBatch() {
+        if (this.isFetchingBatch) return;
+        this.isFetchingBatch = true;
+        this.updateQueueIndicator();
+        try {
+            const queuedIds = this.cardQueue.map(c => c.id);
+            const excludeParam = queuedIds.length > 0 ? `&exclude_ids=${queuedIds.join(',')}` : '';
+            const response = await fetch(`${STUDY_CONFIG.batchUrl}?count=${this.BATCH_SIZE}${excludeParam}`);
+            const data = await response.json();
+            if (data.status === 'success' && data.cards && data.cards.length > 0) {
+                this.cardQueue.push(...data.cards);
+            }
+        } catch (error) { console.error('Batch fetch failed:', error); }
+        finally { this.isFetchingBatch = false; this.updateQueueIndicator(); }
+    }
+
+    maybeReplenish() {
+        if (this.cardQueue.length <= this.REPLENISH_THRESHOLD && !this.isFetchingBatch) this.fetchBatch();
+    }
+
+    updateQueueIndicator() {
+        const spinner = document.getElementById('bg-spinner');
+        const count = document.getElementById('queue-count');
+        if (this.isFetchingBatch) { spinner.classList.remove('d-none'); count.textContent = `Loading... (${this.cardQueue.length} queued)`; }
+        else { spinner.classList.add('d-none'); count.textContent = `${this.cardQueue.length} queued`; }
+    }
+
+    showNextCard() {
+        if (!this.sessionActive) return;
+        this.resetCardState();
+        this.maybeReplenish();
+        if (this.cardQueue.length === 0) {
+            if (this.isFetchingBatch) {
+                this.showState('loading');
+                const check = setInterval(() => {
+                    if (!this.isFetchingBatch) {
+                        clearInterval(check);
+                        this.cardQueue.length > 0 ? this.showNextCard() : this.showState('no-cards');
+                    }
+                }, 200);
+                return;
+            }
+            this.showState('no-cards'); return;
+        }
+        this.currentCard = this.cardQueue.shift();
+
+        // Handle legacy single-question cards vs new multi-question cards
+        if (!this.currentCard.questions) {
+            this.currentCard.questions = [{
+                question: this.currentCard.question,
+                question_type: this.currentCard.question_type,
+                choices: this.currentCard.choices,
+                correct_key: this.currentCard.correct_key
+            }];
+        }
+
+        this.cardCorrectCount = 0;
+        this.answeredCount = 0;
+        this.totalQuestions = this.currentCard.questions.length;
+
+        this.updateQueueIndicator();
+        this.displayAllQuestions();
+    }
+
+    displayAllQuestions() {
+        const card = this.currentCard;
+        const displayField = STUDY_CONFIG.displayField;
+
+        document.getElementById('jlpt-badge').textContent = card.jlpt_level || card.jlpt || '';
+        document.getElementById('rank-badge').textContent = `#${card.rank}`;
+        const newBadge = document.getElementById('new-badge');
+        card.is_new ? newBadge.classList.remove('d-none') : newBadge.classList.add('d-none');
+
+        document.getElementById('grammar-point').textContent = `「${card[displayField] || card.display_text || ''}」`;
+        document.getElementById('grammar-meaning-hint').textContent = `(${this.totalQuestions} questions)`;
+
+        const teachBtn = document.getElementById('teach-me-btn');
+        if (card.is_new) {
+            teachBtn.classList.remove('d-none');
+        } else {
+            teachBtn.classList.add('d-none');
+        }
+
+        // Render all questions
+        const container = document.getElementById('all-questions-container');
+        container.innerHTML = '';
+
+        card.questions.forEach((question, qIdx) => {
+            const qDiv = document.createElement('div');
+            qDiv.className = 'card mb-3';
+            qDiv.id = `question-block-${qIdx}`;
+
+            const qBody = document.createElement('div');
+            qBody.className = 'card-body';
+
+            // Question header
+            const qHeader = document.createElement('h6');
+            qHeader.className = 'card-subtitle mb-2 text-muted';
+            qHeader.textContent = `Question ${qIdx + 1}/${this.totalQuestions}`;
+            if (question.question_type) {
+                const typeBadge = document.createElement('span');
+                typeBadge.className = 'badge bg-light text-dark ms-2';
+                typeBadge.textContent = question.question_type.replace(/_/g, ' ');
+                qHeader.appendChild(typeBadge);
+            }
+            qBody.appendChild(qHeader);
+
+            // Question text
+            const qText = document.createElement('p');
+            qText.className = 'card-text mb-3';
+            qText.innerHTML = this.escapeHtml(question.question).replace(/\n/g, '<br>');
+            qBody.appendChild(qText);
+
+            // Choices
+            const choicesDiv = document.createElement('div');
+            choicesDiv.id = `choices-${qIdx}`;
+            question.choices.forEach(choice => {
+                const btn = document.createElement('button');
+                btn.className = 'btn btn-outline-dark w-100 text-start mb-2 p-2';
+                btn.dataset.key = choice.key;
+                btn.dataset.qidx = qIdx;
+                btn.innerHTML = `<strong>${this.escapeHtml(choice.key)}.</strong> <span>${this.escapeHtml(choice.text)}</span>`;
+                btn.addEventListener('click', () => this.selectAnswer(qIdx, choice.key));
+                choicesDiv.appendChild(btn);
+            });
+            qBody.appendChild(choicesDiv);
+
+            // Per-question feedback (hidden until answered)
+            const fbDiv = document.createElement('div');
+            fbDiv.id = `feedback-${qIdx}`;
+            fbDiv.style.display = 'none';
+            qBody.appendChild(fbDiv);
+
+            qDiv.appendChild(qBody);
+            container.appendChild(qDiv);
+        });
+
+        this.updateSessionStats();
+        this.showState('study-card');
+    }
+
+    selectAnswer(qIdx, key) {
+        const choicesDiv = document.getElementById(`choices-${qIdx}`);
+        // Prevent double-answer
+        if (choicesDiv.dataset.answered === 'true') return;
+        choicesDiv.dataset.answered = 'true';
+
+        const question = this.currentCard.questions[qIdx];
+        const isCorrect = key === question.correct_key;
+
+        if (isCorrect) this.cardCorrectCount++;
+        this.answeredCount++;
+
+        // Highlight choices
+        choicesDiv.querySelectorAll('button').forEach(btn => {
+            btn.disabled = true;
+            if (btn.dataset.key === question.correct_key) {
+                btn.classList.remove('btn-outline-dark');
+                btn.classList.add('btn-success');
+            } else if (btn.dataset.key === key && !isCorrect) {
+                btn.classList.remove('btn-outline-dark');
+                btn.classList.add('btn-danger');
+            } else {
+                btn.classList.add('opacity-50');
+            }
+        });
+
+        // Show per-question feedback
+        const fbDiv = document.getElementById(`feedback-${qIdx}`);
+        const correctChoice = question.choices.find(c => c.key === question.correct_key);
+        if (isCorrect) {
+            fbDiv.innerHTML = `<small class="text-success fw-bold">✅ Correct!</small>`;
+        } else {
+            fbDiv.innerHTML = `<small class="text-danger fw-bold">❌ Incorrect</small> — <small class="text-muted">Correct: ${question.correct_key}. ${this.escapeHtml(correctChoice ? correctChoice.text : '')}</small>`;
+        }
+        fbDiv.style.display = 'block';
+
+        // Update question block border
+        const qBlock = document.getElementById(`question-block-${qIdx}`);
+        qBlock.classList.add(isCorrect ? 'border-success' : 'border-danger');
+
+        // Check if all questions answered
+        if (this.answeredCount >= this.totalQuestions) {
+            this.finishCard();
+        }
+    }
+
+    async finishCard() {
+        const card = this.currentCard;
+
+        // Show aggregate feedback
+        const aggDiv = document.getElementById('aggregate-feedback');
+        const aggAlert = document.getElementById('aggregate-alert');
+        const aggResult = document.getElementById('aggregate-result');
+        const aggDetail = document.getElementById('aggregate-detail');
+
+        const score = this.cardCorrectCount;
+        const total = this.totalQuestions;
+        const pct = Math.round((score / total) * 100);
+
+        if (score === total) {
+            aggAlert.className = 'alert mt-3 alert-success';
+            aggResult.textContent = `🎉 Perfect! ${score}/${total}`;
+        } else if (score >= total * 0.5) {
+            aggAlert.className = 'alert mt-3 alert-warning';
+            aggResult.textContent = `👍 ${score}/${total} correct (${pct}%)`;
+        } else {
+            aggAlert.className = 'alert mt-3 alert-danger';
+            aggResult.textContent = `📚 ${score}/${total} correct (${pct}%)`;
+        }
+        aggDetail.textContent = score >= total * 0.5 ? 'Card passed! Moving forward.' : 'Keep studying — this card will come back sooner.';
+        aggDiv.style.display = 'block';
+
+        // Submit aggregate result to server
+        try {
+            const response = await fetch(STUDY_CONFIG.answerUrl, {
+                method: 'POST', headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    card_id: card.id,
+                    correct_count: this.cardCorrectCount,
+                    total_count: this.totalQuestions
+                })
+            });
+            const data = await response.json();
+
+            this.cardsStudied++;
+            if (data.is_correct) this.correctCount++;
+            this.updateSessionStats();
+        } catch (error) {
+            console.error('Failed to submit result:', error);
+        }
+        this.maybeReplenish();
+    }
+
+    async showLesson() {
+        const card = this.currentCard;
+        const lessonDisplay = document.getElementById('lesson-display');
+        const lessonContent = document.getElementById('lesson-content');
+        lessonContent.innerHTML = '<div class="text-center"><div class="spinner-border text-info"></div><p class="mt-2">Generating lesson...</p></div>';
+        lessonDisplay.style.display = 'block';
+        document.getElementById('all-questions-container').style.display = 'none';
+        document.getElementById('teach-me-btn').classList.add('d-none');
+        try {
+            const response = await fetch(STUDY_CONFIG.lessonUrl, {
+                method: 'POST', headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ card_id: card.id })
+            });
+            const data = await response.json();
+            if (data.status === 'success') lessonContent.innerHTML = this.renderLesson(data.lesson);
+            else lessonContent.innerHTML = `<p class="text-danger">Failed: ${data.message}</p>`;
+        } catch (error) { lessonContent.innerHTML = `<p class="text-danger">Error: ${error.message}</p>`; }
+    }
+
+    renderLesson(lesson) {
+        let html = '<div>';
+        for (const [key, value] of Object.entries(lesson)) {
+            if (!value || key === 'url') continue;
+            if (Array.isArray(value)) {
+                html += `<h6 class="mt-3">${this.formatKey(key)}</h6><ul class="list-group mb-2">`;
+                value.forEach(item => {
+                    if (typeof item === 'object') {
+                        const parts = Object.values(item).map(v => this.escapeHtml(String(v)));
+                        html += `<li class="list-group-item"><strong>${parts[0] || ''}</strong>${parts.length > 1 ? '<br><small class="text-muted">' + parts.slice(1).join(' — ') + '</small>' : ''}</li>`;
+                    } else html += `<li class="list-group-item">${this.escapeHtml(String(item))}</li>`;
+                });
+                html += '</ul>';
+            } else {
+                html += `<h6 class="mt-2">${this.formatKey(key)}</h6><p>${this.escapeHtml(String(value))}</p>`;
+            }
+        }
+        if (lesson.url) html += `<p><a href="${this.escapeHtml(lesson.url)}" target="_blank" class="btn btn-sm btn-outline-info">🔗 Reference</a></p>`;
+        html += '</div>';
+        return html;
+    }
+
+    formatKey(key) {
+        const icons = { explanation: '📝', formation: '🔧', examples: '📌', tips: '💡', comparison: '🔄',
+            kanji: '漢', word: '📖', meanings: '📗', on_readings: '音', kun_readings: '訓', reading: '📖' };
+        const icon = icons[key] || '📄';
+        return `${icon} ${key.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}`;
+    }
+
+    closeLessonAndQuiz() {
+        document.getElementById('lesson-display').style.display = 'none';
+        document.getElementById('all-questions-container').style.display = 'block';
+    }
+
+    openChat() { document.getElementById('chat-interface').style.display = 'block'; document.getElementById('chat-input').focus(); }
+    closeChat() { document.getElementById('chat-interface').style.display = 'none'; }
+
+    async sendChat() {
+        const input = document.getElementById('chat-input');
+        const message = input.value.trim(); if (!message) return;
+        input.value = ''; this.appendChatMessage('user', message);
+        document.getElementById('chat-spinner').classList.remove('d-none');
+        try {
+            const response = await fetch(STUDY_CONFIG.chatUrl, {
+                method: 'POST', headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ card_id: this.currentCard.id, message, chat_history: this.chatHistory.slice(-6) })
+            });
+            const data = await response.json();
+            this.appendChatMessage('tutor', data.status === 'success' ? data.response : `Error: ${data.message}`);
+        } catch (error) { this.appendChatMessage('tutor', `Error: ${error.message}`); }
+        finally { document.getElementById('chat-spinner').classList.add('d-none'); }
+    }
+
+    appendChatMessage(role, text) {
+        this.chatHistory.push([role, text]);
+        const container = document.getElementById('chat-messages');
+        const div = document.createElement('div');
+        div.className = `mb-2 p-2 rounded ${role === 'user' ? 'bg-light text-end' : 'bg-info bg-opacity-10'}`;
+        div.innerHTML = `<small class="text-muted">${role === 'user' ? 'You' : '🤖 Tutor'}</small><br>${this.escapeHtml(text)}`;
+        container.appendChild(div); container.scrollTop = container.scrollHeight;
+    }
+
+    async manualRecallOverride(quality) {
+        if (!this.currentCard) return;
+        try {
+            await fetch(STUDY_CONFIG.answerUrl, {
+                method: 'POST', headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ card_id: this.currentCard.id, manual_quality: quality })
+            });
+            this.cardsStudied++;
+            if (quality >= 3) this.correctCount++;
+            this.updateSessionStats();
+        } catch (error) { console.error('Manual override failed:', error); }
+        this.showNextCard();
+    }
+
+    skipCard() { this.showNextCard(); }
+    endSession() {
+        this.sessionActive = false;
+        if (this.cardsStudied > 0) {
+            document.getElementById('summary-cards').textContent = this.cardsStudied;
+            document.getElementById('summary-correct').textContent = this.correctCount;
+            document.getElementById('summary-accuracy').textContent = Math.round((this.correctCount / this.cardsStudied) * 100);
+            this.showState('session-summary');
+        } else window.location.href = '/';
+    }
+
+    resetCardState() {
+        this.chatHistory = [];
+        ['aggregate-feedback', 'lesson-display', 'chat-interface', 'manual-override-panel'].forEach(id => document.getElementById(id).style.display = 'none');
+        document.getElementById('chat-messages').innerHTML = '';
+        document.getElementById('all-questions-container').innerHTML = '';
+        document.getElementById('all-questions-container').style.display = 'block';
+    }
+
+    updateSessionStats() {
+        document.getElementById('cards-studied').textContent = this.cardsStudied;
+        document.getElementById('correct-count').textContent = this.correctCount;
+    }
+
+    showState(state) {
+        document.getElementById('loading-state').style.display = state === 'loading' ? 'block' : 'none';
+        document.getElementById('no-cards-state').style.display = state === 'no-cards' ? 'block' : 'none';
+        document.getElementById('study-card-state').style.display = state === 'study-card' ? 'block' : 'none';
+        document.getElementById('error-state').style.display = state === 'error' ? 'block' : 'none';
+        document.getElementById('session-summary').style.display = state === 'session-summary' ? 'block' : 'none';
+    }
+
+    showError(message) { document.getElementById('error-message').textContent = message; this.showState('error'); }
+    escapeHtml(text) { const d = document.createElement('div'); d.textContent = text; return d.innerHTML; }
+}
+
+document.addEventListener('DOMContentLoaded', () => { new MCStudySession(); });
+</script>
+{% endblock %}

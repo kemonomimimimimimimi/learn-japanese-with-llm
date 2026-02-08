@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+
+{% block title %}Add Kanji - Japanese Learning App{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-6 mx-auto">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="mb-0">🈷️ Add Kanji</h3>
+                <small class="text-muted">Add kanji characters with readings and meanings</small>
+            </div>
+            <div class="card-body">
+                <form method="POST">
+                    <div class="mb-3">
+                        <label for="character" class="form-label">Kanji Character *</label>
+                        <input type="text" class="form-control" id="character" name="character" required 
+                               placeholder="例: 学" maxlength="1" autocomplete="off">
+                        <div class="form-text">Enter a single kanji character</div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="onyomi" class="form-label">Onyomi (Chinese Reading)</label>
+                        <input type="text" class="form-control" id="onyomi" name="onyomi" 
+                               placeholder="例: ガク" autocomplete="off">
+                        <div class="form-text">Enter the Chinese reading in katakana</div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="kunyomi" class="form-label">Kunyomi (Japanese Reading)</label>
+                        <input type="text" class="form-control" id="kunyomi" name="kunyomi" 
+                               placeholder="例: まな(ぶ)" autocomplete="off">
+                        <div class="form-text">Enter the Japanese reading in hiragana</div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="meanings" class="form-label">Meanings</label>
+                        <input type="text" class="form-control" id="meanings" name="meanings" 
+                               placeholder="例: learn, study, school" autocomplete="off">
+                        <div class="form-text">Enter English meanings separated by commas</div>
+                    </div>
+                    
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary">Add Kanji</button>
+                        <a href="{{ url_for('add_content') }}" class="btn btn-secondary">Back to Add Content</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="card mt-4">
+            <div class="card-header">
+                <h5 class="mb-0">💡 Tips</h5>
+            </div>
+            <div class="card-body">
+                <ul class="mb-0">
+                    <li>The system will automatically create learning aspects for:</li>
+                    <ul>
+                        <li><strong>Meaning:</strong> What does this kanji mean?</li>
+                        <li><strong>Onyomi:</strong> Chinese reading exercises</li>
+                        <li><strong>Kunyomi:</strong> Japanese reading exercises</li>
+                        <li><strong>Usage:</strong> Using the kanji in words and sentences</li>
+                    </ul>
+                    <li>Fill in as many fields as possible for better AI exercises</li>
+                    <li>Use standard romanization conventions</li>
+                    <li>Separate multiple readings or meanings with commas</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+// Focus on the character input when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('character').focus();
+});
+
+// Move to next field on Enter
+const inputs = ['character', 'onyomi', 'kunyomi', 'meanings'];
+inputs.forEach((inputId, index) => {
+    const input = document.getElementById(inputId);
+    input.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            if (index < inputs.length - 1) {
+                document.getElementById(inputs[index + 1]).focus();
+            } else {
+                e.target.form.submit();
+            }
+        }
+    });
+});
+
+// Validate single character input
+document.getElementById('character').addEventListener('input', function(e) {
+    const value = e.target.value;
+    if (value.length > 1) {
+        e.target.value = value.charAt(0);
+    }
+});
+</script>
+{% endblock %}

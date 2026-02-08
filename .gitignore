@@ -1,0 +1,27 @@
+# Virtual environments
+env/
+.venv/
+
+# Build artifacts
+*.egg-info/
+japanese_learning_app.egg-info/
+llm_learn_japanese.egg-info/
+build/
+dist/
+
+# Python
+__pycache__/
+*.pyc
+
+# Database
+*.db
+
+# Uploads
+uploads/
+
+# IDE
+.idea/
+.vscode/
+
+# OS
+.DS_Store

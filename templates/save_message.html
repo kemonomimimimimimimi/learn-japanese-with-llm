@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block title %}Save Message - Japanese Learning App{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-6 mx-auto">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="mb-0">📝 Save Message</h3>
+                <small class="text-muted">Save a message to the database</small>
+            </div>
+            <div class="card-body">
+                <form method="POST">
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" name="message" rows="5" 
+                                  required placeholder="Enter your message here..."></textarea>
+                        <div class="form-text">Enter any message or note you want to save</div>
+                    </div>
+                    
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary">Save Message</button>
+                        <a href="{{ url_for('index') }}" class="btn btn-secondary">Back to Home</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="card mt-4">
+            <div class="card-header">
+                <h5 class="mb-0">💡 About Messages</h5>
+            </div>
+            <div class="card-body">
+                <ul class="mb-0">
+                    <li>Messages are stored in the database with timestamps</li>
+                    <li>Use this to save study notes, observations, or reminders</li>
+                    <li>Messages can be retrieved later for reference</li>
+                    <li>This is a simple note-taking feature for your learning journey</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+// Focus on the message textarea when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('message').focus();
+});
+
+// Allow Ctrl+Enter to submit
+document.getElementById('message').addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' && e.ctrlKey) {
+        e.target.form.submit();
+    }
+});
+</script>
+{% endblock %}

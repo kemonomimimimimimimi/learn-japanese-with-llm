@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+
+{% block title %}Add Idiom - Japanese Learning App{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-6 mx-auto">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="mb-0">🎭 Add Idiom</h3>
+                <small class="text-muted">Add Japanese idioms and sayings</small>
+            </div>
+            <div class="card-body">
+                <form method="POST">
+                    <div class="mb-3">
+                        <label for="idiom" class="form-label">Japanese Idiom *</label>
+                        <input type="text" class="form-control" id="idiom" name="idiom" required 
+                               placeholder="例: 十人十色" autocomplete="off">
+                        <div class="form-text">Enter the Japanese idiom or saying</div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="meaning" class="form-label">Meaning</label>
+                        <input type="text" class="form-control" id="meaning" name="meaning" 
+                               placeholder="例: ten people, ten colors (everyone is different)" autocomplete="off">
+                        <div class="form-text">Enter the English meaning or explanation</div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="example" class="form-label">Example Sentence</label>
+                        <input type="text" class="form-control" id="example" name="example" 
+                               placeholder="例: 人の好みは十人十色だ。" autocomplete="off">
+                        <div class="form-text">Provide a Japanese example sentence using this idiom</div>
+                    </div>
+                    
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary">Add Idiom</button>
+                        <a href="{{ url_for('add_content') }}" class="btn btn-secondary">Back to Add Content</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="card mt-4">
+            <div class="card-header">
+                <h5 class="mb-0">💡 Tips</h5>
+            </div>
+            <div class="card-body">
+                <ul class="mb-0">
+                    <li>The system will automatically create learning aspects for:</li>
+                    <ul>
+                        <li><strong>Meaning:</strong> What does this idiom mean?</li>
+                        <li><strong>Usage:</strong> How to use this idiom appropriately</li>
+                    </ul>
+                    <li>Idioms are figurative expressions with cultural significance</li>
+                    <li>Include both literal and figurative meanings when helpful</li>
+                    <li>Example sentences show proper usage context</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+// Focus on the idiom input when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('idiom').focus();
+});
+
+// Move to next field on Enter
+const inputs = ['idiom', 'meaning', 'example'];
+inputs.forEach((inputId, index) => {
+    const input = document.getElementById(inputId);
+    input.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            if (index < inputs.length - 1) {
+                document.getElementById(inputs[index + 1]).focus();
+            } else {
+                e.target.form.submit();
+            }
+        }
+    });
+});
+</script>
+{% endblock %}

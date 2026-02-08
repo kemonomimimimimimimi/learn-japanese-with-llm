@@ -1,0 +1,159 @@
+{% extends "base.html" %}
+
+{% block title %}Process Discord Log - Japanese Learning App{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8 mx-auto">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="mb-0">💬 Process Discord Log</h3>
+                <small class="text-muted">Extract Japanese content from Discord chat logs using AI</small>
+            </div>
+            <div class="card-body">
+                {% if not results %}
+                    <form method="POST" enctype="multipart/form-data">
+                        <div class="mb-3">
+                            <label for="file" class="form-label">Select Discord Log File</label>
+                            <input type="file" class="form-control" id="file" name="file" 
+                                   accept=".txt,.log" required>
+                            <div class="form-text">
+                                Supported formats: .txt, .log files containing Discord chat logs
+                            </div>
+                        </div>
+                        
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-primary">
+                                <span class="spinner-border spinner-border-sm d-none" id="loading-spinner"></span>
+                                Process Discord Log
+                            </button>
+                            <a href="{{ url_for('add_content') }}" class="btn btn-secondary">Back to Add Content</a>
+                        </div>
+                    </form>
+                {% else %}
+                    <div class="alert alert-success">
+                        <h4>✅ Discord Log Processing Complete!</h4>
+                        <p>Successfully extracted and processed Japanese content from your Discord chat log.</p>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card bg-success text-white">
+                                <div class="card-body text-center">
+                                    <h3>{{ results.total_new }}</h3>
+                                    <p class="mb-0">New Items Added</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card bg-warning text-dark">
+                                <div class="card-body text-center">
+                                    <h3>{{ results.total_dup }}</h3>
+                                    <p class="mb-0">Duplicates Skipped</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <h5>Detailed Results</h5>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Content Type</th>
+                                    <th>New Items</th>
+                                    <th>Duplicates</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>📝 Vocabulary</td>
+                                    <td><span class="badge bg-success">{{ results.vocab_new }}</span></td>
+                                    <td><span class="badge bg-warning">{{ results.vocab_dup }}</span></td>
+                                </tr>
+                                <tr>
+                                    <td>🈷️ Kanji</td>
+                                    <td><span class="badge bg-success">{{ results.kanji_new }}</span></td>
+                                    <td><span class="badge bg-warning">{{ results.kanji_dup }}</span></td>
+                                </tr>
+                                <tr>
+                                    <td>📚 Grammar</td>
+                                    <td><span class="badge bg-success">{{ results.grammar_new }}</span></td>
+                                    <td><span class="badge bg-warning">{{ results.grammar_dup }}</span></td>
+                                </tr>
+                                <tr>
+                                    <td>💬 Phrases</td>
+                                    <td><span class="badge bg-success">{{ results.phrase_new }}</span></td>
+                                    <td><span class="badge bg-warning">{{ results.phrase_dup }}</span></td>
+                                </tr>
+                                <tr>
+                                    <td>🎭 Idioms</td>
+                                    <td><span class="badge bg-success">{{ results.idiom_new }}</span></td>
+                                    <td><span class="badge bg-warning">{{ results.idiom_dup }}</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                        <a href="{{ url_for('process_discord') }}" class="btn btn-primary">Process Another Log</a>
+                        <a href="{{ url_for('study_session') }}" class="btn btn-success">Start Studying</a>
+                        <a href="{{ url_for('index') }}" class="btn btn-secondary">Back to Home</a>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="card mt-4">
+            <div class="card-header">
+                <h5 class="mb-0">💬 How Discord Log Processing Works</h5>
+            </div>
+            <div class="card-body">
+                <ol>
+                    <li><strong>Export:</strong> Export your Discord chat logs as text files</li>
+                    <li><strong>Upload:</strong> Select the text file containing Japanese conversations</li>
+                    <li><strong>AI Analysis:</strong> AI scans all messages for Japanese content</li>
+                    <li><strong>Extraction:</strong> Japanese text is identified and categorized</li>
+                    <li><strong>Enhancement:</strong> AI adds readings, meanings, and context</li>
+                    <li><strong>Integration:</strong> New content is added to your study collection</li>
+                </ol>
+                
+                <div class="alert alert-info mt-3">
+                    <strong>💡 Tips:</strong>
+                    <ul class="mb-0">
+                        <li>Export Discord chats using bots or manual copy-paste</li>
+                        <li>Include timestamps and usernames for better context</li>
+                        <li>Japanese language learning servers are ideal sources</li>
+                        <li>The AI filters out non-Japanese content automatically</li>
+                        <li>Duplicate detection prevents adding the same content twice</li>
+                    </ul>
+                </div>
+
+                <div class="alert alert-warning mt-3">
+                    <strong>⚠️ Privacy Note:</strong> Only upload logs you have permission to use. 
+                    Be mindful of Discord's Terms of Service and user privacy when exporting chat logs.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+// Show loading spinner when form is submitted
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.querySelector('form');
+    const spinner = document.getElementById('loading-spinner');
+    const submitBtn = document.querySelector('button[type="submit"]');
+    
+    if (form && spinner && submitBtn) {
+        form.addEventListener('submit', function() {
+            spinner.classList.remove('d-none');
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Processing...';
+        });
+    }
+});
+</script>
+{% endblock %}

@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+
+{% block title %}Add Grammar - Japanese Learning App{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-6 mx-auto">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="mb-0">📚 Add Grammar</h3>
+                <small class="text-muted">Add grammar points and explanations</small>
+            </div>
+            <div class="card-body">
+                <form method="POST">
+                    <div class="mb-3">
+                        <label for="point" class="form-label">Grammar Point *</label>
+                        <input type="text" class="form-control" id="point" name="point" required 
+                               placeholder="例: ～ている" autocomplete="off">
+                        <div class="form-text">Enter the grammar pattern or structure</div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="explanation" class="form-label">Explanation</label>
+                        <textarea class="form-control" id="explanation" name="explanation" rows="3"
+                                  placeholder="例: Indicates ongoing action or state"></textarea>
+                        <div class="form-text">Explain how this grammar point is used</div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="example" class="form-label">Example Sentence</label>
+                        <input type="text" class="form-control" id="example" name="example" 
+                               placeholder="例: 今、勉強している。" autocomplete="off">
+                        <div class="form-text">Provide a Japanese example sentence using this grammar</div>
+                    </div>
+                    
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary">Add Grammar</button>
+                        <a href="{{ url_for('add_content') }}" class="btn btn-secondary">Back to Add Content</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="card mt-4">
+            <div class="card-header">
+                <h5 class="mb-0">💡 Tips</h5>
+            </div>
+            <div class="card-body">
+                <ul class="mb-0">
+                    <li>The system will automatically create learning aspects for:</li>
+                    <ul>
+                        <li><strong>Explanation:</strong> How does this grammar work?</li>
+                        <li><strong>Usage:</strong> Create sentences using this grammar</li>
+                    </ul>
+                    <li>Include both the pattern and a clear explanation</li>
+                    <li>Example sentences help AI generate better exercises</li>
+                    <li>Use standard grammar notation (～ for attachment points)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+// Focus on the point input when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('point').focus();
+});
+
+// Move to next field on Enter (except textarea)
+const inputs = ['point', 'example'];
+inputs.forEach((inputId, index) => {
+    const input = document.getElementById(inputId);
+    input.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            if (inputId === 'point') {
+                document.getElementById('explanation').focus();
+            } else {
+                e.target.form.submit();
+            }
+        }
+    });
+});
+</script>
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}Process Raw Text - Japanese Learning App{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-10 mx-auto">
+        <h2>📝 Process Raw Text</h2>
+        <p class="text-muted">Paste or type raw text (Markdown, lessons, paragraphs, mixed English-Japanese, etc.) and extract Japanese content into your study database.</p>
+
+        <form method="post">
+            <div class="mb-3">
+                <label for="raw_text" class="form-label">Raw Text Input</label>
+                <textarea class="form-control" id="raw_text" name="raw_text" rows="10">{{ raw_text if raw_text else '' }}</textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">🚀 Process Text</button>
+        </form>
+
+        {% if results %}
+        <hr>
+        <h4>✅ Extraction Results</h4>
+        <ul>
+            <li>New Vocabulary: {{ results.vocab_new }} ({{ results.vocab_dup }} duplicates)</li>
+            <li>New Kanji: {{ results.kanji_new }} ({{ results.kanji_dup }} duplicates)</li>
+            <li>New Grammar: {{ results.grammar_new }} ({{ results.grammar_dup }} duplicates)</li>
+            <li>New Phrases: {{ results.phrase_new }} ({{ results.phrase_dup }} duplicates)</li>
+            <li>New Idioms: {{ results.idiom_new }} ({{ results.idiom_dup }} duplicates)</li>
+        </ul>
+        <p><strong>Total New Added:</strong> {{ results.total_new }}</p>
+        <p><strong>Total Duplicates Skipped:</strong> {{ results.total_dup }}</p>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

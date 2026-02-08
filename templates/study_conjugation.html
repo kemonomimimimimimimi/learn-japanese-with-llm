@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+
+{% block title %}Study Conjugation - Japanese Learning App{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8 mx-auto">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="mb-0">📖 Study: {{ conjugation.label }}</h3>
+                <small class="text-muted">{{ conjugation.category }}</small>
+            </div>
+            <div class="card-body">
+                <div id="lesson-flow">
+                    <h4>Teach</h4>
+                    <div id="teach-section">
+                        <button class="btn btn-sm btn-outline-primary" onclick="loadLesson()">Load AI Lesson</button>
+                        <div id="teach-content" class="mt-2 text-muted">AI explanation will appear here.</div>
+                    </div>
+
+                    <h4>Guide</h4>
+                    <div id="guide-section" class="mb-2">
+                        <input id="guide-input" type="text" class="form-control" placeholder="e.g. Conjugate 食べる into {{ conjugation.label }}">
+                        <button class="btn btn-sm btn-success mt-1" onclick="submitGuide()">Check Answer</button>
+                    </div>
+                    <div id="guide-feedback" class="text-info small"></div>
+
+                    <h4>Try</h4>
+                    <div id="try-section">
+                        <button class="btn btn-sm btn-outline-success" onclick="nextDrill()">Get Drill</button>
+                        <div id="try-prompt" class="mt-2"></div>
+                        <input id="try-answer" type="text" class="form-control mt-1" placeholder="Your answer">
+                        <button class="btn btn-sm btn-primary mt-1" onclick="submitDrill()">Submit</button>
+                    </div>
+                    <div id="try-feedback" class="text-info small"></div>
+
+                    <h4>Check</h4>
+                    <div id="check-section" class="text-muted">Feedback will appear here after exercises.</div>
+
+                    <h4>Review</h4>
+                    <div id="review-section" class="text-muted">Results will be logged to your spaced repetition schedule.</div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <a href="{{ url_for('view_conjugations') }}" class="btn btn-secondary">← Back to Conjugations</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+const conjId = JSON.parse('{{ conjugation.id | tojson | safe }}');
+async function loadLesson() {
+    const resp = await fetch(`/api/conjugation_lesson/${conjId}`);
+    const data = await resp.json();
+    if (data.status === "success") {
+        document.getElementById("teach-content").innerText = data.lesson.teach;
+    }
+}
+
+async function submitGuide() {
+    const userAns = document.getElementById("guide-input").value;
+    const resp = await fetch(`/api/submit_answer`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ card_id: conjId, answer: userAns })
+    });
+    const data = await resp.json();
+    document.getElementById("guide-feedback").innerText = data.feedback || "Response saved.";
+}
+
+async function nextDrill() {
+    const resp = await fetch(`/api/conjugation_lesson/${conjId}`);
+    const data = await resp.json();
+    if (data.status === "success" && data.lesson.try) {
+        const drills = data.lesson.try;
+        const randomDrill = drills[Math.floor(Math.random() * drills.length)];
+        document.getElementById("try-prompt").innerText = randomDrill;
+        document.getElementById("try-answer").value = "";
+        document.getElementById("try-feedback").innerText = "";
+        window.currentDrillPrompt = randomDrill;
+    } else {
+        document.getElementById("try-prompt").innerText = "No drills available.";
+    }
+}
+
+async function submitDrill() {
+    const userAns = document.getElementById("try-answer").value;
+    const resp = await fetch(`/api/submit_answer`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ card_id: conjId, answer: userAns })
+    });
+    const data = await resp.json();
+    document.getElementById("try-feedback").innerText = data.feedback || "Checked.";
+    if(data.is_correct) {
+        document.getElementById("check-section").innerText = "✅ Correct! Scheduled for later review.";
+    } else {
+        document.getElementById("check-section").innerText = "❌ Needs practice, scheduled sooner.";
+    }
+}
+</script>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

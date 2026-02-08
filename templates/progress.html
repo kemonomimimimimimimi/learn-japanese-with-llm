@@ -1,0 +1,608 @@
+{% extends "base.html" %}
+
+{% block title %}Progress - Japanese Learning App{% endblock %}
+
+{% block content %}
+{# ─── Tab navigation ─── #}
+<ul class="nav nav-tabs mb-4" id="analyticsTabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="overview-tab" data-bs-toggle="tab" data-bs-target="#overview" type="button" role="tab">📊 Overview</button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="charts-tab" data-bs-toggle="tab" data-bs-target="#charts" type="button" role="tab">📈 Charts &amp; Trends</button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="heatmap-tab" data-bs-toggle="tab" data-bs-target="#heatmap" type="button" role="tab">🟩 Activity Heatmap</button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="cards-tab" data-bs-toggle="tab" data-bs-target="#cards" type="button" role="tab">🃏 Card Details</button>
+    </li>
+</ul>
+
+<div class="tab-content" id="analyticsTabContent">
+
+{# ════════════════════════════════════════════════════════════════════ #}
+{# TAB 1 — Overview                                                    #}
+{# ════════════════════════════════════════════════════════════════════ #}
+<div class="tab-pane fade show active" id="overview" role="tabpanel">
+
+    {# ── Streak + Quick stats row ── #}
+    <div class="row g-3 mb-4">
+        {% if analytics and analytics.streak %}
+        <div class="col-md-3">
+            <div class="card analytics-stat-card border-0 bg-warning text-dark h-100">
+                <div class="card-body text-center">
+                    <div class="analytics-stat-icon">🔥</div>
+                    <h2 class="mb-0">{{ analytics.streak.current }}</h2>
+                    <p class="mb-0 small">Day Streak</p>
+                    <small class="text-muted">Best: {{ analytics.streak.longest }}</small>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+        {% if progress %}
+        {% set accuracy = (progress.correct_answers / progress.total_reviews * 100) if progress.total_reviews > 0 else 0 %}
+        <div class="col-md-3">
+            <div class="card analytics-stat-card border-0 bg-primary text-white h-100">
+                <div class="card-body text-center">
+                    <div class="analytics-stat-icon">📝</div>
+                    <h2 class="mb-0">{{ progress.total_reviews }}</h2>
+                    <p class="mb-0 small">Total Reviews</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card analytics-stat-card border-0 bg-success text-white h-100">
+                <div class="card-body text-center">
+                    <div class="analytics-stat-icon">✅</div>
+                    <h2 class="mb-0">{{ progress.correct_answers }}</h2>
+                    <p class="mb-0 small">Correct Answers</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card analytics-stat-card border-0 bg-{{ 'success' if accuracy >= 80 else ('warning' if accuracy >= 60 else 'danger') }} text-white h-100">
+                <div class="card-body text-center">
+                    <div class="analytics-stat-icon">🎯</div>
+                    <h2 class="mb-0">{{ "%.1f"|format(accuracy) }}%</h2>
+                    <p class="mb-0 small">Accuracy</p>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+
+    {# ── Today's progress ── #}
+    {% if today_progress %}
+    <div class="row g-3 mb-4">
+        <div class="col-md-4">
+            <div class="card border-info h-100">
+                <div class="card-body text-center">
+                    <h6 class="text-info">📅 Today</h6>
+                    <h3>{{ today_progress.cards_reviewed }}</h3>
+                    <small class="text-muted">cards reviewed</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card border-info h-100">
+                <div class="card-body text-center">
+                    <h6 class="text-info">🆕 New Today</h6>
+                    <h3>{{ today_progress.new_cards_seen }}</h3>
+                    <small class="text-muted">new cards seen</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card border-info h-100">
+                <div class="card-body text-center">
+                    <h6 class="text-info">⏰ Due Now</h6>
+                    <h3>{{ due_count if due_count is defined else '—' }}</h3>
+                    <small class="text-muted">review cards scheduled</small>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+    {# ── Additional stat cards row ── #}
+    {% if progress %}
+    <div class="row g-3 mb-4">
+        <div class="col-md-3">
+            <div class="card h-100">
+                <div class="card-body text-center">
+                    <h6 class="text-muted">👁️ Cards Seen</h6>
+                    <h3>{{ progress.total_seen }}</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card h-100">
+                <div class="card-body text-center">
+                    <h6 class="text-muted">📦 Unseen</h6>
+                    <h3>{{ progress.remaining_unseen }}</h3>
+                </div>
+            </div>
+        </div>
+        {% if analytics and analytics.averages %}
+        <div class="col-md-3">
+            <div class="card h-100">
+                <div class="card-body text-center">
+                    <h6 class="text-muted">📏 Avg Interval</h6>
+                    <h3>{{ analytics.averages.avg_interval }}d</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card h-100">
+                <div class="card-body text-center">
+                    <h6 class="text-muted">🏆 Mature Cards</h6>
+                    <h3>{{ analytics.averages.mature_count }}</h3>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+    {% endif %}
+
+    {# ── Content inventory + SRS donut side by side ── #}
+    <div class="row g-3 mb-4">
+        <div class="col-md-6">
+            <div class="card h-100">
+                <div class="card-header"><h6 class="mb-0">📚 Content Inventory</h6></div>
+                <div class="card-body">
+                    {% if analytics and analytics.content_breakdown %}
+                    <canvas id="contentBreakdownChart" height="250"></canvas>
+                    {% else %}
+                    <p class="text-muted text-center">No content data yet.</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card h-100">
+                <div class="card-header"><h6 class="mb-0">🎓 SRS Stage Distribution</h6></div>
+                <div class="card-body">
+                    {% if analytics and analytics.srs_stages %}
+                    <canvas id="srsDonutChart" height="250"></canvas>
+                    {% else %}
+                    <p class="text-muted text-center">No SRS data yet.</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {# ── Performance analysis ── #}
+    {% if progress %}
+    <div class="alert alert-{{ 'success' if accuracy >= 80 else ('warning' if accuracy >= 60 else 'info') }}">
+        {% if accuracy >= 80 %}
+            <strong>🌟 Excellent!</strong> You're doing great with {{ "%.1f"|format(accuracy) }}% accuracy. Keep up the good work!
+        {% elif accuracy >= 60 %}
+            <strong>💪 Good progress!</strong> You're at {{ "%.1f"|format(accuracy) }}% accuracy. Consider reviewing challenging topics.
+        {% else %}
+            <strong>📖 Keep practicing!</strong> Focus on understanding rather than speed. Review fundamental concepts.
+        {% endif %}
+    </div>
+    {% elif not progress %}
+    <div class="text-center">
+        <div class="alert alert-info">
+            <h4>📚 No progress data yet</h4>
+            <p>Start studying to track your progress!</p>
+            <a href="{{ url_for('study_session') }}" class="btn btn-primary">Start Study Session</a>
+            <a href="{{ url_for('add_content') }}" class="btn btn-secondary">Add Content First</a>
+        </div>
+    </div>
+    {% endif %}
+
+    <div class="d-grid gap-2 d-md-flex justify-content-md-center mt-3">
+        <a href="{{ url_for('study_session') }}" class="btn btn-success">Continue Studying</a>
+        <a href="{{ url_for('index') }}" class="btn btn-secondary">Back to Home</a>
+    </div>
+</div>
+
+{# ════════════════════════════════════════════════════════════════════ #}
+{# TAB 2 — Charts & Trends                                            #}
+{# ════════════════════════════════════════════════════════════════════ #}
+<div class="tab-pane fade" id="charts" role="tabpanel">
+
+    {# ── Daily activity (enhanced existing chart) ── #}
+    <div class="card mb-4">
+        <div class="card-header"><h6 class="mb-0">📈 Daily Activity (Last 30 Days)</h6></div>
+        <div class="card-body">
+            <canvas id="dailyProgressChart" height="200"></canvas>
+        </div>
+    </div>
+
+    {# ── Review forecast ── #}
+    <div class="card mb-4">
+        <div class="card-header"><h6 class="mb-0">🔮 Review Forecast (Next 14 Days)</h6></div>
+        <div class="card-body">
+            {% if analytics and analytics.forecast %}
+            <canvas id="forecastChart" height="200"></canvas>
+            {% else %}
+            <p class="text-muted text-center">No forecast data available.</p>
+            {% endif %}
+        </div>
+    </div>
+
+    {# ── SRS by type stacked bar ── #}
+    <div class="card mb-4">
+        <div class="card-header"><h6 class="mb-0">📊 SRS Stages by Content Type</h6></div>
+        <div class="card-body">
+            {% if analytics and analytics.srs_by_type %}
+            <canvas id="srsByTypeChart" height="250"></canvas>
+            {% else %}
+            <p class="text-muted text-center">No SRS data yet.</p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+{# ════════════════════════════════════════════════════════════════════ #}
+{# TAB 3 — Activity Heatmap                                           #}
+{# ════════════════════════════════════════════════════════════════════ #}
+<div class="tab-pane fade" id="heatmap" role="tabpanel">
+    <div class="card mb-4">
+        <div class="card-header">
+            <h6 class="mb-0">🟩 Study Activity — Last 90 Days</h6>
+        </div>
+        <div class="card-body">
+            {% if analytics and analytics.heatmap %}
+            <div class="heatmap-container">
+                <div class="heatmap-months" id="heatmapMonths"></div>
+                <div class="heatmap-grid-wrapper">
+                    <div class="heatmap-days">
+                        <span>Mon</span><span></span><span>Wed</span><span></span><span>Fri</span><span></span><span>Sun</span>
+                    </div>
+                    <div class="heatmap-grid" id="heatmapGrid"></div>
+                </div>
+                <div class="heatmap-legend">
+                    <span class="text-muted small">Less</span>
+                    <div class="heatmap-cell" style="background:#ebedf0;" title="0 reviews"></div>
+                    <div class="heatmap-cell" style="background:#9be9a8;" title="1-5 reviews"></div>
+                    <div class="heatmap-cell" style="background:#40c463;" title="6-15 reviews"></div>
+                    <div class="heatmap-cell" style="background:#30a14e;" title="16-30 reviews"></div>
+                    <div class="heatmap-cell" style="background:#216e39;" title="31+ reviews"></div>
+                    <span class="text-muted small">More</span>
+                </div>
+            </div>
+            {% else %}
+            <p class="text-muted text-center">No activity data yet. Start studying to build your heatmap!</p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+{# ════════════════════════════════════════════════════════════════════ #}
+{# TAB 4 — Card Details                                               #}
+{# ════════════════════════════════════════════════════════════════════ #}
+<div class="tab-pane fade" id="cards" role="tabpanel">
+
+    {# ── Module progress ── #}
+    {% if analytics and analytics.module_progress %}
+    {% set mp = analytics.module_progress %}
+    <div class="card mb-4">
+        <div class="card-header"><h6 class="mb-0">📖 Module Progress</h6></div>
+        <div class="card-body">
+            <div class="row g-3">
+                {% for key, label, color in [('bunpro', 'Bunpro Grammar', 'info'), ('kanji', 'Top Kanji', 'danger'), ('words', 'Top Words', 'primary')] %}
+                {% if mp[key] and mp[key].total > 0 %}
+                <div class="col-md-4">
+                    <h6>{{ label }}</h6>
+                    <div class="progress mb-1" style="height: 24px;">
+                        {% set pct = (mp[key].studied / mp[key].total * 100) if mp[key].total > 0 else 0 %}
+                        <div class="progress-bar bg-{{ color }}" role="progressbar" style="width: {{ pct }}%">
+                            {{ "%.0f"|format(pct) }}%
+                        </div>
+                    </div>
+                    <small class="text-muted">{{ mp[key].studied }} / {{ mp[key].total }} studied</small>
+                </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+    {# ── Weakest cards ── #}
+    {% if analytics and analytics.weakest %}
+    <div class="card mb-4">
+        <div class="card-header bg-danger text-white"><h6 class="mb-0">⚠️ Weakest Cards (Lowest Ease Factor)</h6></div>
+        <div class="card-body p-0">
+            <div class="table-responsive">
+            <table class="table table-hover mb-0">
+                <thead class="table-light">
+                    <tr>
+                        <th>Item</th>
+                        <th>Type</th>
+                        <th>Aspect</th>
+                        <th>Ease</th>
+                        <th>Interval</th>
+                        <th>Next Review</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for c in analytics.weakest %}
+                    <tr>
+                        <td class="japanese-text fw-bold">{{ c.label }}</td>
+                        <td><span class="badge bg-secondary">{{ c.parent_type }}</span></td>
+                        <td>{{ c.aspect_type }}</td>
+                        <td><span class="badge bg-{{ 'danger' if c.ease_factor < 1.8 else ('warning' if c.ease_factor < 2.2 else 'success') }}">{{ c.ease_factor }}</span></td>
+                        <td>{{ c.interval }}d</td>
+                        <td>{{ c.next_review[:10] if c.next_review else '—' }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+    {# ── Strongest cards ── #}
+    {% if analytics and analytics.strongest %}
+    <div class="card mb-4">
+        <div class="card-header bg-success text-white"><h6 class="mb-0">🏆 Strongest Cards (Longest Interval)</h6></div>
+        <div class="card-body p-0">
+            <div class="table-responsive">
+            <table class="table table-hover mb-0">
+                <thead class="table-light">
+                    <tr>
+                        <th>Item</th>
+                        <th>Type</th>
+                        <th>Aspect</th>
+                        <th>Interval</th>
+                        <th>Ease</th>
+                        <th>Next Review</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for c in analytics.strongest %}
+                    <tr>
+                        <td class="japanese-text fw-bold">{{ c.label }}</td>
+                        <td><span class="badge bg-secondary">{{ c.parent_type }}</span></td>
+                        <td>{{ c.aspect_type }}</td>
+                        <td><span class="badge bg-success">{{ c.interval }}d</span></td>
+                        <td>{{ c.ease_factor }}</td>
+                        <td>{{ c.next_review[:10] if c.next_review else '—' }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+    {% if not analytics or (not analytics.weakest and not analytics.strongest) %}
+    <div class="alert alert-info text-center">
+        <h5>🃏 No card details yet</h5>
+        <p>Study some cards to see your weakest and strongest items here.</p>
+    </div>
+    {% endif %}
+</div>
+
+</div>{# /tab-content #}
+
+{# ════════════════════════════════════════════════════════════════════ #}
+{# Chart.js Scripts                                                    #}
+{# ════════════════════════════════════════════════════════════════════ #}
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+// Analytics data from server
+const analytics = {{ analytics | tojson }};
+
+// ── Daily Progress Chart (30 days) ──────────────────────────────────
+fetch("{{ url_for('progress_data') }}")
+  .then(r => r.json())
+  .then(data => {
+    const ctx = document.getElementById("dailyProgressChart");
+    if (!ctx) return;
+    new Chart(ctx.getContext("2d"), {
+      type: "line",
+      data: {
+        labels: data.map(d => d.date),
+        datasets: [
+          {
+            label: "Cards Reviewed",
+            data: data.map(d => d.cards_reviewed),
+            borderColor: "#0d6efd",
+            backgroundColor: "rgba(13,110,253,0.1)",
+            fill: true,
+            tension: 0.3,
+          },
+          {
+            label: "New Cards Seen",
+            data: data.map(d => d.new_cards_seen),
+            borderColor: "#198754",
+            backgroundColor: "rgba(25,135,84,0.1)",
+            fill: true,
+            tension: 0.3,
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        plugins: { legend: { position: "top" } },
+        scales: { y: { beginAtZero: true } }
+      }
+    });
+  });
+
+// ── Content Breakdown Bar Chart ─────────────────────────────────────
+if (analytics.content_breakdown && analytics.content_breakdown.length) {
+  const cbCtx = document.getElementById("contentBreakdownChart");
+  if (cbCtx) {
+    const cb = analytics.content_breakdown;
+    new Chart(cbCtx.getContext("2d"), {
+      type: "bar",
+      data: {
+        labels: cb.map(d => d.type.charAt(0).toUpperCase() + d.type.slice(1)),
+        datasets: [
+          {
+            label: "Total",
+            data: cb.map(d => d.total),
+            backgroundColor: "rgba(13,110,253,0.6)",
+          },
+          {
+            label: "Studied",
+            data: cb.map(d => d.studied),
+            backgroundColor: "rgba(25,135,84,0.6)",
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        plugins: { legend: { position: "top" } },
+        scales: { y: { beginAtZero: true } }
+      }
+    });
+  }
+}
+
+// ── SRS Donut Chart ─────────────────────────────────────────────────
+if (analytics.srs_stages) {
+  const srsCtx = document.getElementById("srsDonutChart");
+  if (srsCtx) {
+    const s = analytics.srs_stages;
+    new Chart(srsCtx.getContext("2d"), {
+      type: "doughnut",
+      data: {
+        labels: ["New", "Learning (1-6d)", "Young (7-30d)", "Mature (31d+)"],
+        datasets: [{
+          data: [s.new, s.learning, s.young, s.mature],
+          backgroundColor: ["#6c757d", "#ffc107", "#0dcaf0", "#198754"],
+          borderWidth: 2,
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { position: "bottom" },
+        }
+      }
+    });
+  }
+}
+
+// ── Review Forecast Bar Chart ───────────────────────────────────────
+if (analytics.forecast && analytics.forecast.length) {
+  const fcCtx = document.getElementById("forecastChart");
+  if (fcCtx) {
+    const fc = analytics.forecast;
+    new Chart(fcCtx.getContext("2d"), {
+      type: "bar",
+      data: {
+        labels: fc.map(d => d.date.slice(5)),  // MM-DD
+        datasets: [{
+          label: "Cards Due",
+          data: fc.map(d => d.count),
+          backgroundColor: fc.map((d, i) => i === 0 ? "#dc3545" : "rgba(13,110,253,0.6)"),
+          borderRadius: 4,
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: { legend: { display: false } },
+        scales: { y: { beginAtZero: true } }
+      }
+    });
+  }
+}
+
+// ── SRS by Type Stacked Bar Chart ───────────────────────────────────
+if (analytics.srs_by_type && analytics.srs_by_type.length) {
+  const stCtx = document.getElementById("srsByTypeChart");
+  if (stCtx) {
+    const st = analytics.srs_by_type;
+    new Chart(stCtx.getContext("2d"), {
+      type: "bar",
+      data: {
+        labels: st.map(d => d.type.charAt(0).toUpperCase() + d.type.slice(1)),
+        datasets: [
+          { label: "New",      data: st.map(d => d.new),      backgroundColor: "#6c757d" },
+          { label: "Learning", data: st.map(d => d.learning), backgroundColor: "#ffc107" },
+          { label: "Young",    data: st.map(d => d.young),    backgroundColor: "#0dcaf0" },
+          { label: "Mature",   data: st.map(d => d.mature),   backgroundColor: "#198754" },
+        ]
+      },
+      options: {
+        responsive: true,
+        plugins: { legend: { position: "top" } },
+        scales: {
+          x: { stacked: true },
+          y: { stacked: true, beginAtZero: true }
+        }
+      }
+    });
+  }
+}
+
+// ── Activity Heatmap ────────────────────────────────────────────────
+if (analytics.heatmap && analytics.heatmap.length) {
+  const grid = document.getElementById("heatmapGrid");
+  const monthsDiv = document.getElementById("heatmapMonths");
+  if (grid && monthsDiv) {
+    const heatmap = analytics.heatmap;
+    const maxCount = Math.max(...heatmap.map(d => d.count), 1);
+
+    function getColor(count) {
+      if (count === 0) return "#ebedf0";
+      if (count <= 5) return "#9be9a8";
+      if (count <= 15) return "#40c463";
+      if (count <= 30) return "#30a14e";
+      return "#216e39";
+    }
+
+    // Build grid: columns = weeks, rows = days of week
+    // Determine the starting day of week for the first date
+    const firstDate = new Date(heatmap[0].date + "T00:00:00");
+    const startDow = (firstDate.getDay() + 6) % 7;  // Mon=0
+
+    // Pad the beginning with empty cells
+    for (let i = 0; i < startDow; i++) {
+      const cell = document.createElement("div");
+      cell.className = "heatmap-cell heatmap-empty";
+      grid.appendChild(cell);
+    }
+
+    // Track months for the header
+    const months = [];
+    let lastMonth = -1;
+    let weekCol = 0;
+
+    heatmap.forEach((d, idx) => {
+      const cell = document.createElement("div");
+      cell.className = "heatmap-cell";
+      cell.style.backgroundColor = getColor(d.count);
+      cell.title = d.date + ": " + d.count + " reviews";
+      grid.appendChild(cell);
+
+      // Track month labels
+      const dt = new Date(d.date + "T00:00:00");
+      const currentWeekCol = Math.floor((idx + startDow) / 7);
+      if (dt.getMonth() !== lastMonth) {
+        months.push({ month: dt.toLocaleString('default', { month: 'short' }), col: currentWeekCol });
+        lastMonth = dt.getMonth();
+      }
+    });
+
+    // Render month labels
+    const totalWeeks = Math.ceil((heatmap.length + startDow) / 7);
+    monthsDiv.style.display = "flex";
+    monthsDiv.style.paddingLeft = "30px";  // align with grid (accounts for day labels)
+    let prevCol = 0;
+    months.forEach(m => {
+      const span = document.createElement("span");
+      span.textContent = m.month;
+      span.className = "text-muted small";
+      const gapWeeks = m.col - prevCol;
+      span.style.marginLeft = (gapWeeks * 16) + "px";  // 14px cell + 2px gap
+      monthsDiv.appendChild(span);
+      prevCol = m.col + 2;  // account for label width
+    });
+  }
+}
+</script>
+{% endblock %}

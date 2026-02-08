@@ -1,0 +1,642 @@
+{% extends "base.html" %}
+
+{% block title %}Study Session - Japanese Learning App{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8 mx-auto">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="mb-0">📚 Study Session</h3>
+                <small class="text-muted">AI-powered exercises with spaced repetition</small>
+            </div>
+            <div class="card-body">
+                <div id="study-container">
+                    <!-- Initial state -->
+                    <div id="loading-state" class="text-center">
+                        <div class="spinner-border text-primary" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                        <p class="mt-3">🤖 Generating AI exercise...</p>
+                    </div>
+
+                    <!-- No cards state -->
+                    <div id="no-cards-state" class="text-center" style="display: none;">
+                        <div class="alert alert-success">
+                            <h4>🎉 All caught up!</h4>
+                            <p>No cards are due for review right now.</p>
+                            <a href="{{ url_for('add_content') }}" class="btn btn-primary">Add More Content</a>
+                            <a href="{{ url_for('index') }}" class="btn btn-secondary">Back to Home</a>
+                        </div>
+                    </div>
+
+                    <!-- Study card state -->
+                    <div id="study-card-state" style="display: none;">
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-primary" id="aspect-type"></span>
+                                <span id="session-stats" class="text-muted">Session: <span id="cards-studied">0</span> cards | <span id="correct-count">0</span> correct</span>
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <div class="card bg-light">
+                                <div class="card-body">
+                                    <h5 class="card-title">Question:</h5>
+                                    <p class="card-text" id="question-text"></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="answer-form">
+                            <div class="mb-3">
+                                <label for="user-answer" class="form-label">Your Answer:</label>
+                                <textarea class="form-control" id="user-answer" rows="3" placeholder="Enter your answer here..."></textarea>
+                            </div>
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                                <button type="button" class="btn btn-success" id="submit-answer">
+                                    <span class="spinner-border spinner-border-sm d-none me-2" id="submit-spinner"></span>
+                                    Submit Answer
+                                </button>
+                                <button type="button" class="btn btn-info" id="chat-tutor">Chat with Tutor</button>
+                                <button type="button" class="btn btn-warning" id="skip-card">Skip Card</button>
+                                <button type="button" class="btn btn-danger" id="end-session">End Session</button>
+                            </div>
+                        </div>
+
+                        <!-- Chat interface -->
+                        <div id="chat-interface" style="display: none;">
+                            <div class="card mt-3">
+                                <div class="card-header">
+                                    <h5 class="mb-0">💬 Chat with AI Tutor</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div id="chat-messages" style="max-height: 300px; overflow-y: auto; margin-bottom: 15px;">
+                                        <!-- Chat messages will appear here -->
+                                    </div>
+                                    <div class="input-group">
+                                        <textarea class="form-control" id="chat-input" rows="2" placeholder="Ask your tutor a question..."></textarea>
+                                        <button class="btn btn-primary" type="button" id="send-chat">
+                                            <span class="spinner-border spinner-border-sm d-none me-2" id="chat-spinner"></span>
+                                            Send
+                                        </button>
+                                    </div>
+                                    <div class="mt-2">
+                                        <small class="text-muted">Press Ctrl+Enter to send. When you're done learning, you can only skip this card.</small>
+                                    </div>
+                                    <div class="mt-2">
+                                        <button type="button" class="btn btn-warning btn-sm" id="skip-after-chat">Skip Card</button>
+                                        <button type="button" class="btn btn-secondary btn-sm" id="close-chat">Close Chat</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Feedback display -->
+                        <div id="feedback-display" style="display: none;">
+                            <div class="alert" id="feedback-alert">
+                                <h5 id="feedback-score"></h5>
+                                <p><strong>Your answer:</strong> <span id="feedback-answer"></span></p>
+                                <p><strong>AI Feedback:</strong> <span id="feedback-text"></span></p>
+                                <p id="feedback-scheduling"></p>
+                            </div>
+                            <div class="d-grid">
+                                <button type="button" class="btn btn-primary" id="next-card">Next Card</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Error state -->
+                    <div id="error-state" style="display: none;">
+                        <div class="alert alert-danger">
+                            <h4>❌ Error</h4>
+                            <p id="error-message"></p>
+                            <button type="button" class="btn btn-primary" id="retry-button">Try Again</button>
+                            <a href="{{ url_for('index') }}" class="btn btn-secondary">Back to Home</a>
+                        </div>
+                    </div>
+
+                    <!-- Session summary -->
+                    <div id="session-summary" style="display: none;">
+                        <div class="alert alert-info">
+                            <h4>📊 Session Complete</h4>
+                            <p><strong>Cards studied:</strong> <span id="summary-cards"></span></p>
+                            <p><strong>Correct answers:</strong> <span id="summary-correct"></span></p>
+                            <p><strong>Accuracy:</strong> <span id="summary-accuracy"></span>%</p>
+                            <hr>
+                            <a href="{{ url_for('study_session') }}" class="btn btn-success">New Session</a>
+                            <a href="{{ url_for('index') }}" class="btn btn-secondary">Back to Home</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+class StudySession {
+    constructor() {
+        this.currentCard = null;
+        this.cardsStudied = 0;
+        this.correctCount = 0;
+        this.sessionActive = true;
+        this.chatHistory = [];
+        this.inChatMode = false;
+        
+        // Pre-loading functionality
+        this.preloadedCard = null;
+        this.isPreloading = false;
+        this.preloadPromise = null;
+
+        this.initializeEventListeners();
+        this.loadNextCard();
+    }
+    
+    initializeEventListeners() {
+        document.getElementById('submit-answer').addEventListener('click', () => this.submitAnswer());
+        document.getElementById('chat-tutor').addEventListener('click', () => this.openChat());
+        document.getElementById('skip-card').addEventListener('click', () => this.skipCard());
+        document.getElementById('skip-after-chat').addEventListener('click', () => this.skipAfterChat());
+        document.getElementById('close-chat').addEventListener('click', () => this.closeChat());
+        document.getElementById('end-session').addEventListener('click', () => this.endSession());
+        document.getElementById('next-card').addEventListener('click', () => this.loadNextCard());
+        document.getElementById('retry-button').addEventListener('click', () => this.loadNextCard());
+        document.getElementById('send-chat').addEventListener('click', () => this.sendChatMessage());
+        
+        // Allow Enter key to submit answer
+        document.getElementById('user-answer').addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' && e.ctrlKey) {
+                this.submitAnswer();
+            }
+        });
+
+        // Allow Ctrl+Enter to send chat message
+        document.getElementById('chat-input').addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' && e.ctrlKey) {
+                this.sendChatMessage();
+            }
+        });
+    }
+    
+    async loadNextCard() {
+        if (!this.sessionActive) return;
+        
+        // Reset chat state before loading new card
+        this.resetChatState();
+
+        // Check if we have a preloaded card ready
+        if (this.preloadedCard) {
+            console.log('📦 Using preloaded card');
+            this.currentCard = this.preloadedCard;
+            this.preloadedCard = null; // Clear the preloaded card
+            this.displayCard();
+
+            // Start preloading the next card in background
+            this.startPreloading();
+            return;
+        }
+
+        // No preloaded card available, load normally with loading state
+        this.showState('loading');
+        
+        try {
+            const response = await fetch(`/api/next_card?exclude_id=${this.currentCard ? this.currentCard.id : ''}`);
+            const data = await response.json();
+            
+            if (data.status === 'no_cards') {
+                this.showState('no-cards');
+                return;
+            }
+            
+            if (data.status === 'error') {
+                this.showError(data.message);
+                return;
+            }
+            
+            this.currentCard = data.card;
+            this.displayCard();
+            
+            // Start preloading the next card in background
+            this.startPreloading();
+
+        } catch (error) {
+            console.error('Error loading card:', error);
+            this.showError('Failed to load next card: ' + error.message);
+        }
+    }
+    
+    async startPreloading() {
+        // Don't start another preload if one is already in progress
+        if (this.isPreloading || this.preloadedCard) {
+            return;
+        }
+
+        this.isPreloading = true;
+        console.log('🔄 Starting background preload of next card...');
+
+        try {
+            // Start the fetch in the background
+            this.preloadPromise = fetch(`/api/next_card?exclude_id=${this.currentCard ? this.currentCard.id : ''}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.status === 'success' && data.card) {
+                        this.preloadedCard = data.card;
+                        console.log('✅ Next card preloaded successfully');
+                    } else if (data.status === 'no_cards') {
+                        console.log('ℹ️ No more cards available for preloading');
+                    } else {
+                        console.log('⚠️ Preload returned error:', data.message);
+                    }
+                })
+                .catch(error => {
+                    console.warn('⚠️ Background preload failed:', error.message);
+                    // Don't show error to user since this is background loading
+                })
+                .finally(() => {
+                    this.isPreloading = false;
+                    this.preloadPromise = null;
+                });
+
+        } catch (error) {
+            console.warn('⚠️ Failed to start preloading:', error.message);
+            this.isPreloading = false;
+        }
+    }
+
+    cancelPreloading() {
+        if (this.preloadPromise) {
+            // We can't actually cancel the fetch, but we can ignore its result
+            this.preloadPromise.then(() => {
+                // Clear preloaded card if session is no longer active
+                if (!this.sessionActive) {
+                    this.preloadedCard = null;
+                }
+            });
+            this.preloadPromise = null;
+        }
+        this.isPreloading = false;
+    }
+
+    displayCard() {
+        document.getElementById('aspect-type').textContent = this.currentCard.aspect_type;
+        const safeQuestion = this.currentCard.question
+            .replace(/&/g, "&")
+            .replace(/</g, "<")
+            .replace(/>/g, ">")
+            .replace(/\r\n|\r|\n/g, "<br>");
+        document.getElementById('question-text').innerHTML = safeQuestion;
+        
+        // Ensure the original interface is restored
+        this.restoreOriginalInterface();
+
+        this.updateSessionStats();
+        this.showState('study-card');
+    }
+    
+    resetChatState() {
+        // Reset chat-related state variables
+        this.inChatMode = false;
+        this.chatHistory = [];
+
+        // Hide chat interface if it's visible
+        this.showElement('chat-interface', false);
+
+        // Clear chat messages
+        const chatMessages = document.getElementById('chat-messages');
+        if (chatMessages) {
+            chatMessages.innerHTML = '';
+        }
+
+        // Clear chat input
+        const chatInput = document.getElementById('chat-input');
+        if (chatInput) {
+            chatInput.value = '';
+        }
+
+        // Hide feedback display
+        this.showElement('feedback-display', false);
+    }
+
+    async submitAnswer() {
+        const answer = document.getElementById('user-answer').value.trim();
+        if (!answer) {
+            alert('Please enter an answer');
+            return;
+        }
+        
+        // Show loading spinner - with safety checks
+        const submitBtn = document.getElementById('submit-answer');
+        const spinner = document.getElementById('submit-spinner');
+        
+        if (submitBtn) {
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Evaluating...';
+        }
+
+        if (spinner) {
+            spinner.classList.remove('d-none');
+        }
+
+        try {
+            const response = await fetch('/api/submit_answer', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    card_id: this.currentCard.id,
+                    answer: answer,
+                    question: this.currentCard ? this.currentCard.question : undefined
+                })
+            });
+            
+            const data = await response.json();
+            
+            if (data.status === 'error') {
+                this.showError(data.message);
+                this.resetSubmitButton();
+                return;
+            }
+            
+            this.cardsStudied++;
+            if (data.is_correct) {
+                this.correctCount++;
+            }
+            
+            this.showFeedback(data, answer);
+            this.resetSubmitButton();
+            
+        } catch (error) {
+            console.error('Error submitting answer:', error);
+            this.showError('Failed to submit answer: ' + error.message);
+            this.resetSubmitButton();
+        }
+    }
+    
+    resetSubmitButton() {
+        const submitBtn = document.getElementById('submit-answer');
+        const spinner = document.getElementById('submit-spinner');
+
+        // Check if spinner exists before trying to manipulate it
+        if (spinner) {
+            spinner.classList.add('d-none');
+        }
+
+        if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = `
+                <span class="spinner-border spinner-border-sm d-none me-2" id="submit-spinner"></span>
+                Submit Answer
+            `;
+        }
+    }
+
+    openChat() {
+        this.inChatMode = false; // Only set to true after user sends a message
+        this.chatHistory = [];
+        this.showElement('answer-form', false);
+        this.showElement('chat-interface', true);
+        document.getElementById('chat-input').focus();
+
+        // Add initial message
+        this.addChatMessage('tutor', 'Hi! I\'m here to help you learn about this topic. What would you like to know?');
+    }
+
+    closeChat() {
+        this.showElement('chat-interface', false);
+
+        if (this.inChatMode) {
+            // After chatting, show only skip option
+            this.showSkipOnlyInterface();
+        } else {
+            // If they didn't actually chat, restore the original answer form
+            this.restoreOriginalInterface();
+        }
+    }
+
+    restoreOriginalInterface() {
+        const answerForm = document.getElementById('answer-form');
+        answerForm.innerHTML = `
+            <div class="mb-3">
+                <label for="user-answer" class="form-label">Your Answer:</label>
+                <textarea class="form-control" id="user-answer" rows="3" placeholder="Enter your answer here..."></textarea>
+            </div>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                <button type="button" class="btn btn-success" id="submit-answer">
+                    <span class="spinner-border spinner-border-sm d-none me-2" id="submit-spinner"></span>
+                    Submit Answer
+                </button>
+                <button type="button" class="btn btn-info" id="chat-tutor">Chat with Tutor</button>
+                <button type="button" class="btn btn-warning" id="skip-card">Skip Card</button>
+                <button type="button" class="btn btn-danger" id="end-session">End Session</button>
+            </div>
+        `;
+
+        // Re-attach event listeners
+        document.getElementById('submit-answer').addEventListener('click', () => this.submitAnswer());
+        document.getElementById('chat-tutor').addEventListener('click', () => this.openChat());
+        document.getElementById('skip-card').addEventListener('click', () => this.skipCard());
+        document.getElementById('end-session').addEventListener('click', () => this.endSession());
+
+        // Re-attach keydown listener for Ctrl+Enter
+        document.getElementById('user-answer').addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' && e.ctrlKey) {
+                this.submitAnswer();
+            }
+        });
+
+        this.showElement('answer-form', true);
+        document.getElementById('user-answer').focus();
+    }
+
+    showSkipOnlyInterface() {
+        const answerForm = document.getElementById('answer-form');
+        answerForm.innerHTML = `
+            <div class="alert alert-info">
+                <h6>💬 You've used the tutor chat for this card</h6>
+                <p>Since you've learned about this topic through chat, you can now skip this card.</p>
+            </div>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                <button type="button" class="btn btn-warning" id="skip-after-learning">Skip This Card</button>
+                <button type="button" class="btn btn-danger" id="end-session-after-chat">End Session</button>
+            </div>
+        `;
+
+        // Re-attach event listeners for the new buttons
+        document.getElementById('skip-after-learning').addEventListener('click', () => this.skipAfterChat());
+        document.getElementById('end-session-after-chat').addEventListener('click', () => this.endSession());
+
+        this.showElement('answer-form', true);
+    }
+
+    async sendChatMessage() {
+        const chatInput = document.getElementById('chat-input');
+        const message = chatInput.value.trim();
+        if (!message) return;
+
+        // Mark that user has actually used chat
+        this.inChatMode = true;
+
+        // Show loading
+        const sendBtn = document.getElementById('send-chat');
+        const chatSpinner = document.getElementById('chat-spinner');
+        chatSpinner.classList.remove('d-none');
+        sendBtn.disabled = true;
+
+        // Add user message
+        this.addChatMessage('user', message);
+        chatInput.value = '';
+
+        try {
+            const response = await fetch('/api/chat', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    card_id: this.currentCard.id,
+                    message: message,
+                    chat_history: this.chatHistory
+                })
+            });
+
+            const data = await response.json();
+
+            if (data.status === 'error') {
+                this.addChatMessage('tutor', 'Sorry, I\'m having trouble right now. Could you try asking again?');
+            } else {
+                this.addChatMessage('tutor', data.response);
+            }
+
+        } catch (error) {
+            console.error('Error in chat:', error);
+            this.addChatMessage('tutor', 'Sorry, I\'m having trouble right now. Could you try asking again?');
+        } finally {
+            chatSpinner.classList.add('d-none');
+            sendBtn.disabled = false;
+            chatInput.focus();
+        }
+    }
+
+    addChatMessage(role, message) {
+        this.chatHistory.push([role, message]);
+
+        const messagesDiv = document.getElementById('chat-messages');
+        const messageDiv = document.createElement('div');
+        messageDiv.className = `mb-2 ${role === 'user' ? 'text-end' : ''}`;
+
+        const badge = role === 'user' ? 'bg-primary' : 'bg-success';
+        const label = role === 'user' ? 'You' : 'Tutor';
+
+        const safeMessage = message
+            .replace(/&/g, "&")
+            .replace(/</g, "<")
+            .replace(/>/g, ">")
+            .replace(/\r\n|\r|\n/g, "<br>");
+
+        messageDiv.innerHTML = `
+            <span class="badge ${badge} me-2">${label}:</span>
+            <span>${safeMessage}</span>
+        `;
+
+        messagesDiv.appendChild(messageDiv);
+        messagesDiv.scrollTop = messagesDiv.scrollHeight;
+    }
+
+    skipAfterChat() {
+        this.cardsStudied++;
+        this.updateSessionStats();
+        this.loadNextCard();
+    }
+
+    showFeedback(data, userAnswer) {
+        const alertClass = data.score >= 4 ? 'alert-success' :
+                          data.score >= 3 ? 'alert-warning' : 'alert-danger';
+        
+        const scoreSymbol = data.score >= 4 ? '✅' :
+                           data.score >= 3 ? '⚠️' : '❌';
+        
+        document.getElementById('feedback-alert').className = `alert ${alertClass}`;
+        document.getElementById('feedback-score').textContent = `${scoreSymbol} Score: ${data.score}/5`;
+        document.getElementById('feedback-answer').textContent = userAnswer;
+        document.getElementById('feedback-text').textContent = data.feedback;
+        
+        const scheduling = data.score >= 3 ?
+            '📅 Card rescheduled for later review' :
+            '🔄 Card will be reviewed again soon';
+        document.getElementById('feedback-scheduling').textContent = scheduling;
+        
+        // Hide the answer form and chat interface, show only feedback
+        this.showElement('answer-form', false);
+        this.showElement('chat-interface', false);
+        this.showElement('feedback-display', true);
+        this.updateSessionStats();
+    }
+    
+    skipCard() {
+        this.cardsStudied++;
+        this.updateSessionStats();
+        this.loadNextCard();
+    }
+    
+    endSession() {
+        this.sessionActive = false;
+        this.cancelPreloading(); // Clean up any ongoing preloading
+        this.showSessionSummary();
+    }
+    
+    showSessionSummary() {
+        const accuracy = this.cardsStudied > 0 ? (this.correctCount / this.cardsStudied * 100).toFixed(1) : 0;
+        
+        document.getElementById('summary-cards').textContent = this.cardsStudied;
+        document.getElementById('summary-correct').textContent = this.correctCount;
+        document.getElementById('summary-accuracy').textContent = accuracy;
+        
+        this.showState('session-summary');
+    }
+    
+    updateSessionStats() {
+        document.getElementById('cards-studied').textContent = this.cardsStudied;
+        document.getElementById('correct-count').textContent = this.correctCount;
+    }
+    
+    showState(state) {
+        const states = ['loading', 'no-cards', 'study-card', 'error', 'session-summary'];
+        states.forEach(s => {
+            this.showElement(`${s}-state`, s === state);
+        });
+        
+        if (state === 'study-card') {
+            this.showElement('answer-form', true);
+            this.showElement('feedback-display', false);
+            this.showElement('chat-interface', false);
+        }
+    }
+    
+    showError(message) {
+        document.getElementById('error-message').textContent = message;
+        this.showState('error');
+    }
+    
+    showElement(id, show) {
+        const element = document.getElementById(id);
+        if (element) {
+            element.style.display = show ? 'block' : 'none';
+        }
+    }
+    
+    showLoading(message) {
+        // You could customize this to show different loading messages
+        console.log('Loading:', message);
+    }
+}
+
+// Initialize study session when page loads
+document.addEventListener('DOMContentLoaded', () => {
+    new StudySession();
+});
+</script>
+{% endblock %}

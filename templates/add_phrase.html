@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+
+{% block title %}Add Phrase - Japanese Learning App{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-6 mx-auto">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="mb-0">💬 Add Phrase</h3>
+                <small class="text-muted">Add common phrases and expressions</small>
+            </div>
+            <div class="card-body">
+                <form method="POST">
+                    <div class="mb-3">
+                        <label for="phrase" class="form-label">Japanese Phrase *</label>
+                        <input type="text" class="form-control" id="phrase" name="phrase" required 
+                               placeholder="例: よろしくお願いします" autocomplete="off">
+                        <div class="form-text">Enter the Japanese phrase or expression</div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="meaning" class="form-label">Meaning</label>
+                        <input type="text" class="form-control" id="meaning" name="meaning" 
+                               placeholder="例: Please treat me well" autocomplete="off">
+                        <div class="form-text">Enter the English meaning or translation</div>
+                    </div>
+                    
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary">Add Phrase</button>
+                        <a href="{{ url_for('add_content') }}" class="btn btn-secondary">Back to Add Content</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="card mt-4">
+            <div class="card-header">
+                <h5 class="mb-0">💡 Tips</h5>
+            </div>
+            <div class="card-body">
+                <ul class="mb-0">
+                    <li>The system will automatically create learning aspects for:</li>
+                    <ul>
+                        <li><strong>Meaning:</strong> What does this phrase mean?</li>
+                        <li><strong>Usage:</strong> When and how to use this phrase</li>
+                    </ul>
+                    <li>Phrases are expressions used in specific contexts</li>
+                    <li>Include common greetings, polite expressions, and set phrases</li>
+                    <li>AI will generate contextual usage exercises</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+// Focus on the phrase input when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('phrase').focus();
+});
+
+// Move to next field on Enter
+document.getElementById('phrase').addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+        e.preventDefault();
+        document.getElementById('meaning').focus();
+    }
+});
+
+document.getElementById('meaning').addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+        e.target.form.submit();
+    }
+});
+</script>
+{% endblock %}

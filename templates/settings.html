@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+
+{% block title %}Settings - Japanese Learning App{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-6 mx-auto">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="mb-0">⚙️ Settings</h3>
+                <small class="text-muted">Configure your learning preferences</small>
+            </div>
+            <div class="card-body">
+                <form method="POST">
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Username</label>
+                        <input type="text" class="form-control" id="username" name="username"
+                               value="{{ username }}" required placeholder="Enter your username">
+                        <div class="form-text">This is used to track your individual progress</div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="max_new_per_day" class="form-label">Max New Cards per Day</label>
+                        <input type="number" class="form-control" id="max_new_per_day" name="max_new_per_day"
+                               value="{{ max_new_per_day or 20 }}" min="1" max="200">
+                        <div class="form-text">Limit how many new cards are introduced per day</div>
+                    </div>
+                    
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary">Save Settings</button>
+                        <a href="{{ url_for('index') }}" class="btn btn-secondary">Back to Home</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="card mt-4">
+            <div class="card-header">
+                <h5 class="mb-0">📊 Current Settings</h5>
+            </div>
+            <div class="card-body">
+                <table class="table table-sm">
+                    <tbody>
+                        <tr>
+                            <td><strong>Current Username:</strong></td>
+                            <td>{{ username }}</td>
+                        </tr>
+                        <tr>
+                            <td><strong>AI Model:</strong></td>
+                            <td>GPT-5 Mini</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Learning System:</strong></td>
+                            <td>Spaced Repetition (FSRS)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="card mt-4">
+            <div class="card-header">
+                <h5 class="mb-0">💡 About Progress Tracking</h5>
+            </div>
+            <div class="card-body">
+                <ul class="mb-0">
+                    <li>Your username is used to track your individual learning progress</li>
+                    <li>Progress includes review counts, accuracy rates, and study history</li>
+                    <li>Changing your username will start fresh progress tracking</li>
+                    <li>All study data is stored locally in the database</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+// Focus on the username input when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('username').focus();
+    document.getElementById('username').select();
+});
+</script>
+{% endblock %}

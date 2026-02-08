@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block title %}Add Vocabulary - Japanese Learning App{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-6 mx-auto">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="mb-0">📝 Add Vocabulary</h3>
+                <small class="text-muted">Add Japanese words and phrases</small>
+            </div>
+            <div class="card-body">
+                <form method="POST">
+                    <div class="mb-3">
+                        <label for="word" class="form-label">Japanese Word/Phrase *</label>
+                        <input type="text" class="form-control" id="word" name="word" required 
+                               placeholder="例: こんにちは" autocomplete="off">
+                        <div class="form-text">Enter the Japanese word or phrase in hiragana, katakana, or kanji</div>
+                    </div>
+                    
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary">Add Vocabulary</button>
+                        <a href="{{ url_for('add_content') }}" class="btn btn-secondary">Back to Add Content</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="card mt-4">
+            <div class="card-header">
+                <h5 class="mb-0">💡 Tips</h5>
+            </div>
+            <div class="card-body">
+                <ul class="mb-0">
+                    <li>The system will automatically create learning aspects for:</li>
+                    <ul>
+                        <li><strong>Meaning:</strong> What does this word mean?</li>
+                        <li><strong>Reading:</strong> How is this word pronounced?</li>
+                        <li><strong>Usage:</strong> How to use this word in context</li>
+                    </ul>
+                    <li>AI will generate contextual exercises for each aspect</li>
+                    <li>Duplicate detection prevents adding the same word twice</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+// Focus on the word input when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('word').focus();
+});
+
+// Auto-submit on Enter
+document.getElementById('word').addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+        e.target.form.submit();
+    }
+});
+</script>
+{% endblock %}

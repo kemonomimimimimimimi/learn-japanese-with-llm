@@ -1,0 +1,200 @@
+{% extends "base.html" %}
+
+{% block title %}Process RenPy File - Japanese Learning App{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8 mx-auto">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="mb-0">🎮 Process RenPy File</h3>
+                <small class="text-muted">Extract Japanese dialogue from RenPy visual novel scripts</small>
+            </div>
+            <div class="card-body">
+                {% if not results %}
+                    <form method="POST" enctype="multipart/form-data">
+                        <div class="mb-3">
+                            <label for="file" class="form-label">Select RenPy Script File</label>
+                            <input type="file" class="form-control" id="file" name="file" 
+                                   accept=".rpy,.renpy,.txt" required>
+                            <div class="form-text">
+                                Supported formats: .rpy, .renpy, .txt files containing RenPy dialogue scripts
+                            </div>
+                        </div>
+                        
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-primary">
+                                <span class="spinner-border spinner-border-sm d-none" id="loading-spinner"></span>
+                                Process RenPy File
+                            </button>
+                            <a href="{{ url_for('add_content') }}" class="btn btn-secondary">Back to Add Content</a>
+                        </div>
+                    </form>
+                {% else %}
+                    <div class="alert alert-success">
+                        <h4>✅ RenPy File Processing Complete!</h4>
+                        <p>Successfully extracted and processed Japanese dialogue from your RenPy script.</p>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card bg-success text-white">
+                                <div class="card-body text-center">
+                                    <h3>{{ results.total_new }}</h3>
+                                    <p class="mb-0">New Items Added</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card bg-warning text-dark">
+                                <div class="card-body text-center">
+                                    <h3>{{ results.total_dup }}</h3>
+                                    <p class="mb-0">Duplicates Skipped</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    {% if chunks %}
+                    <div class="mt-4">
+                        <h5>Dialogue Chunks Processed</h5>
+                        <div class="alert alert-info">
+                            <strong>📝 Chunks Created:</strong> {{ chunks|length }} dialogue chunks of ~20 lines each
+                        </div>
+                        
+                        <div class="accordion" id="chunksAccordion">
+                            {% for chunk in chunks[:5] %}
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="heading{{ loop.index }}">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                            data-bs-target="#collapse{{ loop.index }}" aria-expanded="false">
+                                        Chunk {{ chunk.chunk_id }} ({{ chunk.dialogues|length }} lines) 
+                                        - Lines {{ chunk.start_line }}-{{ chunk.end_line }}
+                                    </button>
+                                </h2>
+                                <div id="collapse{{ loop.index }}" class="accordion-collapse collapse" 
+                                     data-bs-parent="#chunksAccordion">
+                                    <div class="accordion-body">
+                                        {% for dialogue in chunk.dialogues[:3] %}
+                                            <p><strong>{{ dialogue.speaker }}:</strong> {{ dialogue.text }}</p>
+                                        {% endfor %}
+                                        {% if chunk.dialogues|length > 3 %}
+                                            <p class="text-muted">... and {{ chunk.dialogues|length - 3 }} more lines</p>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                            {% if chunks|length > 5 %}
+                            <div class="alert alert-secondary mt-2">
+                                <small>Showing first 5 chunks. Total processed: {{ chunks|length }} chunks</small>
+                            </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                    {% endif %}
+                    
+                    <div class="mt-4">
+                        <h5>Detailed Results</h5>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Content Type</th>
+                                    <th>New Items</th>
+                                    <th>Duplicates</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>📝 Vocabulary</td>
+                                    <td><span class="badge bg-success">{{ results.vocab_new }}</span></td>
+                                    <td><span class="badge bg-warning">{{ results.vocab_dup }}</span></td>
+                                </tr>
+                                <tr>
+                                    <td>🈷️ Kanji</td>
+                                    <td><span class="badge bg-success">{{ results.kanji_new }}</span></td>
+                                    <td><span class="badge bg-warning">{{ results.kanji_dup }}</span></td>
+                                </tr>
+                                <tr>
+                                    <td>📚 Grammar</td>
+                                    <td><span class="badge bg-success">{{ results.grammar_new }}</span></td>
+                                    <td><span class="badge bg-warning">{{ results.grammar_dup }}</span></td>
+                                </tr>
+                                <tr>
+                                    <td>💬 Phrases</td>
+                                    <td><span class="badge bg-success">{{ results.phrase_new }}</span></td>
+                                    <td><span class="badge bg-warning">{{ results.phrase_dup }}</span></td>
+                                </tr>
+                                <tr>
+                                    <td>🎭 Idioms</td>
+                                    <td><span class="badge bg-success">{{ results.idiom_new }}</span></td>
+                                    <td><span class="badge bg-warning">{{ results.idiom_dup }}</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                        <a href="{{ url_for('process_renpy') }}" class="btn btn-primary">Process Another File</a>
+                        <a href="{{ url_for('study_session') }}" class="btn btn-success">Start Studying</a>
+                        <a href="{{ url_for('index') }}" class="btn btn-secondary">Back to Home</a>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="card mt-4">
+            <div class="card-header">
+                <h5 class="mb-0">🎮 How RenPy Processing Works</h5>
+            </div>
+            <div class="card-body">
+                <ol>
+                    <li><strong>Upload:</strong> Select a RenPy script file (.rpy, .renpy, or .txt)</li>
+                    <li><strong>Parsing:</strong> Extracts dialogue lines while ignoring RenPy commands</li>
+                    <li><strong>Chunking:</strong> Groups dialogue into manageable chunks of ~20 lines each</li>
+                    <li><strong>Processing:</strong> Each chunk becomes a phrase entry in your study collection</li>
+                    <li><strong>Integration:</strong> Dialogue content is added as study material</li>
+                </ol>
+                
+                <div class="alert alert-info mt-3">
+                    <strong>💡 Tips:</strong>
+                    <ul class="mb-0">
+                        <li>Works best with RenPy visual novel script files containing Japanese dialogue</li>
+                        <li>Automatically skips game commands (scene, play, jump, etc.)</li>
+                        <li>Supports both Western quotes ("") and Japanese quotes (「」)</li>
+                        <li>Each 20-line chunk becomes a phrase for contextual learning</li>
+                        <li>Perfect for learning conversational Japanese from visual novels</li>
+                    </ul>
+                </div>
+
+                <div class="alert alert-warning mt-3">
+                    <strong>⚠️ Supported Format:</strong>
+                    <p>Expected RenPy dialogue format:</p>
+                    <pre class="text-dark">character "Dialogue text here"
+leo "「はいはい、皆さん。」"
+narrator "レオが前に出てきて、俺達を静かにさせる。"</pre>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+// Show loading spinner when form is submitted
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.querySelector('form');
+    const spinner = document.getElementById('loading-spinner');
+    const submitBtn = document.querySelector('button[type="submit"]');
+    
+    if (form && spinner && submitBtn) {
+        form.addEventListener('submit', function() {
+            spinner.classList.remove('d-none');
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Processing...';
+        });
+    }
+});
+</script>
+{% endblock %}

@@ -1,0 +1,152 @@
+{% extends "base.html" %}
+
+{% block title %}Process Image - Japanese Learning App{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8 mx-auto">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="mb-0">🖼️ Process Image</h3>
+                <small class="text-muted">Extract Japanese content from images using AI vision</small>
+            </div>
+            <div class="card-body">
+                {% if not results %}
+                    <form method="POST" enctype="multipart/form-data">
+                        <div class="mb-3">
+                            <label for="file" class="form-label">Select Image File</label>
+                            <input type="file" class="form-control" id="file" name="file" 
+                                   accept="image/*" required>
+                            <div class="form-text">
+                                Supported formats: PNG, JPG, JPEG, GIF, BMP, WebP (Max: 16MB)
+                            </div>
+                        </div>
+                        
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-primary">
+                                <span class="spinner-border spinner-border-sm d-none" id="loading-spinner"></span>
+                                Process Image
+                            </button>
+                            <a href="{{ url_for('add_content') }}" class="btn btn-secondary">Back to Add Content</a>
+                        </div>
+                    </form>
+                {% else %}
+                    <div class="alert alert-success">
+                        <h4>✅ Image Processing Complete!</h4>
+                        <p>Successfully extracted and processed Japanese content from your image.</p>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card bg-success text-white">
+                                <div class="card-body text-center">
+                                    <h3>{{ results.total_new }}</h3>
+                                    <p class="mb-0">New Items Added</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card bg-warning text-dark">
+                                <div class="card-body text-center">
+                                    <h3>{{ results.total_dup }}</h3>
+                                    <p class="mb-0">Duplicates Skipped</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <h5>Detailed Results</h5>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Content Type</th>
+                                    <th>New Items</th>
+                                    <th>Duplicates</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>📝 Vocabulary</td>
+                                    <td><span class="badge bg-success">{{ results.vocab_new }}</span></td>
+                                    <td><span class="badge bg-warning">{{ results.vocab_dup }}</span></td>
+                                </tr>
+                                <tr>
+                                    <td>🈷️ Kanji</td>
+                                    <td><span class="badge bg-success">{{ results.kanji_new }}</span></td>
+                                    <td><span class="badge bg-warning">{{ results.kanji_dup }}</span></td>
+                                </tr>
+                                <tr>
+                                    <td>📚 Grammar</td>
+                                    <td><span class="badge bg-success">{{ results.grammar_new }}</span></td>
+                                    <td><span class="badge bg-warning">{{ results.grammar_dup }}</span></td>
+                                </tr>
+                                <tr>
+                                    <td>💬 Phrases</td>
+                                    <td><span class="badge bg-success">{{ results.phrase_new }}</span></td>
+                                    <td><span class="badge bg-warning">{{ results.phrase_dup }}</span></td>
+                                </tr>
+                                <tr>
+                                    <td>🎭 Idioms</td>
+                                    <td><span class="badge bg-success">{{ results.idiom_new }}</span></td>
+                                    <td><span class="badge bg-warning">{{ results.idiom_dup }}</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                        <a href="{{ url_for('process_image') }}" class="btn btn-primary">Process Another Image</a>
+                        <a href="{{ url_for('study_session') }}" class="btn btn-success">Start Studying</a>
+                        <a href="{{ url_for('index') }}" class="btn btn-secondary">Back to Home</a>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="card mt-4">
+            <div class="card-header">
+                <h5 class="mb-0">🤖 How AI Image Processing Works</h5>
+            </div>
+            <div class="card-body">
+                <ol>
+                    <li><strong>Upload:</strong> Select an image containing Japanese text</li>
+                    <li><strong>OCR:</strong> AI extracts all visible text using computer vision</li>
+                    <li><strong>Classification:</strong> Content is categorized into vocabulary, kanji, grammar, etc.</li>
+                    <li><strong>Enhancement:</strong> AI adds readings, meanings, and explanations</li>
+                    <li><strong>Integration:</strong> New content is added to your study collection</li>
+                </ol>
+                
+                <div class="alert alert-info mt-3">
+                    <strong>💡 Tips:</strong>
+                    <ul class="mb-0">
+                        <li>Clear, high-resolution images work best</li>
+                        <li>Manga panels, textbook pages, and signs are ideal sources</li>
+                        <li>The AI is comprehensive - it extracts everything visible</li>
+                        <li>Duplicate detection prevents adding the same content twice</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+// Show loading spinner when form is submitted
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.querySelector('form');
+    const spinner = document.getElementById('loading-spinner');
+    const submitBtn = document.querySelector('button[type="submit"]');
+    
+    if (form && spinner && submitBtn) {
+        form.addEventListener('submit', function() {
+            spinner.classList.remove('d-none');
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Processing...';
+        });
+    }
+});
+</script>
+{% endblock %}

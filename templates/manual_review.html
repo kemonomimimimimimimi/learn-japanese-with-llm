@@ -1,0 +1,126 @@
+{% extends "base.html" %}
+
+{% block title %}Manual Review - Japanese Learning App{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-6 mx-auto">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="mb-0">📝 Manual Card Review</h3>
+                <small class="text-muted">Manually review and rate card aspects</small>
+            </div>
+            <div class="card-body">
+                <form method="POST">
+                    <div class="mb-3">
+                        <label for="aspect_id" class="form-label">Aspect ID</label>
+                        <input type="number" class="form-control" id="aspect_id" name="aspect_id" 
+                               required placeholder="Enter aspect ID">
+                        <div class="form-text">Enter the ID of the card aspect to review</div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="quality" class="form-label">Quality Rating</label>
+                        <select class="form-select" id="quality" name="quality" required>
+                            <option value="">Select quality...</option>
+                            <option value="0">0 - Forgot completely</option>
+                            <option value="1">1 - Very poor</option>
+                            <option value="2">2 - Poor</option>
+                            <option value="3">3 - Acceptable</option>
+                            <option value="4">4 - Good</option>
+                            <option value="5">5 - Perfect</option>
+                        </select>
+                        <div class="form-text">Rate how well you knew this card</div>
+                    </div>
+                    
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary">Submit Review</button>
+                        <a href="{{ url_for('index') }}" class="btn btn-secondary">Back to Home</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="card mt-4">
+            <div class="card-header">
+                <h5 class="mb-0">📋 Quality Rating Guide</h5>
+            </div>
+            <div class="card-body">
+                <table class="table table-sm">
+                    <thead>
+                        <tr>
+                            <th>Rating</th>
+                            <th>Description</th>
+                            <th>Next Review</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="table-danger">
+                            <td><strong>0</strong></td>
+                            <td>Forgot completely</td>
+                            <td>Very soon</td>
+                        </tr>
+                        <tr class="table-danger">
+                            <td><strong>1</strong></td>
+                            <td>Very poor recall</td>
+                            <td>Soon</td>
+                        </tr>
+                        <tr class="table-warning">
+                            <td><strong>2</strong></td>
+                            <td>Poor with major errors</td>
+                            <td>Soon</td>
+                        </tr>
+                        <tr class="table-warning">
+                            <td><strong>3</strong></td>
+                            <td>Acceptable with some errors</td>
+                            <td>Normal interval</td>
+                        </tr>
+                        <tr class="table-success">
+                            <td><strong>4</strong></td>
+                            <td>Good recall</td>
+                            <td>Longer interval</td>
+                        </tr>
+                        <tr class="table-success">
+                            <td><strong>5</strong></td>
+                            <td>Perfect recall</td>
+                            <td>Much longer interval</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="card mt-4">
+            <div class="card-header">
+                <h5 class="mb-0">💡 How to Use</h5>
+            </div>
+            <div class="card-body">
+                <ul class="mb-0">
+                    <li>This tool allows manual review of specific card aspects</li>
+                    <li>Useful for correcting the scheduling of cards you know well/poorly</li>
+                    <li>The aspect ID can be found in debug logs or database inspection</li>
+                    <li>Rating affects the spaced repetition algorithm</li>
+                    <li>Higher ratings = longer intervals before next review</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+// Focus on the aspect ID input when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('aspect_id').focus();
+});
+
+// Move to quality selector on Enter
+document.getElementById('aspect_id').addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+        e.preventDefault();
+        document.getElementById('quality').focus();
+    }
+});
+</script>
+{% endblock %}

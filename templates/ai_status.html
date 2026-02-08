@@ -1,0 +1,149 @@
+{% extends "base.html" %}
+
+{% block title %}AI Status - Japanese Learning App{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8 mx-auto">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="mb-0">🤖 AI Configuration</h3>
+                <small class="text-muted">Current AI system status and capabilities</small>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card bg-success text-white">
+                            <div class="card-body text-center">
+                                <h4>✅ Active</h4>
+                                <p class="mb-0">OpenAI API Key</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card bg-info text-white">
+                            <div class="card-body text-center">
+                                <h4>GPT-5</h4>
+                                <p class="mb-0">AI Model</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-4">
+                    <h5>🚀 AI Features</h5>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Feature</th>
+                                <th>Status</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>📚 Exercise Generation</td>
+                                <td><span class="badge bg-success">Active</span></td>
+                                <td>Dynamic, contextual exercises for all content types</td>
+                            </tr>
+                            <tr>
+                                <td>🧠 Answer Evaluation</td>
+                                <td><span class="badge bg-success">Active</span></td>
+                                <td>Semantic understanding and intelligent feedback</td>
+                            </tr>
+                            <tr>
+                                <td>🖼️ Image Processing</td>
+                                <td><span class="badge bg-success">Active</span></td>
+                                <td>Extract Japanese content from images using computer vision</td>
+                            </tr>
+                            <tr>
+                                <td>📝 Content Enhancement</td>
+                                <td><span class="badge bg-success">Active</span></td>
+                                <td>Automatic readings, meanings, and explanations</td>
+                            </tr>
+                            <tr>
+                                <td>🔄 Duplicate Detection</td>
+                                <td><span class="badge bg-warning">Basic</span></td>
+                                <td>String-based duplicate prevention (AI semantic detection disabled)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="mt-4">
+                    <h5>⚙️ Technical Details</h5>
+                    <table class="table table-sm">
+                        <tbody>
+                            <tr>
+                                <td><strong>Primary Model:</strong></td>
+                                <td>GPT-5 Mini</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Vision Model:</strong></td>
+                                <td>GPT-5 (2025-08-07)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Max Tokens:</strong></td>
+                                <td>2,500 (text), 16,384 (vision)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Temperature:</strong></td>
+                                <td>1.0 (creative responses)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Spaced Repetition:</strong></td>
+                                <td>FSRS Algorithm</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="mt-4">
+                    <h5>💡 How AI Enhances Learning</h5>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card border-primary">
+                                <div class="card-body">
+                                    <h6 class="card-title">🎯 Adaptive Exercises</h6>
+                                    <p class="card-text">AI generates exercises based on your progress, difficulty level, and learning patterns.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card border-success">
+                                <div class="card-body">
+                                    <h6 class="card-title">🔍 Smart Evaluation</h6>
+                                    <p class="card-text">Understands context and meaning, not just exact matches. Provides constructive feedback.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-md-6">
+                            <div class="card border-info">
+                                <div class="card-body">
+                                    <h6 class="card-title">🖼️ Content Extraction</h6>
+                                    <p class="card-text">Processes images to extract all Japanese text, categorizes and enhances it automatically.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card border-warning">
+                                <div class="card-body">
+                                    <h6 class="card-title">📈 Personalized Learning</h6>
+                                    <p class="card-text">Adjusts difficulty and focuses on areas needing improvement based on your performance.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-grid gap-2 d-md-flex justify-content-md-center mt-4">
+                    <a href="{{ url_for('study_session') }}" class="btn btn-success">Experience AI Learning</a>
+                    <a href="{{ url_for('index') }}" class="btn btn-secondary">Back to Home</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
