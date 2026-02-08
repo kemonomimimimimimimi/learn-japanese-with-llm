@@ -581,7 +581,9 @@ def settings() -> Any:
     db_sess.close()
     max_new = settings.max_new_per_day if settings else 20
 
-    return render_template('settings.html', username=session['username'], max_new_per_day=max_new)
+    current_model = ai_model.model_name if ai_model else 'Not configured'
+    return render_template('settings.html', username=session['username'], max_new_per_day=max_new,
+                           ai_model_name=current_model)
 
 @app.route('/process_image', methods=['GET', 'POST'])
 def process_image() -> Any:
@@ -1126,7 +1128,14 @@ def save_message() -> Any:
 @app.route('/ai_status')
 def ai_status() -> Any:
     """AI status page."""
-    return render_template('ai_status.html')
+    model_info = {
+        'main_model': ai_model.model_name if ai_model else 'Not configured',
+        'study_model': study_ai_model.model_name if study_ai_model else 'Not configured',
+        'embedding_model': db._embedding_model,
+        'ai_active': ai_model is not None,
+        'using_openrouter': db._using_openrouter,
+    }
+    return render_template('ai_status.html', model_info=model_info)
 
 
 # ----------------------------------------------------------------------

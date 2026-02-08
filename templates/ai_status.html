@@ -13,17 +13,17 @@
             <div class="card-body">
                 <div class="row">
                     <div class="col-md-6">
-                        <div class="card bg-success text-white">
+                        <div class="card bg-{{ 'success' if model_info.ai_active else 'secondary' }} text-white">
                             <div class="card-body text-center">
-                                <h4>✅ Active</h4>
-                                <p class="mb-0">OpenAI API Key</p>
+                                <h4>{{ '✅ Active' if model_info.ai_active else '⚠️ Inactive' }}</h4>
+                                <p class="mb-0">{{ 'OpenRouter' if model_info.using_openrouter else 'OpenAI' }} API</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="card bg-info text-white">
                             <div class="card-body text-center">
-                                <h4>GPT-5</h4>
+                                <h4>{{ model_info.main_model }}</h4>
                                 <p class="mb-0">AI Model</p>
                             </div>
                         </div>
@@ -76,15 +76,19 @@
                         <tbody>
                             <tr>
                                 <td><strong>Primary Model:</strong></td>
-                                <td>GPT-5 Mini</td>
+                                <td>{{ model_info.main_model }}</td>
                             </tr>
                             <tr>
-                                <td><strong>Vision Model:</strong></td>
-                                <td>GPT-5 (2025-08-07)</td>
+                                <td><strong>Study Model:</strong></td>
+                                <td>{{ model_info.study_model }}</td>
                             </tr>
                             <tr>
-                                <td><strong>Max Tokens:</strong></td>
-                                <td>2,500 (text), 16,384 (vision)</td>
+                                <td><strong>Embedding Model:</strong></td>
+                                <td>{{ model_info.embedding_model }}</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Provider:</strong></td>
+                                <td>{{ 'OpenRouter' if model_info.using_openrouter else 'OpenAI Direct' }}</td>
                             </tr>
                             <tr>
                                 <td><strong>Temperature:</strong></td>
