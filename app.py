@@ -102,8 +102,13 @@ class OpenAIModel:
 def init_ai(api_key: Optional[str] = None,
             base_url: Optional[str] = None,
             model_name: str = "gpt-5.2",
-            study_model_name: Optional[str] = None) -> None:
-    """Initialize the OpenAI client and models."""
+            study_model_name: Optional[str] = None,
+            embedding_model: Optional[str] = None) -> None:
+    """Initialize the OpenAI client and models.
+
+    Also configures the db module's embedding client so that embedding-based
+    duplicate detection works with the same provider (OpenAI or OpenRouter).
+    """
     global client, ai_model, study_ai_model
 
     if TEST_MODE:
@@ -120,6 +125,13 @@ def init_ai(api_key: Optional[str] = None,
         print("Error: OpenAI library is required but not installed.")
         return
 
+    is_openrouter = bool(base_url and "openrouter" in base_url)
+
+    # Default embedding model: on OpenRouter use namespaced model, on OpenAI use direct
+    if embedding_model is None:
+        embedding_model = ("openai/text-embedding-3-small" if is_openrouter
+                           else "text-embedding-3-small")
+
     try:
         client_kwargs = {"api_key": api_key}
         if base_url:
@@ -130,7 +142,16 @@ def init_ai(api_key: Optional[str] = None,
         ai_model = OpenAIModel(client, model_name=model_name)
         study_ai_model = OpenAIModel(client, model_name=study_model_name or model_name)
 
+        # Share the client with db.py for embeddings & duplicate detection
+        db.configure_db_client(
+            client=client,
+            embedding_model=embedding_model,
+            chat_model=model_name,
+            is_openrouter=is_openrouter,
+        )
+
         print(f"✅ AI initialized with model: {model_name}")
+        print(f"✅ Embedding model: {embedding_model}")
         if study_model_name and study_model_name != model_name:
             print(f"✅ Study AI initialized with model: {study_model_name}")
 
@@ -389,8 +410,26 @@ def add_grammar() -> Any:
 @app.route('/conjugations')
 def view_conjugations() -> Any:
     """View list of verb conjugations."""
-    session_db = db.get_session()
     from llm_learn_japanese.db import VerbConjugation
+    # Auto-import default conjugations on first visit if table is empty
+    try:
+        session_db = db.get_session()
+        count = session_db.query(VerbConjugation).count()
+        session_db.close()
+        if count == 0:
+            n = db.import_default_conjugations()
+            if n > 0:
+                print(f"✅ Auto-imported {n} verb conjugations on first visit")
+    except Exception:
+        try:
+            db.Base.metadata.create_all(bind=db.engine)
+            n = db.import_default_conjugations()
+            if n > 0:
+                print(f"✅ Created verb_conjugations table and imported {n} entries")
+        except Exception as e:
+            print(f"❌ Verb conjugation auto-import failed: {e}")
+
+    session_db = db.get_session()
     conjugations = session_db.query(VerbConjugation).order_by(VerbConjugation.category, VerbConjugation.label).all()
     session_db.close()
     return render_template('verb_conjugations.html', conjugations=conjugations)
@@ -1798,6 +1837,7 @@ if __name__ == '__main__':
     parser.add_argument('--openrouter-key', help='OpenRouter API Key (overrides OpenAI key)')
     parser.add_argument('--model', default='gpt-5.2', help='Main AI model name')
     parser.add_argument('--study-model', help='Study AI model name (defaults to main model)')
+    parser.add_argument('--embedding-model', help='Embedding model name (default: auto-detect based on provider)')
     parser.add_argument('--batch-size', type=int, default=5, help='Number of cards to prefetch in batch (default: 5)')
     parser.add_argument('--debug', action='store_true', help='Enable debug mode')
 
@@ -1818,7 +1858,8 @@ if __name__ == '__main__':
             api_key=api_key,
             base_url=base_url,
             model_name=args.model,
-            study_model_name=args.study_model
+            study_model_name=args.study_model,
+            embedding_model=args.embedding_model,
         )
 
     # Initialize database

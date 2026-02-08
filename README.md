@@ -175,6 +175,7 @@ The server starts at **http://\<your-local-ip\>:5000/** by default (it auto-dete
 | `--openrouter-key` | — | OpenRouter API key (uses OpenRouter base URL) |
 | `--model` | `gpt-5.2` | Main AI model name |
 | `--study-model` | same as `--model` | Separate model for study sessions |
+| `--embedding-model` | auto-detect | Embedding model for duplicate detection (auto: `text-embedding-3-small` for OpenAI, `openai/text-embedding-3-small` for OpenRouter) |
 | `--batch-size` | `5` | Number of cards to prefetch per batch |
 | `--debug` | off | Enable Flask debug mode and verbose AI logging |
 

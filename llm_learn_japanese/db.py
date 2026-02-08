@@ -250,10 +250,52 @@ except ImportError:
     np = None  # type: ignore
     faiss = None  # type: ignore
 
-# Initialize OpenAI client (only if API key is present)
+# ── Configurable AI client for embeddings & duplicate detection ──────
+# These module-level variables are set either from the OPENAI_API_KEY env
+# var at import time, or later by calling configure_db_client() from app.py.
 _openai_client: Optional[OpenAI] = None
+_embedding_model: str = "text-embedding-3-small"
+_chat_model: str = "gpt-5-mini"
+_using_openrouter: bool = False
+
+# Auto-configure from environment if OPENAI_API_KEY is set
 if "OPENAI_API_KEY" in os.environ:
     _openai_client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
+
+
+def configure_db_client(
+    client: Optional[OpenAI] = None,
+    embedding_model: Optional[str] = None,
+    chat_model: Optional[str] = None,
+    is_openrouter: bool = False,
+) -> None:
+    """Configure the OpenAI-compatible client used for embeddings and duplicate detection.
+
+    Called by app.py's init_ai() so that db.py shares the same client
+    (including OpenRouter base_url if applicable).
+
+    Args:
+        client: An OpenAI client instance (may point to OpenRouter).
+        embedding_model: Model name for embeddings (e.g. "text-embedding-3-small"
+                         or "openai/text-embedding-3-small" on OpenRouter).
+        chat_model: Model name for the AI duplicate-detection chat call.
+        is_openrouter: Whether the client is configured for OpenRouter.
+    """
+    global _openai_client, _embedding_model, _chat_model, _using_openrouter
+
+    if client is not None:
+        _openai_client = client
+    if embedding_model is not None:
+        _embedding_model = embedding_model
+    if chat_model is not None:
+        _chat_model = chat_model
+    _using_openrouter = is_openrouter
+
+    if DEBUG_MODE:
+        provider = "OpenRouter" if _using_openrouter else "OpenAI"
+        print(f"🔧 db client configured: provider={provider}, "
+              f"embedding_model={_embedding_model}, chat_model={_chat_model}")
+
 
 # Optional dependency typing fallback
 import typing
@@ -266,8 +308,9 @@ except ImportError:
 _embedding_cache: dict[str, Any] = {}
 
 def _get_embedding(text: str) -> Any:
-    """Get embedding vector from OpenAI and cache results.
-    In TEST_MODE, return a deterministic fake embedding."""
+    """Get embedding vector from the configured OpenAI-compatible API and cache results.
+    In TEST_MODE, return a deterministic fake embedding.
+    Supports both OpenAI direct and OpenRouter endpoints."""
     if text in _embedding_cache:
         return _embedding_cache[text]
 
@@ -284,11 +327,23 @@ def _get_embedding(text: str) -> Any:
         return fake_vec
 
     if _openai_client is None:
-        raise RuntimeError("OpenAI client not initialized. Set OPENAI_API_KEY to use embeddings.")
-    response = _openai_client.embeddings.create(
-        input=text,
-        model="text-embedding-3-small"
-    )
+        raise RuntimeError(
+            "OpenAI/OpenRouter client not initialized. "
+            "Set OPENAI_API_KEY or pass --openai-key / --openrouter-key."
+        )
+    try:
+        response = _openai_client.embeddings.create(
+            input=text,
+            model=_embedding_model,
+        )
+    except Exception as e:
+        raise RuntimeError(
+            f"Embedding API call failed (model={_embedding_model}): {e}\n"
+            f"If using OpenRouter, make sure the embedding model "
+            f"'{_embedding_model}' is supported. "
+            f"See https://openrouter.ai/docs/api/reference/embeddings"
+        ) from e
+
     try:
         import numpy as _np
         vec: Any = _np.array(response.data[0].embedding, dtype="float32")
@@ -320,11 +375,14 @@ def _cosine_similarity(vec_a: Any, vec_b: Any) -> float:
 
 # Re-export public API functions for external modules/tests
 __all__ = [
+    "configure_db_client",
     "get_session", "save_message",
     "evaluate_answer_with_ai", "get_next_card",
     "review_card", "update_progress", "get_progress",
+    "get_analytics_data",
     "add_card", "add_kanji", "add_grammar",
     "add_phrase", "add_idiom",
+    "import_default_conjugations",
     "_check_semantic_duplicate_with_ai", "_get_existing_items_for_ai_check",
     "get_daily_progress",
     "get_next_bunpro_card", "review_bunpro_card", "get_bunpro_progress",
@@ -422,7 +480,7 @@ def _check_semantic_duplicate_with_ai(new_item: str, existing_items: List[str], 
     try:
         import json
         response = _openai_client.chat.completions.create(
-            model="gpt-5-mini",
+            model=_chat_model,
             messages=[
                 {"role": "system", "content": "You are an assistant for detecting duplicates in Japanese language learning content."},
                 {"role": "user", "content": prompt}
@@ -1491,6 +1549,127 @@ def add_conjugation(label: str, category: str = "", description: str = "", examp
     session.commit()
     session.close()
     return True
+
+
+# Default verb conjugation data for auto-import
+_DEFAULT_CONJUGATIONS: list[tuple[str, str]] = [
+    ("Core verb forms", "Dictionary / plain (non-past)"),
+    ("Core verb forms", "ます-stem（連用形）"),
+    ("Core verb forms", "ない-stem（未然形）"),
+    ("Core verb forms", "て-form（テ形）"),
+    ("Core verb forms", "た-form（タ形 / past, completion）"),
+    ("Core verb forms", "Volitional（推量形：～う／～よう）"),
+    ("Core verb forms", "Imperative（命令形：五段＝～え、 一段＝～ろ／～よ）"),
+    ("Core verb forms", "Conditional: ～ば（仮定形）"),
+    ("Core verb forms", "Conditional: ～たら（\"when/if\" after completion）"),
+    ("Core verb forms", "Conditional: ～と（確定条件）"),
+    ("Polite paradigm", "～ます／～ません（非過去）"),
+    ("Polite paradigm", "～ました／～ませんでした（過去）"),
+    ("Polite paradigm", "～ましょう（意向）"),
+    ("Polite paradigm", "～まして（連用・接続）"),
+    ("Polite paradigm", "～ますれば（条件）"),
+    ("Polite paradigm", "～なさい（準命令）／～な（禁止・俗）"),
+    ("Negative paradigm", "～ない（否定）"),
+    ("Negative paradigm", "～なかった（否定過去）"),
+    ("Negative paradigm", "～なくて（否定テ形）"),
+    ("Negative paradigm", "～ないで（without ～ing）"),
+    ("Negative paradigm", "～なければ／～なきゃ（条件）"),
+    ("Negative paradigm", "～なかろう（否定意向・文語）"),
+    ("Negative paradigm", "～ず（文語否定）／～ずに（文語「～ないで」）"),
+    ("Voice / ability / causation", "Potential（可能）"),
+    ("Voice / ability / causation", "Passive（受け身・尊敬）"),
+    ("Voice / ability / causation", "Causative（使役）"),
+    ("Voice / ability / causation", "Causative-passive（使役受け身）"),
+    ("Te-form combos", "～ている（進行・習慣・結果状態）"),
+    ("Te-form combos", "～てある（結果の残存）"),
+    ("Te-form combos", "～ておく（準備）"),
+    ("Te-form combos", "～ていく／～てくる（状態変化の方向性）"),
+    ("Te-form combos", "～てしまう（完了・遺憾）"),
+    ("Te-form combos", "～てみる（試み）"),
+    ("Te-form combos", "～てほしい（依頼・希望）"),
+    ("Te-form combos", "～てください（依頼）"),
+    ("Te-form combos", "～ては いけない（禁止）"),
+    ("Te-form combos", "～ても いい（許可）"),
+    ("Te-form combos", "～た ほうが いい（助言）"),
+    ("Desire / tendency", "～たい（願望）"),
+    ("Desire / tendency", "～たがる（第三者の願望）"),
+    ("Desire / tendency", "～がち（傾向）"),
+    ("Desire / tendency", "～ながら（同時進行）"),
+    ("Desire / tendency", "～方（方法）"),
+    ("Desire / tendency", "複合動詞（～始める／～続ける など）"),
+    ("Hearsay / supposition", "～そうだ（様態）"),
+    ("Hearsay / supposition", "～そうだ（伝聞）"),
+    ("Hearsay / supposition", "～らしい推量"),
+    ("Hearsay / supposition", "～みたいだ"),
+    ("Hearsay / supposition", "～はずだ"),
+    ("Hearsay / supposition", "～つもりだ"),
+    ("Hearsay / supposition", "～べきだ"),
+    ("Hearsay / supposition", "～まい"),
+    ("Hearsay / supposition", "～だろう／～でしょう"),
+    ("Nominalization", "～の（名詞化／強調）"),
+    ("Nominalization", "～こと（名詞化）"),
+    ("Nominalization", "ことができる（能力表現）"),
+    ("Nominalization", "ことがある（経験）"),
+    ("Nominalization", "ことにする／ことになる"),
+    ("Obligation / necessity", "～ないと（いけない／だめ）"),
+    ("Obligation / necessity", "～なくては（いけない）"),
+    ("Obligation / necessity", "～なければ（いけない）"),
+    ("Obligation / necessity", "～しなくては／～しては いけない"),
+    ("授受表現", "（～て）あげる／くれる／もらう"),
+    ("授受表現", "すみません＋～て"),
+    ("五段・一段ポイント", "五段：語尾別の活用列"),
+    ("五段・一段ポイント", "一段：～いる／～える"),
+    ("五段・一段ポイント", "て／た への音便規則"),
+    ("不規則動詞", "する（全活用）"),
+    ("不規則動詞", "来る（全活用）"),
+    ("不規則動詞", "名詞＋する（サ変複合）"),
+    ("敬語", "尊敬：お＋連用形＋になる／～れる"),
+    ("敬語", "謙譲：お／ご＋連用形＋する"),
+    ("敬語", "不規則敬語動詞"),
+    ("形容詞・形容動詞", "い形容詞全活用"),
+    ("形容詞・形容動詞", "な形容詞全活用"),
+    ("形容詞・形容動詞", "いい→よい 注意"),
+    ("コピュラ", "だ／です 系列"),
+]
+
+
+def import_default_conjugations() -> int:
+    """Auto-import the default set of verb conjugations.
+
+    Unlike add_conjugation(), this does NOT require an API key — it skips
+    embedding generation.  Returns the number of newly inserted rows.
+    """
+    session: Session = get_session()
+    Base.metadata.create_all(bind=engine)  # ensure table exists
+    inserted = 0
+
+    for category, label in _DEFAULT_CONJUGATIONS:
+        existing = session.query(VerbConjugation).filter_by(label=label).first()
+        if existing:
+            continue
+
+        conj = VerbConjugation(category=category, label=label)
+        session.add(conj)
+        session.flush()
+
+        # Create atomic aspects (same structure as add_conjugation)
+        for aspect_type, prompt in [
+            ("explanation", f"Explain when and how to use the conjugation: {label}"),
+            ("example", f"Provide a Japanese sentence using the conjugation: {label}"),
+            ("drill", f"Conjugate the verb '食べる' into: {label} form"),
+        ]:
+            session.add(CardAspect(
+                parent_type="conjugation",
+                parent_id=conj.id,
+                aspect_type=aspect_type,
+                prompt_template=prompt,
+            ))
+
+        inserted += 1
+
+    session.commit()
+    session.close()
+    return inserted
 
 
 def add_idiom(idiom: str, meaning: str = "", example: str = "") -> bool:
