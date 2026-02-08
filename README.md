@@ -185,16 +185,16 @@ The server starts at **http://\<your-local-ip\>:5000/** by default (it auto-dete
 python app.py --openai-key sk-... --model gpt-4o --debug
 
 # Run with OpenRouter (recommended — supports many models)
-python app.py --openrouter-key sk-or-v1-... --model moonshotai/kimi-k2.5
+python app.py --openrouter-key sk-or-v1-... --model google/gemini-3-flash-preview
 
 # Run with OpenRouter using a separate study model
-python app.py --openrouter-key sk-or-v1-... --model moonshotai/kimi-k2.5 --study-model moonshotai/kimi-k2.5
+python app.py --openrouter-key sk-or-v1-... --model google/gemini-3-flash-preview --study-model google/gemini-3-flash-preview
 
 # Using uv run (no venv activation needed)
-uv run python app.py --openrouter-key sk-or-v1-... --model moonshotai/kimi-k2.5
+uv run python app.py --openrouter-key sk-or-v1-... --model google/gemini-3-flash-preview
 
 # Custom port
-python app.py --openrouter-key sk-or-v1-... --model moonshotai/kimi-k2.5 --port 8080
+python app.py --openrouter-key sk-or-v1-... --model google/gemini-3-flash-preview --port 8080
 ```
 
 ### Accessing the app in your browser
