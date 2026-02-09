@@ -321,7 +321,7 @@ Your role is to:
 1. Answer questions about this topic in a clear, educational manner.
 2. Provide additional context, examples, or explanations when helpful.
 3. Encourage the student and provide supportive feedback.
-4. Stay focused on Japanese language learning, but make sure your sentences are able to be understand by an English speaker learning Japanese.
+4. Stay focused on Japanese language learning, but make sure your sentences are able to be understood by an English speaker learning Japanese.
 
 Keep responses concise but informative (5 sentences max). Use simple English explanations for complex Japanese concepts."""
 
@@ -1604,7 +1604,7 @@ def api_kanji_chat() -> Any:
             return jsonify({'status': 'error', 'message': 'Card not found'})
         system_prompt = f"You are a Japanese kanji tutor. The student is studying 「{card.kanji}」 (meanings: {card.meanings_en}, on: {card.on_readings}, kun: {card.kun_readings}). Be concise (3-4 sentences)."
         conversation = [f"{'Student' if r == 'user' else 'Tutor'}: {m}" for r, m in data.get('chat_history', [])[-6:]]
-        prompt = f"Previous: {chr(10).join(conversation)}\nStudent: {data['message']}\nRespond helpfully."
+        prompt = f"Previous: {chr(10).join(conversation)}\nStudent: {data['message']}\nRespond helpfully but make sure your sentences are able to be understood by an English speaker learning Japanese.\n"
         chat_model = ai_model
         if not chat_model:
             raise ValueError("AI model not configured")
@@ -1812,7 +1812,7 @@ def api_words_chat() -> Any:
             return jsonify({'status': 'error', 'message': 'Card not found'})
         system_prompt = f"You are a Japanese vocabulary tutor. The student is studying 「{card.lemma}」 (reading: {card.reading}, meanings: {card.meanings_en}). Be concise (3-4 sentences)."
         conversation = [f"{'Student' if r == 'user' else 'Tutor'}: {m}" for r, m in data.get('chat_history', [])[-6:]]
-        prompt = f"Previous: {chr(10).join(conversation)}\nStudent: {data['message']}\nRespond helpfully."
+        prompt = f"Previous: {chr(10).join(conversation)}\nStudent: {data['message']}\nRespond helpfully but make sure your sentences are able to be understood by an English speaker learning Japanese.\n"
         chat_model = ai_model
         if not chat_model:
             raise ValueError("AI model not configured")
