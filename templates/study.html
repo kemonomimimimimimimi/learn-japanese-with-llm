@@ -531,16 +531,23 @@ class StudySession {
         const badge = role === 'user' ? 'bg-primary' : 'bg-success';
         const label = role === 'user' ? 'You' : 'Tutor';
 
-        const safeMessage = message
-            .replace(/&/g, "&")
-            .replace(/</g, "<")
-            .replace(/>/g, ">")
-            .replace(/\r\n|\r|\n/g, "<br>");
-
-        messageDiv.innerHTML = `
-            <span class="badge ${badge} me-2">${label}:</span>
-            <span>${safeMessage}</span>
-        `;
+        if (role === 'tutor' && typeof marked !== 'undefined') {
+            const rendered = marked.parse(message);
+            messageDiv.innerHTML = `
+                <span class="badge ${badge} me-2">${label}:</span>
+                <span class="chat-markdown">${rendered}</span>
+            `;
+        } else {
+            const safeMessage = message
+                .replace(/&/g, "&")
+                .replace(/</g, "<")
+                .replace(/>/g, ">")
+                .replace(/\r\n|\r|\n/g, "<br>");
+            messageDiv.innerHTML = `
+                <span class="badge ${badge} me-2">${label}:</span>
+                <span>${safeMessage}</span>
+            `;
+        }
 
         messagesDiv.appendChild(messageDiv);
         messagesDiv.scrollTop = messagesDiv.scrollHeight;

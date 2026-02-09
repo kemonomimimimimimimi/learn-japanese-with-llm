@@ -635,7 +635,11 @@ class BunproSession {
         const container = document.getElementById('chat-messages');
         const div = document.createElement('div');
         div.className = `mb-2 p-2 rounded ${role === 'user' ? 'bg-light text-end' : 'bg-info bg-opacity-10'}`;
-        div.innerHTML = `<small class="text-muted">${role === 'user' ? 'You' : '🤖 Tutor'}</small><br>${this.escapeHtml(text)}`;
+        if (role === 'tutor' && typeof marked !== 'undefined') {
+            div.innerHTML = `<small class="text-muted">🤖 Tutor</small><br><span class="chat-markdown">${marked.parse(text)}</span>`;
+        } else {
+            div.innerHTML = `<small class="text-muted">${role === 'user' ? 'You' : '🤖 Tutor'}</small><br>${this.escapeHtml(text)}`;
+        }
         container.appendChild(div);
         container.scrollTop = container.scrollHeight;
     }
